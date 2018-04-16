@@ -42,10 +42,15 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.4)
+    autoprefixer-rails (6.3.6.2)
+      execjs
     bcrypt (3.1.11)
     bindata (2.3.5)
     binding_of_caller (0.8.0)
       debug_inspector (>= 0.0.1)
+    bootstrap-sass (3.3.6)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
     capistrano (3.4.1)
@@ -80,6 +85,8 @@ GEM
     erubis (2.7.0)
     execjs (2.7.0)
     ffi (1.9.23)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (0.9.5)
@@ -195,6 +202,7 @@ PLATFORMS
 DEPENDENCIES
   active_directory
   activerecord-sqlserver-adapter
+  bootstrap-sass (~> 3.3.6)
   byebug
   capistrano (~> 3.4.0)
   capistrano-bundler
@@ -202,6 +210,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.0)
   coffee-rails (~> 4.1.0)
   devise
+  font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
