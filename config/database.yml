@@ -82,4 +82,4 @@ production:
   <<: *default
   database: esalc
   username: esalc_admin
-  password: 3sAlC_@
+  password: <%= ENV['ESALC_DB_PWD'] %>
