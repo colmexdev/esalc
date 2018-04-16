@@ -22,8 +22,6 @@ set :rbenv_ruby, '2.3.1'
 # require 'capistrano/chruby'
 require 'capistrano/bundler'
 require 'capistrano/rails'
-require "capistrano/scm/git"
-install_plugin Capistrano::SCM::Git
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
 # require 'capistrano/passenger'
