@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: esalc
-  username: postgres
+  username: esalc_admin
   password: <%= ENV['ESALC_DATABASE_PASSWORD'] %>
