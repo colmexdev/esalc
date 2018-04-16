@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
+  devise_for :admins, :controllers => { :registrations => "registrations", :sessions => "sessions"}
+  resources :admins
 
+  devise_scope :admin do
+    get "/acceder" => "devise/sessions#new"
+  end
 
   get 'principal/principal' => 'principal#principal', :as => :principal
   # The priority is based upon order of creation: first created -> highest priority.
