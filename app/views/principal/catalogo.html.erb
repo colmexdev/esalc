@@ -1,7 +1,6 @@
-<h2>Hola mundo</h2>
 <script>
 $.ajax({
-	url: "http://repositorio.colmex.mx/catalog.json?q=america+latina",
+	url: "http://repositorio.colmex.mx/catalog.json?f%5Bunit_sim%5D%5B%5D=" + "<%= @unit %>" + "f%5Bsubject_sim%5D%5B%5D=América+Latina&q=america+latina",
 	dataType: "json",
 	method: "GET",
 	async: true,

@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   put 'panel/editar' => 'panel#actualizar'
   patch 'panel/editar' => 'panel#actualizar'
 
-  get 'principal/principal' => 'principal#principal', :as => :principal
+  get '/' => 'principal#principal', :as => :principal
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

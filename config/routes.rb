@@ -19,6 +19,9 @@ Rails.application.routes.draw do
   patch 'panel/editar' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :principal
+  get '/revistas' => 'principal#revistas', :as => :revistas
+  get '/tesis' => 'principal#tesis', :as => :tesis
+  get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
