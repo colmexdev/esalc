@@ -1,0 +1,12 @@
+class CreateMagazine < ActiveRecord::Migration
+  def change
+    create_table :magazines do |t|
+      t.text :articulo, null: false
+      t.text :autores, null: false
+      t.text :volumen
+      t.textfecha :numero
+      t.text :tematica
+      t.text :link, null: false
+    end
+  end
+end
