@@ -1,0 +1,11 @@
+class CreateDirectorio < ActiveRecord::Migration
+  def change
+    create_table :directorios do |t|
+      t.text :nombre
+      t.text :centro
+      t.text :temas
+      t.text :correo
+      t.text :sitio
+    end
+  end
+end
