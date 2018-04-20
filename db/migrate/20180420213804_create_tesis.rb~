@@ -1,0 +1,16 @@
+class CreateTesis < ActiveRecord::Migration
+  def change
+    create_table :teses do |t|
+      t.text :autores
+      t.text :titulo
+      t.text :asesores
+      t.text :tematica
+      t.integer :anio
+      t.text :idioma
+      t.text :link
+      t.text :grado
+      t.text :programa
+      t.text :centro
+    end
+  end
+end

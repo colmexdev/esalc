@@ -4,7 +4,8 @@ class CreateMagazine < ActiveRecord::Migration
       t.text :articulo, null: false
       t.text :autores, null: false
       t.text :volumen
-      t.textfecha :numero
+      t.text :numero
+      t.text :fecha
       t.text :tematica
       t.text :link, null: false
     end

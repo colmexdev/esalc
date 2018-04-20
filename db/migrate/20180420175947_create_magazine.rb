@@ -8,6 +8,8 @@ class CreateMagazine < ActiveRecord::Migration
       t.text :fecha
       t.text :tematica
       t.text :link, null: false
+      t.text :revista, null: false
+      t.text :centro, null: false
     end
   end
 end
