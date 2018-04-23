@@ -5,21 +5,21 @@ class PrincipalController < ApplicationController
   def revistas
     @unit = "revistas"
     respond_to do |format|
-      format.html { redirect_to :catalogo}
+      format.html { render :catalogo}
     end
   end
 
   def tesis
     @unit = "tesis"
     respond_to do |format|
-      format.html { redirect_to :catalogo}
+      format.html { render :catalogo}
     end
   end
 
   def publicaciones
     @unit = "pub-colmex"
     respond_to do |format|
-      format.html { redirect_to :catalogo}
+      format.html { render :catalogo}
     end
   end
 end
