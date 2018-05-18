@@ -27,4 +27,5 @@ class PrincipalController < ApplicationController
       format.html { render :catalogo}
     end
   end
+
 end

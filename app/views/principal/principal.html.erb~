@@ -1,2 +1,13 @@
 <h2>Hola mundo</h2>
+<script>
+$.ajax({
+	url: '<%= principal_path %>',
+	method: 'GET',
+	dataType: 'JSON',
+	async: true,
+	success: function(result){
+		console.log(result);
+	}
+});
+</script>
 
