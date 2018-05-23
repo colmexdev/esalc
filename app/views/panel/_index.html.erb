@@ -60,7 +60,7 @@
 <% ind = 0 %>
 
 	<% if @pags > 1 %>
-		<span class="numeros" style="margin:0 4px;cursor:<%= params[:offset].to_i != 0 ? "pointer" : "default" %>;" <%= params[:offset].to_i != 0 ? ("onclick=hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: params[:offset].to_i - 1) + "',null,document.getElementById('keyword').value,buildQuery(filteredParams('#{params[:set]}')))") : "" %>><</span>
+		<span class="numeros" style="margin:0 4px;cursor:<%= params[:offset].to_i != 0 ? "pointer" : "default" %>;" <%= params[:offset].to_i != 0 ? ("onclick=hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: params[:offset].to_i - 1) + "',null,document.getElementById('keyword').value,buildQuery(filteredParams('#{params[:set].split(' ').join('+')}')))") : "" %>><</span>
 	<% end %>
 
 <% while ind < @pags %>
@@ -69,7 +69,7 @@
 <% end %>
 
 	<% if @pags > 1 %>
-		<span class="numeros" style="margin:0 4px;cursor:<%= params[:offset].to_i != @pags - 1 ? "pointer" : "default" %>;" <%= params[:offset].to_i != @pags - 1 ? ("onclick=hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: params[:offset].to_i + 1) + "',null,document.getElementById('keyword').value,buildQuery(filteredParams('#{params[:set]}')))") : "" %>>></span>
+		<span class="numeros" style="margin:0 4px;cursor:<%= params[:offset].to_i != @pags - 1 ? "pointer" : "default" %>;" <%= params[:offset].to_i != @pags - 1 ? ("onclick=hideLink(event,'#index-panel','" + panel_index_path(set: params[:set], offset: params[:offset].to_i + 1) + "',null,document.getElementById('keyword').value,buildQuery(filteredParams('#{params[:set].split(' ').join('+')}')))") : "" %>>></span>
 	<% end %>
 </div>
 <% if false %>
