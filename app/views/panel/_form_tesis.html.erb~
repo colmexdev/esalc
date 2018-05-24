@@ -12,42 +12,49 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :articulo, "Título del artículo" %><br>
-    <%= f.text_field :articulo %>
+    <%= f.label :titulo, "Título" %><br>
+    <%= f.text_field :titulo %>
   </div>
   <div class="field">
     <%= f.label :autores, "Autor(es)" %><br>
-    <%= f.text_area :autores %>
+    <%= f.text_area :autores, placeholder: "(Apellidos, nombre(s)), separados por punto y coma (;)" %>
   </div>
   <div class="field">
-    <%= f.label :volumen, "Volumen" %><br>
-    <%= f.text_field :volumen %>
+    <%= f.label :asesores, "Asesor(es)" %><br>
+    <%= f.text_area :asesores, placeholder: "(Apellidos, nombre(s)), separados por punto y coma (;)" %>
   </div>
   <div class="field">
-    <%= f.label :numero, "Número" %><br>
-    <%= f.text_field :numero %>
+    <%= f.label :anio, "Año" %><br>
+    <%= f.number_field :anio, min: 1900, step: 1 %>
   </div>
   <div class="field">
-    <%= f.label :fecha, "Periodo de publicación" %><br>
-    <%= f.text_field :fecha %>
+    <%= f.label :idioma, "Idioma" %><br>
+    <%= f.text_field :idioma %>
   </div>
   <div class="field">
     <%= f.label :tematica, "Temática(s)" %><br>
-    <%= f.text_area :tematica, placeholder: "Temáticas separadas por punto y coma (;) de ser múltiples" %>
+		<% ["Historia","Lengua y literatura","Instituciones políticas","Cuestiones socioeconómicas","Relaciones internacionales","Violencia"].each do |t| %>
+    	<%= f.check_box :tematica, {multiple: true}, t, nil %>
+			<%= f.label :tematica, t %>
+		<% end %>
   </div>
   <div class="field">
     <%= f.label :link, "Liga al artículo" %><br>
     <%= f.text_field :link %>
   </div>
   <div class="field">
-    <%= f.label :revista, "Revista a la que pertenece" %><br>
-    <%= f.text_field :revista %>
+    <%= f.label :grado, "Grado académico de la tesis" %><br>
+    <%= f.select(:grado, [["Licenciatura","Licenciatura"],["Maestría","Maestría"],["Doctorado","Doctorado"]], selected: (@obj.grado || "Licenciatura")) %>
   </div>
   <div class="field">
-    <%= f.label :centro, "Centro de Estudios (siglas)" %><br>
-    <%= f.text_field :centro %>
+    <%= f.label :programa, "Programa docente" %><br>
+    <%= f.select(:programa, [[Economía","Economía"],["Política y Administración Pública","Política y Administración Pública"],["Relaciones Internacionales","Relaciones Internacionales"],["Ciencias Políticas","Ciencias Políticas"],["Ciencia Social con especialidad en Sociología","Ciencia Social con especialidad en Sociología"],["Comparative Urban Governance ","Comparative Urban Governance "],["Demografía","Demografía"],["Estudios de Asia y África","Estudios de Asia y África"],["Estudios de Género","Estudios de Género"],["Estudios Urbanos","Estudios Urbanos"],["Traducción","Traducción"],["Estudios de Población","Estudios de Población"],["Estudios Urbanos y Ambientales","Estudios Urbanos y Ambientales"],["Historia","Historia"],["Lingüística","Lingüística"],["Literatura Hispánica","Literatura Hispánica"]], selected: (@obj.grado || "Economía")) %>
+  </div>
+  <div class="field">
+    <%= f.label :centro, "Centro de Estudios" %><br>
+    <%= f.select(:centro,[["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar artículo" %>
+    <%= f.submit "Guardar tesis" %>
   </div>
 <% end %>

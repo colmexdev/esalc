@@ -35,7 +35,7 @@
     <%= f.label :tematica, "Temática(s)" %><br>
 		<% ["Historia","Lengua y literatura","Instituciones políticas","Cuestiones socioeconómicas","Relaciones internacionales","Violencia"].each do |t| %>
     	<%= f.check_box :tematica, {multiple: true}, t, nil %>
-			<%= f.label :tematica, t %>
+			<%= f.label :tematica, t %><br>
 		<% end %>
   </div>
   <div class="field">

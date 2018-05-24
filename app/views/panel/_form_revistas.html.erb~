@@ -33,7 +33,10 @@
   </div>
   <div class="field">
     <%= f.label :tematica, "Temática(s)" %><br>
-    <%= f.text_area :tematica, placeholder: "Temáticas separadas por punto y coma (;) de ser múltiples" %>
+		<% ["Historia","Lengua y literatura","Instituciones políticas","Cuestiones socioeconómicas","Relaciones internacionales","Violencia"].each do |t| %>
+    	<%= f.check_box :tematica, {multiple: true}, t, nil %>
+			<%= f.label :tematica, t %>
+		<% end %>
   </div>
   <div class="field">
     <%= f.label :link, "Liga al artículo" %><br>

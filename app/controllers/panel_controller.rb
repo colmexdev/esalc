@@ -305,14 +305,10 @@ class PanelController < ApplicationController
   end
 
   def obj_params
-    if params[:set] == "Listas de reproducción"
-      params.require(:playlist).permit(:nombre, :grupo)
-    elsif params[:set] == "Videos"
-      params.require(:info_video).permit(:v_id, :fecha, :titulo, :descripcion, :lista, :likes, :dislikes, :favs, :comentarios, :vistas, :tags, :thumbnail)
-    elsif params[:set] == "Revistas"
-      params.require(:revista).permit(:articulo, :autores, :volumen, :numero, :fecha, :tematica, :link, :revista, :centro)
+    if params[:set] == "Revistas"
+      params.require(:revista).permit(:articulo, :autores, :volumen, :numero, :fecha, tematica:[], :link, :revista, :centro)
     elsif params[:set] == "Tesis"
-      params.require(:teses).permit(:autores, :titulo, :asesores, :tematica, :anio, :idioma, :link, :grado, :programa, :centro)
+      params.require(:teses).permit(:autores, :titulo, :asesores, tematica:[], :anio, :idioma, :link, :grado, :programa, :centro)
     elsif params[:set] == "Publicaciones"
       params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :tematica, :link, :link_vid)
     elsif params[:set] == "Personal del Directorio"

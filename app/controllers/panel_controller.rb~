@@ -263,17 +263,7 @@ class PanelController < ApplicationController
 
   def select_set
     @sets = {
-      "Listas de reproducción": {
-        model: Playlist, 
-        fields: {nombre: "Título", grupo: "Pertenece a"}, 
-        imgs: {},
-        trix: []
-      }, "Videos": {
-        model: InfoVideo,
-        fields: {v_id: "Id de video", fecha: "Fecha", titulo: "Título", descripcion: "Descripción", lista: "En lista", likes: "Likes", dislikes: "Dislikes", favs: "Favoritos", comentarios: "Comentarios", vistas: "Vistas", tags: "Etiquetas", thumbnail: "Thumbnail"},
-        imgs: {},
-        trix: []
-      }, "Revistas": {
+      "Revistas": {
         model: Revista,
         fields: {articulo: "Título", autores: "Autor(es)", volumen: "Volumen", numero: "Número", fecha: "Fecha de publicación", tematica: "Temática(s)", link: "Liga", revista: "Revista", centro: "Centro de estudios"},
         imgs: {},
