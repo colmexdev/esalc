@@ -306,9 +306,9 @@ class PanelController < ApplicationController
 
   def obj_params
     if params[:set] == "Revistas"
-      params.require(:revista).permit(:articulo, :autores, :volumen, :numero, :fecha, tematica:[], :link, :revista, :centro)
+      params.require(:revista).permit(:articulo, :autores, :volumen, :numero, :fecha, :link, :revista, :centro, tematica:[])
     elsif params[:set] == "Tesis"
-      params.require(:teses).permit(:autores, :titulo, :asesores, tematica:[], :anio, :idioma, :link, :grado, :programa, :centro)
+      params.require(:teses).permit(:autores, :titulo, :asesores, :anio, :idioma, :link, :grado, :programa, :centro, tematica:[])
     elsif params[:set] == "Publicaciones"
       params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :tematica, :link, :link_vid)
     elsif params[:set] == "Personal del Directorio"

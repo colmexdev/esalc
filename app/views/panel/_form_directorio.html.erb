@@ -1,0 +1,37 @@
+<%= form_for(@obj, :remote => true, :url => {:controller => "panel", :action => (action_name == "editar" ? "editar" : "crear"), :params => {:set => params[:set], :id => (@obj.id if action_name == "editar")}}) do |f| %>
+  <% if @obj.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@obj.errors.count, "error") %> prohibited this frase from being saved:</h2>
+
+      <ul>
+      <% @obj.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
+  <div class="field">
+    <%= f.label :nombre, "Nombre" %><br>
+    <%= f.text_field :nombre, placeholder: "Apellido(s), nombre(s)" %>
+  </div>
+  <div class="field">
+    <%= f.label :centro, "Centro de Estudios" %><br>
+    <%= f.select(:centro,[["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
+  </div>
+  <div class="field">
+    <%= f.label :temas, "Tema(s) de investigación" %><br>
+    <%= f.text_area :temas, placeholder: "Temas separados por punto y coma (;)" %>
+  </div>
+  <div class="field">
+    <%= f.label :correo, "Correo electrónico" %><br>
+    <%= f.email_field :correo %>
+  </div>
+  <div class="field">
+    <%= f.label :sitio, "Sitio web" %><br>
+    <%= f.text_field :sitio %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Guardar docente" %>
+  </div>
+<% end %>
