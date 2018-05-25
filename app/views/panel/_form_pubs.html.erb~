@@ -59,6 +59,6 @@
     <%= f.text_area :link_vid, placeholder: "Ligas separadas por punto y coma (;)" %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar tesis" %>
+    <%= f.submit "Guardar publicación" %>
   </div>
 <% end %>
