@@ -310,7 +310,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Tesis"
       params.require(:teses).permit(:autores, :titulo, :asesores, :anio, :idioma, :link, :grado, :programa, :centro, tematica:[])
     elsif params[:set] == "Publicaciones"
-      params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :tematica, :link, :link_vid)
+      params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :link, :link_vid, tematica:[])
     elsif params[:set] == "Personal del Directorio"
       params.require(:directorio).permit(:nombre, :centro, :temas, :correo, :sitio)
     end
