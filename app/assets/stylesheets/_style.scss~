@@ -9440,7 +9440,7 @@ img.mfp-img {
     display: none;
     position: relative;
     margin: 0;
-    padding: 0;
+    padding: 0;#header-left
     background: #3e4045;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
