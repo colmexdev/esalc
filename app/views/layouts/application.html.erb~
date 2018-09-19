@@ -111,15 +111,15 @@
 
   <!-- JS begin -->
   <!-- MAGNIFIC POPUP -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
   <!-- PORTFOLIO SCRIPTS -->
-  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="/js/imagesloaded.pkgd.min.js"></script>
   <!-- APPEAR -->
-  <script src="js/jquery.appear.js"></script>
+  <script src="/js/jquery.appear.js"></script>
   <!-- OWL CAROUSEL -->
-  <script src="js/owl.carousel.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
   <!-- NAV SIDEBAR -->
-  <script src="js/jquery.nav.js"></script>
+  <script src="/js/jquery.nav.js"></script>
   <script>
     $(document).ready(function() {
       //NAV SIDEBAR------------------------------------------------------------------
