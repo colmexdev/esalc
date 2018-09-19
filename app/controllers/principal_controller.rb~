@@ -1,10 +1,5 @@
 class PrincipalController < ApplicationController
   def principal
-    consulta_eventos
-    respond_to do |format|
-      format.html
-      format.json {render json: {videos: @datos}}
-    end
   end
 
   def revistas

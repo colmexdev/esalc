@@ -2,6 +2,9 @@ class PrincipalController < ApplicationController
   def principal
   end
 
+  def libros
+  end
+
   def revistas
     @unit = "revistas"
     respond_to do |format|
