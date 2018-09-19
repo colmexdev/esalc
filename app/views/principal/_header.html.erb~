@@ -5,7 +5,7 @@
               <!-- LOGO -->
               <div class="logo-container-2">
                 <div class="logo-2">
-                  <a href="index.html" class="clearfix">
+                  <a href="<%= root_path %>" class="clearfix">
                       <img src="<%= image_url('esalc-colmex.png') %>" class="logo-img" alt="Logo">
                     </a>
                 </div>
@@ -70,7 +70,7 @@
                       </li>
                       <!-- MENU ITEM -->
                       <li>
-                        <a href="videoteca.html">
+                        <a href="<%= videoteca_path %>">
                           <div class="main-menu-title">Videoteca</div>
                         </a>
                       </li>
