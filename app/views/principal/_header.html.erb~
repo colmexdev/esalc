@@ -35,7 +35,7 @@
                       </li>
                       <!-- MENU ITEM -->
                       <li>
-                        <a href="directorio.html">
+                        <a href="<%= directorio_path %>">
                           <div class="main-menu-title">Directorio</div>
                         </a>
                       </li>
@@ -46,7 +46,7 @@
                         </a>
                         <ul class="sub">
                           <li>
-                            <a href="libros.html">Libros</a>
+                            <a href="<%= libros_path %>">Libros</a>
                           </li>
                           <li>
                             <a href="articulos.html">Artículos</a>

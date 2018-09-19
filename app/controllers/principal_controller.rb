@@ -5,6 +5,15 @@ class PrincipalController < ApplicationController
   def libros
   end
 
+  def directorio
+  end
+
+  def videoteca
+  end
+
+  def historia
+  end
+
   def revistas
     @unit = "revistas"
     respond_to do |format|
