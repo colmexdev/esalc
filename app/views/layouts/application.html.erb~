@@ -110,8 +110,6 @@
   <!-- End wrap -->
 
   <!-- JS begin -->
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
   <!-- MAGNIFIC POPUP -->
   <script src="js/jquery.magnific-popup.min.js"></script>
   <!-- PORTFOLIO SCRIPTS -->
