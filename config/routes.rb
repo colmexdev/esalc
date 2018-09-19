@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   patch 'panel/editar' => 'panel#actualizar'
 
   get '/' => 'principal#principal', :as => :principal
-  get '/libros' = 'principal#libros', :as => :libros
+  get '/libros' => 'principal#libros', :as => :libros
   get '/revistas' => 'principal#revistas', :as => :revistas
   get '/tesis' => 'principal#tesis', :as => :tesis
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
