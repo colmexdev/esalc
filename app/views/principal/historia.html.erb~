@@ -1,0 +1,170 @@
+<%= render 'principal/header' %>
+
+      <!-- CONTENT CONTAINER -->
+      <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
+        <div class="row">
+          <!-- SIDENAV HIDE -->
+          <%= render 'principal/sidebar' %>
+          <!-- INTRODUCCIÓN  -->
+          <div class="col-lg-9 col-md-8 col-sm-12 plr-50">
+            <h2 class="section-title pr-0 mb-40"><span class="bold ">HISTORIA</span></h2>
+            <div class="row">
+              <div class="col-md-10 col-sm-12 col-md-offset-1">
+                <p class="text-left">Aquí podrás encontrar información de estudios sobre América Latina relacionada con el tema de Historia.</p>
+              </div>
+            </div>
+            <!-- FORMULARIO DE BÚSQUEDA -->
+            <div class="row">
+              <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
+                <!-- FORMULARIO DE BÚSQUEDA -->
+                <div class="row">
+                  <div class="col-md-5 col-sm-6">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-12 plr-0">
+                        <h4 class="mt-10"><strong>Buscar por: </strong></h4>
+                      </div>
+                      <div class="col-md-8 pl-0">
+                        <input placeholder="Palabra(s) clave" class="input-border w-100" type="text" required="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                      <div class="col-md-4 col-sm-12 plr-0">
+                        <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
+                      </div>
+                      <div class="col-md-8 pl-0">
+                        <form method="post" action="#" class="form">
+                          <select name="tipo" id="tipo" class="select-md input-border w-100">
+                            <option value>Tipo</option>
+                            <option value="Directorio">Directorio</option>
+                            <option value="Publicaciones">Publicaciones</option>
+                            <option value="Seminarios">Seminarios</option>
+                            <option value="Eventos">Eventos</option>
+                            <option value="Videoteca">Videoteca</option>
+                          </select>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-6 plr-0">
+                    <br class="visible-sm visible-xs">
+                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                  </div>
+                </div>
+                <!-- FIN FORMULARIO DE BÚSQUEDA -->
+                <div class="row mt-30 mb-40">
+                  <div class="col-md-8 col-xs-12 text-left">
+                    <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
+                  </div>
+                  <div class="col-md-4 hidden-sm hidden-xs text-right">
+                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                  </div>
+                  <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
+                    <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>
+                  </div>
+                </div>
+                <!-- TOGGLES  -->
+                <div id="toggles" class="bs-docs-section mb-50">
+                  <div class="row mb-30">
+                    <div class="col-md-12">
+                      <!-- Toggle -->
+                      <dl class="toggle">
+                        <dt>
+                          <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
+                        </dt>
+                        <dd>
+                          <div class="row">
+                            <div class="col-md-7">
+                              <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
+                            </div>
+                            <div class="col-md-5">
+                              <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
+                            </div>
+                          </div>
+                        </dd>
+                        <dt>
+                          <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
+                        </dt>
+                        <dd>
+                          <div class="row">
+                            <div class="col-md-7">
+                              <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
+                            </div>
+                            <div class="col-md-5">
+                              <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
+                            </div>
+                          </div>
+                        </dd>
+                        <dt>
+                          <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
+                        </dt>
+                        <dd>
+                          <div class="row">
+                            <div class="col-md-7">
+                              <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
+                            </div>
+                            <div class="col-md-5">
+                              <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
+                            </div>
+                          </div>
+                        </dd>
+                        <dt>
+                          <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
+                        </dt>
+                        <dd>
+                          <div class="row">
+                            <div class="col-md-7">
+                              <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">http://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
+                            </div>
+                            <div class="col-md-5">
+                              <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
+                            </div>
+                          </div>
+                        </dd>
+                      </dl>
+                      <!-- End Toggle -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-30">
+                  <div class="col-md-12 text-center">
+                    <nav class="blog-pag">
+                      <ul class="pagination">
+                        <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 visible-md"></div>
+          <!-- FIN ROW -->
+        </div>
+        <!-- FIN CONTENT CONTAINER -->
+      </div>
+
+<%= render 'principal/footer' %>
