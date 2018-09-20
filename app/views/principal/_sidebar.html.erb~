@@ -1,0 +1,15 @@
+					<div class="col-lg-2 col-md-3 hidden-xs hidden-sm">
+            <div id="sidebar-stiky" class="bs-sidebar clearfix" role="complementary">
+              <div class="heading-underline h4-line" style="padding-top: 24px;">
+                <h4 class="mt-0">TEMAS DE <br>INVESTIGACIÓN</h4>
+              </div>
+              <ul id="nav-sidebar" class="nav bs-sidenav blog-categories links-list bold a-text-cont">
+                <li id="historia"><a href="<%= historia_path %>">Historia</a></li>
+                <li id="lengua-literatura"><a href="<%= lengua_path %>">Lengua y Literatura</a></li>
+                <li id="politica-partidos-instituciones"><a href="<%= politica_path %>">Política, partidos e <br>instituciones</a></li>
+                <li id="relaciones-internacionales"><a href="<%= relaciones_path %>">Relaciones <br>internacionales</a></li>
+                <li id="sociedad-economia"><a href="<%= sociedad_path %>">Sociedad y Economía</a></li>
+                <li id="violencia-derechos-humanos"><a href="<%= violencia_path %>">Violencia y <br>Derechos Humanos</a></li>
+              </ul>
+            </div>
+          </div>

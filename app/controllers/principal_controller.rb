@@ -14,6 +14,36 @@ class PrincipalController < ApplicationController
   def historia
   end
 
+  def lengua_literatura
+    respond_to do |format|
+      format.html {render :historia}
+    end
+  end
+
+  def partidos_politicos
+    respond_to do |format|
+      format.html {render :historia}
+    end
+  end
+
+  def relaciones_internacionales
+    respond_to do |format|
+      format.html {render :historia}
+    end
+  end
+
+  def sociedad_economia
+    respond_to do |format|
+      format.html {render :historia}
+    end
+  end
+
+  def violencia
+    respond_to do |format|
+      format.html {render :historia}
+    end
+  end
+
   def articulos
   end
 
