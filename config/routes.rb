@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get '/directorio' => 'principal#directorio', :as => :directorio
   get '/videoteca' => 'principal#videoteca', :as => :videoteca
   get '/historia' => 'principal#historia', :as => :historia
+  get '/articulos' => 'principal#articulos', :as => :articulos
   get '/revistas' => 'principal#revistas', :as => :revistas
   get '/tesis' => 'principal#tesis', :as => :tesis
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones

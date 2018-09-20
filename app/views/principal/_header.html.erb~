@@ -29,7 +29,7 @@
                     <ul class="nav navbar-nav bold a-text-cont">
                       <!-- MENU ITEM -->
                       <li class="current">
-                        <a href="index.html">
+                        <a href="<%= root_path %>">
                           <div class="main-menu-title">Inicio</div>
                         </a>
                       </li>

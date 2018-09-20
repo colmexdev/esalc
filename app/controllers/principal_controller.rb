@@ -14,6 +14,9 @@ class PrincipalController < ApplicationController
   def historia
   end
 
+  def articulos
+  end
+
   def revistas
     @unit = "revistas"
     respond_to do |format|
@@ -22,10 +25,10 @@ class PrincipalController < ApplicationController
   end
 
   def tesis
-    @unit = "tesis"
-    respond_to do |format|
-      format.html { render :catalogo}
-    end
+   # @unit = "tesis"
+   # respond_to do |format|
+   #   format.html { render :catalogo}
+   # end
   end
 
   def publicaciones

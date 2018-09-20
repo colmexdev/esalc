@@ -11,6 +11,12 @@ class PrincipalController < ApplicationController
   def videoteca
   end
 
+  def historia
+  end
+
+  def articulos
+  end
+
   def revistas
     @unit = "revistas"
     respond_to do |format|
