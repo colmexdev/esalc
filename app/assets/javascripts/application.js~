@@ -19,6 +19,5 @@
 //= require jquery.appear
 //= require owl.carousel.min
 //= require jquery.nav
-//= require main
 //= require backend
 
