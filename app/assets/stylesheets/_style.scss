@@ -1126,7 +1126,7 @@ support for no js
 	margin-top:30px;
 }
 .fes2-img {
-  background: url(../images/fes2.jpg) 50% 50% no-repeat;
+  background: image-url('fes2.jpg') 50% 50% no-repeat;
 
   width: 100%;
   display: block;
@@ -1152,7 +1152,7 @@ support for no js
 	font-weight: 300;
 }
 .fes3-img {
-  background: url(../images/fes3.jpg) 50% 50% no-repeat;
+  background: image-url('fes3.jpg') 50% 50% no-repeat;
   background-size: cover;
 
   width: 100%;
@@ -2199,7 +2199,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   will-change: background-position;
   margin: 0;
   padding: 0;
-  background: #2c2c2c url(../images/work-proc-bg.jpg) fixed;
+  background: #2c2c2c image-url('work-proc-bg.jpg') fixed;
   color:#f1f1f1;
 }
 .work-proc-1-bg h3, .work-proc-1-bg .icon  {
@@ -2298,7 +2298,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   will-change: background-position;
   margin: 0;
   padding: 0;
-  background:#2c2c2c url(../images/work-proc-bg.jpg) fixed;
+  background:#2c2c2c image-url('work-proc-bg.jpg') fixed;
 }
 .video-ads-text-cont {
   margin:0 auto;
@@ -2647,7 +2647,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   background-repeat: no-repeat;
 }
 .sm-video-bg {
-  background-image: url(../images/static-media/video-bg.jpg);
+  background-image: image-url('video-bg.jpg');
   background-position: 50% 0px;
   overflow: hidden;
   position:relative;
@@ -2740,7 +2740,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url(../images/static-media/img-alfa-wide.png);
+  background-image: image-url('img-alfa-wide.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -2759,10 +2759,10 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   background-repeat: no-repeat;
 }
 @media only screen and (max-width : 1024px) {
-  .bg-img-alfa:before { background-image: url(../images/static-media/img-alfa-wide-1024.png);}
+  .bg-img-alfa:before { background-image: image-url('img-alfa-wide-1024.png');}
 }
 @media (max-width : 1024px) and (orientation: portrait) {
-  .bg-img-alfa:before { background-image: url(../images/static-media/img-alfa-wide-768.png);}
+  .bg-img-alfa:before { background-image: image-url('img-alfa-wide-768.png');}
 }
 
 .bg-dark-alfa-40:before {
@@ -3082,7 +3082,7 @@ select.input-border {
   -webkit-appearance: none;
   -moz-appearance: none;
    appearance: none;
-   background-image: url(../images/select.jpg);
+   background-image: image-url('select.jpg');
    background-position: right;
    background-repeat: no-repeat;
 }
@@ -3619,7 +3619,7 @@ background:none;
 }
 .header .primary .navbar .nav .parent .parent > a,
 .header .primary .navbar .nav .parent:hover .parent > a{
-  background-image: url("../images/caret.png");
+  background-image: image-url("caret.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
 }
@@ -4409,7 +4409,7 @@ blockquote.custom-blockquote:before {
 	width: 36px;
 	background-attachment: scroll;
 	background-color: transparent;
-	background-image: url(../images/box-icons.png);
+	background-image: image-url('box-icons.png');
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
@@ -4908,7 +4908,7 @@ blockquote.custom-blockquote:before {
 	padding-bottom:150px;
 }
 .under-constr-bg {
-  background: url(../images/under-const.jpg) 50% 50%;
+  background: image-url('under-const.jpg') 50% 50%;
   background-size: cover !important;
 
   width: 100%;
@@ -5092,7 +5092,7 @@ ul#portfolio {
 	width: 15px;
 	background-attachment: scroll;
 	background-color: transparent;
-	background-image: url(../images/list-icons.png);
+	background-image: image-url('list-icons.png');
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
@@ -6012,7 +6012,7 @@ a:hover, a:focus {
 	font-size:14px;
 	padding:10px 17px 10px 40px;
 	background-color:#ffea00;
-	background: url(../images/icon-get-theme.png) no-repeat scroll 14px center, #ffea00;
+	background: image-url('icon-get-theme.png') no-repeat scroll 14px center, #ffea00;
 	display:inline-block;
   border-bottom: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
@@ -6412,7 +6412,7 @@ a:hover, a:focus {
 /*	#COUNTER
 ==================================================*/
 .counter-bg {
-	background:url(../images/f-box4-bg.png) left top repeat ;
+	background: image-url('f-box4-bg.png') left top repeat ;
 }
 .counter-bg-color {
 	background:#ffea00 ;
