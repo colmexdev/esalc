@@ -4,21 +4,7 @@
       <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
         <div class="row">
           <!-- SIDENAV HIDE -->
-          <div class="col-lg-2 col-md-3 hidden-xs hidden-sm">
-            <div id="sidebar-stiky" class="bs-sidebar clearfix" role="complementary">
-              <div class="heading-underline h4-line" style="padding-top: 24px;">
-                <h4 class="mt-0">TEMAS DE <br>INVESTIGACIÓN</h4>
-              </div>
-              <ul id="nav-sidebar" class="nav bs-sidenav blog-categories links-list bold a-text-cont">
-                <li class="current"><a href="<%= historia_path %>">Historia</a></li>
-                <li><a href="lengua-y-literatura.html">Lengua y Literatura</a></li>
-                <li><a href="politica-partidos-instituciones.html">Política, partidos e <br>instituciones</a></li>
-                <li><a href="relaciones-internacionales.html">Relaciones <br>internacionales</a></li>
-                <li><a href="sociedad-economia.html">Sociedad y Economía</a></li>
-                <li><a href="violencia-derechos-humanos.html">Violencia y <br>Derechos Humanos</a></li>
-              </ul>
-            </div>
-          </div>
+          <%= render 'principal/sidebar' %>
           <!-- INTRODUCCIÓN  -->
           <div class="col-lg-9 col-md-8 col-sm-12 plr-50">
             <h2 class="section-title pr-0 mb-40"><span class="bold ">HISTORIA</span></h2>
@@ -48,7 +34,7 @@
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
                       <div class="col-md-8 pl-0">
-                        <form method="post" action="#" class="form">
+                        <form method="post" action="#" class="forma">
                           <select name="tipo" id="tipo" class="select-md input-border w-100">
                             <option value>Tipo</option>
                             <option value="Directorio">Directorio</option>

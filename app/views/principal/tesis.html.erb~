@@ -1,0 +1,199 @@
+<%= render 'principal/header' %>
+
+      <!-- CONTENT CONTAINER -->
+      <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
+        <div class="row">
+          <!-- SIDENAV HIDE -->
+          <%= render 'principal/sidebar' %>
+
+          <!-- INTRODUCCIÓN  -->
+          <div class="col-lg-9 col-md-9 col-sm-12 plr-50">
+
+            <h2 class="section-title pr-0 mb-40"><span class="bold ">TESIS</span></h2>
+            <div class="row">
+              <div class="col-md-10 col-sm-12 col-md-offset-1">
+                <p class="text-left">Aquí podrás encontrar información sobre las Tesis publicadas en El Colegio de México sobre temas relacionados con América Latina.</p>
+              </div>
+            </div>
+            <!-- FORMULARIO DE BÚSQUEDA -->
+            <div class="row">
+              <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
+                <!-- FORMULARIO DE BÚSQUEDA -->
+                <div class="row">
+                  <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
+                        <h4 class="mt-10"><strong>Buscar por: </strong></h4>
+                      </div>
+                      <div class="col-lg-8 col-md-12 pl-0">
+                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-7 col-md-12 col-sm-12">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                        <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
+                      </div>
+                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                        <form method="post" action="#" class="form">
+                          <select name="programa" id="programa" class="select-md input-border w-100">
+                            <option value>Programa Académico</option>
+                            <option value="liceconomia">Licenciatura en Economía</option>
+                            <option value="licpap">Licenciatura en Política y Administración Pública</option>
+                            <option value="licri">Licenciatura en Relaciones Internacionales</option>
+                            <option value="maescienciapolitica">Maestría en Ciencia Política</option>
+                            <option value="maescienciasocial">Maestría en Ciencia Social con especialidad en Sociología</option>
+                            <option value="maesdemografia">Maestría en Demografía</option>
+                            <option value="maeseconomia">Maestría en Economía</option>
+                            <option value="maesasiaafrica">Maestría en Estudios de Asia y África</option>
+                            <option value="maesgenero">Maestría en Estudios de Género</option>
+                            <option value="maesestudiosurbanos">Maestría en Estudios Urbanos</option>
+                            <option value="maestraduccion">Maestría en Traducción</option>
+                            <option value="doccienciasocial">Doctorado en Ciencia Social con especialidad en Sociología</option>
+                            <option value="doceconomia">Doctorado en Economía</option>
+                            <option value="docestudiospoblacion">Doctorado en Estudios de Población</option>
+                            <option value="docestudiosurbanos">Doctorado en Estudios Urbanos y Ambientales</option>
+                            <option value="dochistoria">Doctorado en Historia</option>
+                            <option value="doclinguistica">Doctorado en Lingüística</option>
+                            <option value="docliteraturahispania">Doctorado en Literatura Hispánica</option>
+                          </select>
+                        </form>
+                      </div>
+                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                        <form method="post" action="#" class="form">
+                          <select name="centros" id="centros" class="select-md input-border w-100">
+                            <option value>Centros de Estudio</option>
+                            <option value="ceaa">CEAA</option>
+                            <option value="cedua">CEDUA</option>
+                            <option value="cee">CEE</option>
+                            <option value="ceh">CEH</option>
+                            <option value="cei">CEI</option>
+                            <option value="cell">CELL</option>
+                            <option value="ces">CES</option>
+                          </select>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                    <br class="visible-sm visible-xs">
+                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                  </div>
+                </div>
+                <!-- FIN FORMULARIO DE BÚSQUEDA -->
+                <div class="row mt-30 mb-40">
+                  <div class="col-md-8 col-xs-12 text-left">
+                    <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
+                  </div>
+                  <div class="col-md-4 hidden-sm hidden-xs text-right">
+                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                  </div>
+                  <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
+                    <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>
+                  </div>
+                </div>
+                <!-- Toggle -->
+                <dl class="toggle">
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">Políticas públicas de mitigación de cambio climático en México y Brasil</h5><h5 class="verde-obscuro mt-10 mb-0">Pierard Manzano, Elena Christiane</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>Ortega Ortiz, Reynaldo Yunuen</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>Licenciatura en Política y Administración Pública</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2016</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716" target="_blank" class="a-inv">https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716</a></p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>CEI</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>Español</span></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">Políticas públicas de mitigación de cambio climático en México y Brasil</h5><h5 class="verde-obscuro mt-10 mb-0">Pierard Manzano, Elena Christiane</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>Ortega Ortiz, Reynaldo Yunuen</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>Licenciatura en Política y Administración Pública</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2016</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716" target="_blank" class="a-inv">https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716</a></p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>CEI</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>Español</span></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">Políticas públicas de mitigación de cambio climático en México y Brasil</h5><h5 class="verde-obscuro mt-10 mb-0">Pierard Manzano, Elena Christiane</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>Ortega Ortiz, Reynaldo Yunuen</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>Licenciatura en Política y Administración Pública</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2016</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716" target="_blank" class="a-inv">https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716</a></p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>CEI</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>Español</span></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">Políticas públicas de mitigación de cambio climático en México y Brasil</h5><h5 class="verde-obscuro mt-10 mb-0">Pierard Manzano, Elena Christiane</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-8">
+                        <p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>Ortega Ortiz, Reynaldo Yunuen</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>Licenciatura en Política y Administración Pública</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2016</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716" target="_blank" class="a-inv">https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716</a></p>
+                      </div>
+                      <div class="col-md-4">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>CEI</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>Español</span></p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <!-- End Toggle -->
+              </div>
+            </div>
+          </div>
+          <div class="row mb-30">
+            <div class="col-md-12 text-center">
+              <nav class="blog-pag">
+                <ul class="pagination">
+                  <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 visible-md"></div>
+    <!-- FIN ROW -->
+  </div>
+  <!-- FIN CONTENT CONTAINER -->
+  </div>
+
+<%= render 'principal/footer' %>

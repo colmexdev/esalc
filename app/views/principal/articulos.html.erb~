@@ -126,7 +126,7 @@
                   <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-2 col-lg-offset-0 wow fadeInUp pb-70">
                     <div class="row">
                       <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                        <a href="https://cuadernoslinguistica.colmex.mx/index.php/cl"><img src="images/clecm.png" alt="Portada revista"></a>
+                        <a href="https://cuadernoslinguistica.colmex.mx/index.php/cl"><img src="<%= image_url('clecm.png') %>" alt="Portada revista"></a>
                       </div>
                     </div>
                     <div class="post-prev-more-cont clearfix ">
@@ -137,7 +137,7 @@
                   <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-2 col-lg-offset-0 wow fadeInUp pb-70">
                     <div class="row">
                       <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                        <a href="https://estudiossociologicos.colmex.mx/index.php/es"><img src="images/res.png" alt="Portada revista"></a>
+                        <a href="https://estudiossociologicos.colmex.mx/index.php/es"><img src="<%= image_url('res.png') %>" alt="Portada revista"></a>
                       </div>
                     </div>
                     <div class="post-prev-more-cont clearfix ">
@@ -148,7 +148,7 @@
                   <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-2 col-lg-offset-0 wow fadeInUp pb-70">
                     <div class="row">
                       <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                        <a href="https://estudiosdegenero.colmex.mx/index.php/eg"><img src="images/reg.png" alt="Portada revista"></a>
+                        <a href="https://estudiosdegenero.colmex.mx/index.php/eg"><img src="<%= image_url('reg.png') %>" alt="Portada revista"></a>
                       </div>
                     </div>
                     <div class="post-prev-more-cont clearfix ">
