@@ -98,14 +98,23 @@
               <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
                 <!-- FORMULARIO DE BÚSQUEDA -->
                 <div class="row">
+<script>
+function filter(){
+	console.log("filtrar");
+}
 
+function clean(){
+	console.log("limpiar");
+}
+</script>
+								<form action="#">
                   <div class="col-lg-3 col-md-12 col-sm-12">
                     <div class="row">
                       <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-lg-8 col-md-12 pl-0">
-                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="">
+                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="" oninput="filter()">
                       </div>
                     </div>
                   </div>
@@ -116,7 +125,7 @@
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
 
-                          <select name="tema" id="tema" class="select-md input-border w-100">
+                          <select name="tema" id="tema" class="select-md input-border w-100" onchange="filter()">
                             <option value>Tema</option>
                             <option value="historia">Historia</option>
                             <option value="lengua">Lengua y Literatura</option>
@@ -129,7 +138,7 @@
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
 
-                          <select name="pais" id="pais" class="select-md input-border w-100">
+                          <select name="pais" id="pais" class="select-md input-border w-100" onchange="filter()">
                             <option value>País</option>
                             <option value="anguila">Anguila (Gb)</option>
                             <option value="antiguaybarbuda">Antigua y Barbuda</option>
@@ -183,7 +192,7 @@
 
                       <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
 
-                          <select name="fecha" id="fecha" class="select-md input-border w-100">
+                          <select name="fecha" id="fecha" class="select-md input-border w-100" onchange="filter()">
                             <option value>Año</option>
                             <option value="2018">2018</option>
                             <option value="2017">2017</option>
@@ -201,8 +210,9 @@
                   </div>
                   <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
                     <br class="visible-sm visible-xs">
-                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                    <button class="button medium hover-thin deeporange w-100-767" onclick="clean()">LIMPIAR BÚSQUEDA</button>
                   </div>
+								</form>
                 </div>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
                 <div class="row mt-30 mb-40">
