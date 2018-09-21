@@ -1,5 +1,6 @@
 class PrincipalController < ApplicationController
   def principal
+    @pubs = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
   end
 
   def libros
@@ -65,6 +66,9 @@ class PrincipalController < ApplicationController
    # respond_to do |format|
    #   format.html { render :catalogo}
    # end
+  end
+
+  def eventos
   end
 
   def publicaciones
