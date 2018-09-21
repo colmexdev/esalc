@@ -1,0 +1,402 @@
+<%= render 'principal/header' %>
+
+      <!-- CONTENT CONTAINER -->
+      <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
+        <div class="row">
+          <!-- SIDENAV HIDE -->
+          <%= render 'principal/sidebar' %>
+
+          <!-- INTRODUCCIÓN  -->
+          <div class="col-lg-9 col-md-8 col-sm-12 plr-50">
+
+            <!-- PUBLICACIONES RECIENTES -->
+            <div class="page-section pt-40">
+              <div class="mb-30">
+                <h2 class="section-title pr-0 "><span class="bold ">SEMINARIOS</span></h2>
+              </div>
+              <div class="row mb-20">
+                <div class="col-md-10 col-sm-12 col-md-offset-1">
+                  <p class="text-left">Aquí podrás encontrar información sobre los seminarios de El Colegio de México que tratan sobre temas relacionados con América Latina.</p>
+                </div>
+              </div>
+              <!-- FEATURES 4 -->
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://mexico-guatemala.colmex.mx/" target="_blank" class="a-inv">El Grupo Guatemala-México. <br>Migración y Desarrollo</a></strong></h5>
+                        <h3><span class="bold">Responsable: Manuel Ángel Castillo</h3>
+                      </div>
+                      <div>
+                        El Grupo Guatemala-México, Migración y Desarrollo es una iniciativa ciudadana cuyo propósito es incidir en la formulación y ejecución de políticas migratorias de ambos países.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://mexico-guatemala.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://encuestaalap.colmex.mx/" target="_blank" class="a-inv">Anuario de Programas de Enseñanza de la Demografía en América Latina</a></strong></h5>
+                        <h3><span class="bold">Responsable: CEDUA</h3>
+                      </div>
+                      <div>
+                        Durante el VI Congreso de Alap, se presentaron los resultados de la Encuesta sobre Enseñanza de la Demografía de ALAP (MR6). <br><br>
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://encuestaalap.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://seminariomex-esp.colmex.mx/" target="_blank" class="a-inv">Seminario Permanente México-España</a></strong></h5>
+                        <h3><span class="bold">Clara E. Lida</h3>
+                      </div>
+                      <div>
+                        Es una actividad cuyo objetivo es servir de foro donde colegas y doctorandos de los centros de investigación en México puedan presentar y debatir los avances y resultados de sus investigaciones en torno a las relaciones entre ambos países desde las post
+                        Independencias hasta el presente.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://seminariomex-esp.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://shial.colmex.mx/" target="_blank" class="a-inv">Seminario de Historia Intelectual de América Latina siglos XIX y XX</a></strong></h5>
+                        <h3><span class="bold">Carlos Marichal</h3>
+                      </div>
+                      <div>
+                        Es una actividad permanente cuyo objetivo es crear un espacio de debate entre historiadores, profesionales de disciplinas afines, estudiantes universitarios y en general todas las personas con un interés formal y especializado en el tema y del periodo
+                        mencionados.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://shial.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://semhistsoc.colmex.mx/" target="_blank" class="a-inv">Seminario Permanente de Historia Social</a></strong></h5>
+                        <h3><span class="bold">Responsable: Clara E. Lida</h3>
+                      </div>
+                      <div>
+                        Su propósito es abrir un espacio plural de discusión, en el que se presenten los resultados de investigaciones inéditas de nivel doctoral o posdoctoral sobre diversos aspectos del vasto campo de la historia social, con sus múltiples intersecciones con
+                        otras áreas de la historia y con las ciencias sociales.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://semhistsoc.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://cell.colmex.mx/index.php/proyectos/archivo-de-lenguas-indigenas" target="_blank" class="a-inv">Archivo de Lenguas Indígenas de México</a></strong></h5>
+                        <h3><span class="bold">Responsable: CELL</h3>
+                      </div>
+                      <div>
+                        Por razones de orden práctico y principalmente el deseo de que la formación del Archivo fuera una tarea realizable en un lapso limitado, se han fijado como objetivos: que el Archivo 1) contenga una muestra representativa de la diferenciación lingüística
+                        de México, y 2) sea utilizable para comparaciones tipológicas e históricas.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://cell.colmex.mx/index.php/proyectos/archivo-de-lenguas-indigenas" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://migdep.colmex.mx/" target="_blank" class="a-inv">Seminario Migración, Desigualdad y Políticas Públicas</a></strong></h5>
+                        <h3><span class="bold">Responsable: Claudia Masferrer</h3>
+                      </div>
+                      <div>
+                        Dentro de la Red de Estudios sobre Desigualdades, el Seminario “Migración, desigualdad y políticas públicas” (MIGDEP), busca comprender de qué manera y cómo diversas dimensiones asociadas a la migración amplían o disminuyen las desigualdades.<br><br><br>
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://migdep.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="http://catedrahumboldt.colmex.mx/" target="_blank" class="a-inv">Cátedra Guillermo y Alejandro Humboldt</a></strong></h5>
+                        <h3><span class="bold">Responsable: Marion Röwekamp</h3>
+                      </div>
+                      <div>
+                        La cátedra prevé el desarrollo conjunto de actividades como la realización de clases teóricas, ejercicios y seminarios en estudios de posgrado, asesoría y apoyo en los trabajos de tesis, investigaciones en grupos interdisciplinarios e internacionales
+                        por medio de conferencias magistrales, congresos y coloquios especializados o interdisciplinarios en estrecha cooperación con contrapartes de El Colegio de México situadas en México y América Latina.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="http://catedrahumboldt.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://seminario7tesis.colmex.mx/" target="_blank" class="a-inv">Seminario 7 Tesis equivocadas sobre América Latina</a></strong></h5>
+                        <h3><span class="bold">Responsable: CES</h3>
+                      </div>
+                      <div>
+                        Discutir dentro de una perspectiva integral que logre impulsar el debate sobre la situación contemporánea de América Latina, la cual parta de la crítica realizada en el trabajo de las Siete Tesis Equivocadas sobre América Latina, ya que este texto construyó
+                        a la reflexión teórica de las diversas corrientes expresadas en esa época (1965), desde la marxista hasta la desarrollista, sin que ellas se transformaran en límites para el análisis de los problemas estudiados.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://seminario7tesis.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="https://www.facebook.com/shi.seminario/" target="_blank" class="a-inv">Seminario de Historia Internacional</a></strong></h5>
+                        <h3><span class="bold">Responsable: UNAM / CEH (El Colegio de México)</h3>
+                      </div>
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis fermentum odio suscipit bibendum. Integer quam nulla, vestibulum ac pretium tincidunt, egestas nec mauris. <br><br>
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="https://www.facebook.com/shi.seminario/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="http://ceh.colmex.mx/index.php/9-seminarios-de-investigacion/13-seminario-institucional-de-historiografia" target="_blank" class="a-inv">Seminario Institucional de Historiografía</a></strong></h5>
+                        <h3><span class="bold">Responsable: Guillermo Zermeño</h3>
+                      </div>
+                      <div>
+                        El seminario se caracteriza por permitir la participación, tanto de destacados estudiosos como de alumnos de grado, a fin de fomentar el intercambio de ideas en distintos niveles, lo cual permite estrechar vínculos interinstitucionales y consolidar el
+                        desarrollo de esta disciplina.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="http://ceh.colmex.mx/index.php/9-seminarios-de-investigacion/13-seminario-institucional-de-historiografia" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4 col-md-4">
+                    <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
+                      <div class="fes4-title-cont">
+                        <h5><strong><a href="http://sihe.colmex.mx/" target="_blank" class="a-inv">Seminario Interinstitucional de Historia Económica</a></strong></h5>
+                        <h3><span class="bold">Responsable: CEH</h3>
+                      </div>
+                      <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam facilisis fermentum odio suscipit bibendum. Integer quam nulla, vestibulum ac pretium tincidunt, egestas nec mauris.
+                      </div>
+                      <div class="post-prev-more-cont clearfix">
+                        <a class="button medium gray-light shop-add-btn" href="http://sihe.colmex.mx/" target="_blank">CONSULTAR</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- FORMULARIO DE BÚSQUEDA -->
+            <div class="row">
+              <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
+                <!-- FORMULARIO DE BÚSQUEDA -->
+                <div class="row">
+                  <div class="col-lg-10 col-md-12 col-sm-12">
+                    <div class="row">
+                      <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                        <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
+                      </div>
+                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                        <form method="post" action="#" class="form">
+                          <select name="proyecto" id="proyecto" class="select-md input-border w-100">
+                            <option value>Proyecto</option>
+                            <option value="ggm">El Grupo Guatemala-México. Migración y Desarrollo</option>
+                            <option value="apedal">Anuario de Programas de Enseñanza de la Demografía en América Latina</option>
+                            <option value="spme">Seminario Permanente México-España</option>
+                            <option value="shial">Seminario de Historia Intelectual de América Latina siglos XIX y XX</option>
+                            <option value="sphs">Seminario Permanente de Historia Social</option>
+                            <option value="alim">Archivo de Lenguas Indígenas de México</option>
+                            <option value="migdep">Seminario Migración, Desigualdad y Políticas Públicas</option>
+                            <option value="catedrahumboldt">Cátedra Guillermo y Alejandro Humboldt</option>
+                            <option value="s7tesis">Seminario 7 Tesis equivocadas sobre América Latina</option>
+                            <option value="shi">Seminario de Historia Internacional</option>
+                            <option value="sih">Seminario Institucional de Historiografía</option>
+                            <option value="sihe">Seminario Interinstitucional de Historia Económica</option>
+                          </select>
+                        </form>
+                      </div>
+                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                        <form method="post" action="#" class="form">
+                          <select name="centro" id="centro" class="select-md input-border w-100">
+                            <option value>Centro de Estudio</option>
+                            <option value="ceaa">CEAA</option>
+                            <option value="cedua">CEDUA</option>
+                            <option value="cee">CEE</option>
+                            <option value="ceh">CEH</option>
+                            <option value="cei">CEI</option>
+                            <option value="cell">CELL</option>
+                            <option value="ces">CES</option>
+                          </select>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                    <br class="visible-sm visible-xs">
+                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                  </div>
+                </div>
+                <!-- FIN FORMULARIO DE BÚSQUEDA -->
+                <div class="row mt-30 mb-40">
+                  <div class="col-md-8 col-xs-12 text-left">
+                    <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
+                  </div>
+                  <div class="col-md-4 hidden-sm hidden-xs text-right">
+                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                  </div>
+                  <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
+                    <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>
+                  </div>
+                </div>
+                <!-- Toggle -->
+                <dl class="toggle">
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
+                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
+                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
+                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
+                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
+                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
+                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
+                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
+                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                </dl>
+                <!-- End Toggle -->
+              </div>
+            </div>
+          </div>
+          <div class="row mb-30">
+            <div class="col-md-12 text-center">
+              <nav class="blog-pag">
+                <ul class="pagination">
+                  <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 visible-md"></div>
+    <!-- FIN ROW -->
+  </div>
+  <!-- FIN CONTENT CONTAINER -->
+  </div>
+
+<%= render 'principal/footer' %>

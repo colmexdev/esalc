@@ -68,6 +68,9 @@ class PrincipalController < ApplicationController
    # end
   end
 
+  def eventos
+  end
+
   def publicaciones
     @unit = "pub-colmex"
     respond_to do |format|

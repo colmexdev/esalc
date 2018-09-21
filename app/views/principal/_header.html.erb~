@@ -64,7 +64,7 @@
                       </li>
                       <!-- MENU ITEM -->
                       <li id="eventos">
-                        <a href="eventos.html">
+                        <a href="<%= eventos_path %>">
                           <div class="main-menu-title">Eventos</div>
                         </a>
                       </li>
