@@ -99,7 +99,7 @@
                 <!-- FORMULARIO DE BÚSQUEDA -->
                 <div class="row">
 <script>
-function filter(){
+function filter(f_ids){
 	console.log("filtrar");
 }
 
@@ -107,14 +107,14 @@ function clean(){
 	console.log("limpiar");
 }
 </script>
-								<form action="#">
+
                   <div class="col-lg-3 col-md-12 col-sm-12">
                     <div class="row">
                       <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-lg-8 col-md-12 pl-0">
-                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="" oninput="filter()">
+                        <input id="autor" placeholder="Autor (es)" class="input-border w-100" type="text" oninput="filter(['autor','pais','fecha','tema'])">
                       </div>
                     </div>
                   </div>
@@ -212,7 +212,6 @@ function clean(){
                     <br class="visible-sm visible-xs">
                     <button class="button medium hover-thin deeporange w-100-767" onclick="clean()">LIMPIAR BÚSQUEDA</button>
                   </div>
-								</form>
                 </div>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
                 <div class="row mt-30 mb-40">
