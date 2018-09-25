@@ -25,4 +25,7 @@ var html_toggle = "";
 $("#toggle").html(html_toggle);
 $(".tog").removeClass("active");
 $("<%= '#tog-' + params[:offset] %>").addClass("active");
-console.log("<%= @profs.all %>");
+<% @profs.each do |p| %>
+console.log("<%= p %>");
+<% end %>
+
