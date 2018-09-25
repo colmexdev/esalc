@@ -103,7 +103,9 @@ function clean(){
 <% end %>
                             </div>
                             <div class="col-md-6">
+															<% if p.sitio.present? && p.sitio != "" %>
                               <p class="text-left"><strong class="azul-obscuro">Sitio web:</strong> <a href="<%= p.sitio %>" target="_blank" class="a-inv"><%= p.sitio[0..25] + (p.sitio.size >= 25 ? "..." : "") %></a></p>
+															<% end %>
 <% if false %>
                               <p class="text-left"><strong class="azul-obscuro">ORCID:</strong> <span>1234567890</span></p>
                               <p class="text-left"><strong class="azul-obscuro">ISNI:</strong> <span>1234567890</span></p>
@@ -112,7 +114,7 @@ function clean(){
                           </div>
                           <div class="row">
                             <div class="col-md-12">
-                              <p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas %></span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.gsub(/<\?((div)|(p)|(li))/,'').html_safe %></span></p>
 <% if false %>
                               <p class="text-left"><strong class="azul-obscuro">Publicaciones recientes:</strong> <span>Título de la publicación, Título de la publicación, Título de la publicación.</span></p>
 <% end %>
