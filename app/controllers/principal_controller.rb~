@@ -7,6 +7,10 @@ class PrincipalController < ApplicationController
   end
 
   def directorio
+    limite = 5.0
+    @profs_c = Directorio.all.count
+    @profs = Directorio.order(nombre: :asc).limit(limite)
+    @pags = @profs_c/limite.ceil
   end
 
   def videoteca

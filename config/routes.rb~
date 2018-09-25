@@ -21,6 +21,8 @@ Rails.application.routes.draw do
   get '/' => 'principal#principal', :as => :principal
   get '/libros' => 'principal#libros', :as => :libros
   get '/directorio' => 'principal#directorio', :as => :directorio
+  get '/dir_entry' => 'principal#dir_entry', :as => :dir_entry
+
   get '/videoteca' => 'principal#videoteca', :as => :videoteca
   get '/historia' => 'principal#historia', :as => :historia
   get '/lengua-y-literatura' => 'principal#lengua_literatura', :as => :lengua
@@ -31,6 +33,7 @@ Rails.application.routes.draw do
   get '/articulos' => 'principal#articulos', :as => :articulos
   get '/revistas' => 'principal#revistas', :as => :revistas
   get '/tesis' => 'principal#tesis', :as => :tesis
+  get '/seminarios' => 'principal#seminarios', :as => :seminarios
   get '/eventos' => 'principal#eventos', :as => :eventos
   get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   # The priority is based upon order of creation: first created -> highest priority.

@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get '/' => 'principal#principal', :as => :principal
   get '/libros' => 'principal#libros', :as => :libros
   get '/directorio' => 'principal#directorio', :as => :directorio
+
   get '/videoteca' => 'principal#videoteca', :as => :videoteca
   get '/historia' => 'principal#historia', :as => :historia
   get '/lengua-y-literatura' => 'principal#lengua_literatura', :as => :lengua
