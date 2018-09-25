@@ -18,7 +18,7 @@ var html_toggle = "";
                           '</div>' +
                           '<div class="row">' +
                             '<div class="col-md-12">' +
-                              '<p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.gsub(/<\?((div)|(p)|(li))/,'').html_safe %></span></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.gsub(/<\?((div)|(p)|(li))>/,'').html_safe %></span></p>' +
                             '</div>' +
                           '</div>' +
                         '</dd>'

@@ -114,7 +114,7 @@ function clean(){
                           </div>
                           <div class="row">
                             <div class="col-md-12">
-                              <p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.gsub(/<\?((div)|(p)|(li))>/,'').html_safe %></span></p>
+                              <p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.html_safe %></span></p>
 <% if false %>
                               <p class="text-left"><strong class="azul-obscuro">Publicaciones recientes:</strong> <span>Título de la publicación, Título de la publicación, Título de la publicación.</span></p>
 <% end %>
