@@ -114,7 +114,9 @@ function clean(){
                           </div>
                           <div class="row">
                             <div class="col-md-12">
+<% if p.temas.present? && p.temas != "" %>
                               <p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.html_safe %></span></p>
+<% end %>
 <% if false %>
                               <p class="text-left"><strong class="azul-obscuro">Publicaciones recientes:</strong> <span>Título de la publicación, Título de la publicación, Título de la publicación.</span></p>
 <% end %>
