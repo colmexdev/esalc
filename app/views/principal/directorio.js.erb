@@ -9,9 +9,11 @@ var html_toggle = "";
                               '<p class="text-left"><strong class="azul-obscuro">Correo electrónico:</strong> <a href="<%= 'mailto:'+p.correo %>" target="_blank" class="a-inv"><%= p.correo %></a></p>' +
                               '<p class="text-left"><strong class="azul-obscuro">Centro:</strong> <span><%= p.centro %></span></p>' +
                             '</div>' +
-                            '<div class="col-md-6">' +
-                              '<p class="text-left"><strong class="azul-obscuro">Sitio web:</strong> <a href="<%= p.sitio %>" target="_blank" class="a-inv"><%= p.sitio[0..25] + (p.sitio.size >= 25 ? "..." : "") %></a></p>' +
-                            '</div>' + 
+                            '<div class="col-md-6">';
+<% if p.sitio.present? && p.sitio != "" %>
+                              html_toggle = html_toggle + '<p class="text-left"><strong class="azul-obscuro">Sitio web:</strong> <a href="<%= p.sitio %>" target="_blank" class="a-inv"><%= p.sitio[0..25] + (p.sitio.size >= 25 ? "..." : "") %></a></p>';
+<% end %>
+                          html_toggle = html_toggle +  '</div>' + 
                           '</div>' +
                           '<div class="row">' +
                             '<div class="col-md-12">' +
