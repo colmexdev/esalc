@@ -11,6 +11,11 @@ class PrincipalController < ApplicationController
     @profs_c = Directorio.all.count
     @profs = Directorio.order(nombre: :asc).limit(limite)
     @pags = @profs_c/limite.ceil
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def videoteca
