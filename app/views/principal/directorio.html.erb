@@ -134,11 +134,17 @@ function clean(){
                   <div class="col-md-12 text-center">
                     <nav class="blog-pag">
                       <ul class="pagination">
-                        <li><a href="<%= c-1 >= 0 ? directorio_path(params: {offset: (c - 1)}) : '' %>" data-remote="<%= c-1 >= 0 ? '' : 'true' %>"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+
 <% @pags.times do |c| %>
+	<% if c == 0 %>
+                        <li><a href="<%= c-1 >= 0 ? directorio_path(params: {offset: (c - 1)}) : '' %>" data-remote="<%= c-1 >= 0 ? '' : 'true' %>"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+	<% end %>
                         <li id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
-<% end %>
+	<% if c == @pags %>
                         <li><a href="<%= c+1 <= @pags ? directorio_path(params: {offset: (c + 1)}) : '' %>" data-remote="<%= c+1 <= @pags ? '' : 'true' %>"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+	<% end %>
+<% end %>
+
                       </ul>
                     </nav>
                   </div>
