@@ -1,6 +1,5 @@
 var html_toggle = "";
 <% @profs.each do |p| %>
-												console.log(<%= p.to_s %>);
                         html_toggle = html_toggle + '<dt>' +
                           '<a href="#"><h5 class="m-0 text-left"><%= p.nombre %></h5></a>' +
                         '</dt>' +
@@ -17,9 +16,11 @@ var html_toggle = "";
                           html_toggle = html_toggle +  '</div>' + 
                           '</div>' +
                           '<div class="row">' +
-                            '<div class="col-md-12">' +
-                              '<p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.html_safe %></span></p>' +
-                            '</div>' +
+                            '<div class="col-md-12">';
+<% if temas.present? && temas != "" %>
+                              html_toggle = html_toggle + '<p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.html_safe %></span></p>';
+<% end %>
+                            html_toggle = html_toggle + '</div>' +
                           '</div>' +
                         '</dd>'
 <% end %>
