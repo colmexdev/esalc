@@ -141,7 +141,7 @@ function clean(){
 	<% end %>
                         <li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
 	<% if c == @pags - 1 %>
-                        <li><a href="<%= directorio_path(params: {offset: 1} %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+                        <li><a href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
 	<% end %>
 <% end %>
 
