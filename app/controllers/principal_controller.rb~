@@ -9,9 +9,8 @@ class PrincipalController < ApplicationController
   def directorio
     limite = 5.0
     @profs_c = Directorio.all.count
-    @profs = Directorio.order(nombre: :asc).limit(limite)
+    @profs = Directorio.order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = @profs_c/limite.ceil
-
     respond_to do |format|
       format.html
       format.js

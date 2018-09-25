@@ -140,7 +140,7 @@ function clean(){
                         <li><a href="<%= c-1 >= 0 ? directorio_path(params: {offset: (c - 1)}) : '' %>" data-remote="<%= c-1 >= 0 ? '' : 'true' %>"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
 	<% end %>
                         <li id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
-	<% if c == @pags %>
+	<% if c == @pags - 1 %>
                         <li><a href="<%= c+1 <= @pags ? directorio_path(params: {offset: (c + 1)}) : '' %>" data-remote="<%= c+1 <= @pags ? '' : 'true' %>"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
 	<% end %>
 <% end %>
