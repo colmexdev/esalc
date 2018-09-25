@@ -17,7 +17,7 @@ var html_toggle = "";
                           '</div>' +
                           '<div class="row">' +
                             '<div class="col-md-12">';
-<% if temas.present? && temas != "" %>
+<% if p.temas.present? && p.temas != "" %>
                               html_toggle = html_toggle + '<p class="text-left"><strong class="azul-obscuro">Líneas de investigación:</strong> <span><%= p.temas.html_safe %></span></p>';
 <% end %>
                             html_toggle = html_toggle + '</div>' +
