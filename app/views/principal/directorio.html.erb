@@ -137,11 +137,11 @@ function clean(){
 
 <% @pags.times do |c| %>
 	<% if c == 0 %>
-                        <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+                        <li><a id="tog-ant" href="<%= directorio_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
 	<% end %>
                         <li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
 	<% if c == @pags - 1 %>
-                        <li><a href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+                        <li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
 	<% end %>
 <% end %>
 
