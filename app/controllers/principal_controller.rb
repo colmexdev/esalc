@@ -7,14 +7,28 @@ class PrincipalController < ApplicationController
   end
 
   def directorio
+    where = ""
+    if params.key?(:conds)
+      where = build_where(params[:conds])
+    end
     limite = 5.0
     @profs_c = Directorio.all.count
-    @profs = Directorio.order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @profs = Directorio.where(where).order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = @profs_c/limite.ceil
     respond_to do |format|
       format.html
       format.js
     end
+  end
+
+  def build_where(pars)
+    where = ""
+    multi = false
+    if pars.key?(:inicial)
+      where = {"nombre like '" + pars[:inicial] + "%'"}
+      multi = true
+    end
+    return where
   end
 
   def videoteca
