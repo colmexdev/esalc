@@ -40,9 +40,9 @@
                           <option value>Tema</option>
                           <option value="historia">Historia</option>
                           <option value="lengua">Lengua y Literatura</option>
-                          <option value="politica">Política, Partidos e Instituciones</option>
-                          <option value="ri">Relaciones internacionales</option>
-                          <option value="sociedad">Sociedad y Economía</option>
+                          <option value="politic">Política, Partidos e Instituciones</option>
+                          <option value="internacionales">Relaciones internacionales</option>
+                          <option value="economi">Sociedad y Economía</option>
                           <option value="violencia">Violencia y Derechos Humanos</option>
                         </select>
                       </form>
@@ -59,7 +59,7 @@ function filter(f_ids){
 	var where = "", multi = false, val;
 	for(var i=0;i<f_ids.length;i++){
 		val = $("#"+f_ids[i]).val();
-		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val() : "");
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
 		url: "/articulos.js?offset=0" + where,
