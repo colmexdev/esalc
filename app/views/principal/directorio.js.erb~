@@ -33,14 +33,14 @@ var pag_html = ""
 	<% if c == 0 %>
                         pag_html = pag_html + '<li><a id="tog-ant" href="<%= directorio_path(params: {offset: 0}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	<% end %>
-                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
 	<% if c == @pags - 1 %>
-                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
 <% end %>
 $("#pags").html(pag_html);
 $("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") );
-$("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : ""));
+$("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : ""));
 $("#count_p").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
 $("#count_pr").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
   // ACCORDION
