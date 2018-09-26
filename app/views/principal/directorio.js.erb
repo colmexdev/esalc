@@ -31,4 +31,40 @@ $("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset
 $("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>");
 $("#count_p").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
 $("#count_pr").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
-
+  // ACCORDION
+  var accordPanels = $(".accordion > dd").hide();
+  
+    accordPanels.first().slideDown("easeOutExpo");
+    $(".accordion > dt > a").first().addClass("active");
+    
+    $(".accordion > dt > a").click(function(){
+    
+      var current = $(this).parent().next("dd");
+      $(".accordion > dt > a").removeClass("active");
+      $(this).addClass("active");
+      accordPanels.not(current).slideUp("easeInExpo");
+      $(this).parent().next().slideDown("easeOutExpo");
+      
+      return false;
+            
+  });
+  
+  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });
