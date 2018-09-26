@@ -28,6 +28,13 @@ class PrincipalController < ApplicationController
       where = "nombre like '" + pars[:inicial] + "%'"
       multi = true
     end
+    if pars.key?(:centros)
+      where = where + (multi ? " AND " : "") + "centro = '" + pars[:centros].upcase + "'"
+      multi = true
+    end
+    if pars.key?(:nombre)
+      where = where + (multi ? " AND " : "") + "lower(nombre) like '%" + pars[:nombre].downcase + "%'"
+    end
     return where
   end
 
