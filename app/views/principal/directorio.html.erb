@@ -69,10 +69,15 @@
 
 <script>
 function filter(f_ids){
-	var where = "";
+	var where = "", multi = false, val;
 	for(var i=0;i<f_ids.length;i++){
-		where = where + "conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val();
+		val = $("#"+f_ids[i].val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val() : "");
 	}
+	$.ajax({
+		url: "/directorio.js?offset=0" + where,
+		success: function(){}
+	});
   console.log(where);
 }
 
