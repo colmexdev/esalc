@@ -25,7 +25,7 @@
                       <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                     </div>
                     <div class="col-md-8 pl-0">
-                      <input placeholder="Autor (es)" class="input-border w-100" type="text" required="">
+                      <input id="autor" oninput="filter(['autor','tema']);" placeholder="Autor (es)" class="input-border w-100" type="text">
                     </div>
                   </div>
                 </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-md-8 pl-0">
                       <form method="post" action="#" class="forma">
-                        <select name="tema" id="tema" class="select-md input-border w-100">
+                        <select onchange="filter(['autor','tema']);" name="tema" id="tema" class="select-md input-border w-100">
                           <option value>Tema</option>
                           <option value="historia">Historia</option>
                           <option value="lengua">Lengua y Literatura</option>
@@ -51,9 +51,31 @@
                 </div>
                 <div class="col-md-3 col-sm-6 plr-0">
                   <br class="visible-sm visible-xs">
-                  <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                  <button onclick="clean();" type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                 </div>
               </div>
+<script>
+function filter(f_ids){
+	var where = "", multi = false, val;
+	for(var i=0;i<f_ids.length;i++){
+		val = $("#"+f_ids[i]).val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val() : "");
+	}
+	$.ajax({
+		url: "/articulos.js?offset=0" + where,
+		success: function(){}
+	});
+}
+
+function clean(){
+	$("#autor").val("");
+	$("#temas").val("");
+	$.ajax({
+		url: "/articulos.js?offset=0",
+		success: function(){}
+	});
+}
+</script>
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 plr-50">
                   <!-- PUBLICACIONES Item 1 -->
@@ -166,14 +188,34 @@
                     <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
                   </div>
                   <div class="col-md-4 hidden-sm hidden-xs text-right">
-                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                    <h3 id="count_p" class="verde-obscuro m-0"><%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %></h3>
                   </div>
                   <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
-                    <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>
+                    <h3 id="count_pr" class="verde-obscuro"><%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %></h3>
                   </div>
                 </div>
                 <!-- Toggle -->
-                <dl class="toggle">
+                <dl id="toggle" class="toggle">
+<% @mags.each do |m| %>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left"><%= m.articulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= m.autores %></h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span><%= m.revista %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span><%= m.volumen %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span><%= m.numero %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= m.link %>" target="_blank" class="a-inv"><%= m.link[0..30] + (m.link.size >= 30 ? "..." : "") %></a></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span><%= m.fecha %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span><%= m.tematica %></span></p>
+                      </div>
+                    </div>
+                  </dd>
+<% end %>
+<% if false %>
                   <dt>
                     <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
                   </dt>
@@ -225,23 +267,7 @@
                       </div>
                     </div>
                   </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
-                      </div>
-                    </div>
-                  </dd>
+<% end %>
                 </dl>
                 <!-- End Toggle -->
               </div>
@@ -251,13 +277,15 @@
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
                 <ul class="pagination">
-                  <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        <li><a id="tog-ant" href="<%= articulos_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+	<% end %>
+                        <li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= articulos_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
+	<% if c == @pags - 1 %>
+                        <li><a id="tog-nxt" href="<%= articulos_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+	<% end %>
+<% end %>
                 </ul>
               </nav>
             </div>

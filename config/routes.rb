@@ -30,11 +30,9 @@ Rails.application.routes.draw do
   get '/sociedad-economia' => 'principal#sociedad_economia', :as => :sociedad
   get '/violencia-derechos-humanos' => 'principal#violencia', :as => :violencia
   get '/articulos' => 'principal#articulos', :as => :articulos
-  get '/revistas' => 'principal#revistas', :as => :revistas
   get '/tesis' => 'principal#tesis', :as => :tesis
   get '/seminarios' => 'principal#seminarios', :as => :seminarios
   get '/eventos' => 'principal#eventos', :as => :eventos
-  get '/publicaciones' => 'principal#publicaciones', :as => :publicaciones
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

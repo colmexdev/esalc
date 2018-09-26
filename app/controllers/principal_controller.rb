@@ -21,23 +21,6 @@ class PrincipalController < ApplicationController
     end
   end
 
-  def build_where(pars)
-    where = ""
-    multi = false
-    if pars.key?(:inicial)
-      where = "nombre like '" + pars[:inicial] + "%'"
-      multi = true
-    end
-    if pars.key?(:centros)
-      where = where + (multi ? " AND " : "") + "centro = '" + pars[:centros].upcase + "'"
-      multi = true
-    end
-    if pars.key?(:nombre)
-      where = where + (multi ? " AND " : "") + "lower(nombre) like '%" + pars[:nombre].downcase + "%'"
-    end
-    return where
-  end
-
   def videoteca
   end
 
@@ -81,14 +64,46 @@ class PrincipalController < ApplicationController
   end
 
   def articulos
-  end
-
-  def revistas
-    @unit = "revistas"
+    where = ""
+    if params.key?(:conds)
+      where = build_where(params[:conds])
+    end
+    limite = 5.0
+    @mags_c = Magazine.where(where).count
+    @mags = Magazine.where(where).order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @pags = @mags_c/limite.ceil
     respond_to do |format|
-      format.html { render :catalogo}
+      format.html
+      format.js
     end
   end
+
+  def build_where(pars)
+    where = ""
+    multi = false
+    if pars.key?(:inicial)
+      where = "nombre like '" + pars[:inicial] + "%'"
+      multi = true
+    end
+    if pars.key?(:centros)
+      where = where + (multi ? " AND " : "") + "centro = '" + pars[:centros].upcase + "'"
+      multi = true
+    end
+    if pars.key?(:nombre)
+      where = where + (multi ? " AND " : "") + "lower(nombre) like '%" + pars[:nombre].downcase + "%'"
+      multi = true
+    end
+    if pars.key?(:autor)
+      where = where + (multi ? " AND " : "") + "lower(autores) like '%" + pars[:autor].downcase + "%'"
+      multi = true
+    end
+    if pars.key?(:temas)
+      where = where + (multi ? " AND " : "") + "lower(tematica) like '%" + pars[:temas].downcase + "%'"
+      multi = true
+    end
+    return where
+  end
+
 
   def tesis
    # @unit = "tesis"
@@ -101,13 +116,6 @@ class PrincipalController < ApplicationController
   end
 
   def seminarios
-  end
-
-  def publicaciones
-    @unit = "pub-colmex"
-    respond_to do |format|
-      format.html { render :catalogo}
-    end
   end
 
 end
