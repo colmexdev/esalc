@@ -19,10 +19,22 @@ var html_toggle = "";
                   '</dd>';
 <% end %>
 $("#toggle").html(html_toggle);
-$(".tog").removeClass("active");
-$("<%= '#tog-' + params[:offset] %>").addClass("active");
-$("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>");
-$("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>");
+//$(".tog").removeClass("active");
+//$("<%= '#tog-' + params[:offset] %>").addClass("active");
+
+var pag_html = ""
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= articulos_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	<% end %>
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == 0 ? 'active' : '') %>"><a href="<%= articulos_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>';
+	<% if c == @pags - 1 %>
+                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= articulos_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+	<% end %>
+<% end %>
+
+$("#mag-ant").attr("href", "<%= articulos_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>");
+$("#mag-nxt").attr("href", "<%= articulos_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>");
 $("#count_p").html('<%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %>');
 $("#count_pr").html('<%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %>');
   // ACCORDION

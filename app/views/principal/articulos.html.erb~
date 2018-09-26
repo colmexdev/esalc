@@ -54,6 +54,28 @@
                   <button onclick="clean();" type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                 </div>
               </div>
+<script>
+function filter(f_ids){
+	var where = "", multi = false, val;
+	for(var i=0;i<f_ids.length;i++){
+		val = $("#"+f_ids[i]).val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val() : "");
+	}
+	$.ajax({
+		url: "/articulos.js?offset=0" + where,
+		success: function(){}
+	});
+}
+
+function clean(){
+	$("#autor").val("");
+	$("#temas").val("");
+	$.ajax({
+		url: "/articulos.js?offset=0",
+		success: function(){}
+	});
+}
+</script>
               <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 plr-50">
                   <!-- PUBLICACIONES Item 1 -->

@@ -38,7 +38,7 @@ var pag_html = ""
                         pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
 <% end %>
-
+$("#pags").html(pag_html);
 $("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>");
 $("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>");
 $("#count_p").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
