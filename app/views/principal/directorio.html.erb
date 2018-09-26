@@ -78,11 +78,15 @@ function filter(f_ids){
 		url: "/directorio.js?offset=0" + where,
 		success: function(){}
 	});
-  console.log(where);
 }
 
 function clean(){
-	console.log("limpiar");
+	$("#nombre").val("");
+	$("#centros").val("");
+	$.ajax({
+		url: "/directorio.js?offset=0",
+		success: function(){}
+	});
 }
 </script>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
