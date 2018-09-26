@@ -29,4 +29,6 @@ $(".tog").removeClass("active");
 $("<%= '#tog-' + params[:offset] %>").addClass("active");
 $("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>");
 $("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>");
+$("#count_p").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
+$("#count_pr").html('<%= ("<strong>Total: " + @profs_c.to_s + "</strong>").html_safe %>');
 
