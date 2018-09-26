@@ -12,7 +12,7 @@ class PrincipalController < ApplicationController
       where = build_where(params[:conds])
     end
     limite = 5.0
-    @profs_c = Directorio.all.count
+    @profs_c = Directorio.where(where).count
     @profs = Directorio.where(where).order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = @profs_c/limite.ceil
     respond_to do |format|
