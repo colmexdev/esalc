@@ -25,7 +25,7 @@ class PrincipalController < ApplicationController
     where = ""
     multi = false
     if pars.key?(:inicial)
-      where = {"nombre like '" + pars[:inicial] + "%'"}
+      where = "nombre like '" + pars[:inicial] + "%'"
       multi = true
     end
     return where
