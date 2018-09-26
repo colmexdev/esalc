@@ -36,7 +36,7 @@
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-md-8 pl-0">
-                        <input placeholder="Nombre y/o apellido" class="input-border w-100" type="text" required="">
+                        <input id="nombre" placeholder="Nombre y/o apellido" class="input-border w-100" type="text" required="">
                       </div>
                     </div>
                   </div>
@@ -47,7 +47,7 @@
                       </div>
                       <div class="col-md-8 pl-0">
                         <form method="post" action="#" class="forma">
-                          <select name="centros" id="centros" class="select-md input-border w-100">
+                          <select onchange="filter(['nombre','centros']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centros de Estudio</option>
                             <option value="ceaa">CEAA</option>
                             <option value="cedua">CEDUA</option>
@@ -69,8 +69,11 @@
 
 <script>
 function filter(f_ids){
-	
-	console.log(f_ids);
+	var where = "";
+	for(var i=0;i<f_ids.length;i++){
+		where = where + "conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val();
+	}
+  console.log(where);
 }
 
 function clean(){
