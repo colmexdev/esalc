@@ -68,7 +68,7 @@ class PrincipalController < ApplicationController
     if params.key?(:conds)
       where = build_where(params[:conds])
     end
-    limite = 5.0
+    limite = 10.0
     @mags_c = Revista.where(where).count
     @mags = Revista.where(where).order(updated_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = @mags_c/limite.ceil
