@@ -20,7 +20,14 @@
                 <!-- FORMULARIO DE BÚSQUEDA -->
                 <div class="row mb-40">
                   <h4 class="mt-10 mb-20"><strong>Buscar por orden alfabético </strong></h4>
-                  <div class="text-center"><span class="alfabeto"><a href="#">A</a></span> <span class="alfabeto"><a href="#">B</a></span> <span class="alfabeto"><a href="#">C</a></span> <span class="alfabeto"><a href="#">D</a></span> <span class="alfabeto"><a href="#">E</a></span>                    <span class="alfabeto"><a href="#">F</a></span> <span class="alfabeto"><a href="#">G</a></span> <span class="alfabeto"><a href="#">H</a></span> <span class="alfabeto"><a href="#">I</a></span> <span class="alfabeto"><a href="#">J</a></span>                    <span class="alfabeto"><a href="#">K</a></span> <span class="alfabeto"><a href="#">L</a></span> <span class="alfabeto"><a href="#">M</a></span> <span class="alfabeto"><a href="#">N</a></span> <span class="alfabeto"><a href="#">O</a></span>                    <span class="alfabeto"><a href="#">P</a></span> <span class="alfabeto"><a href="#">Q</a></span> <span class="alfabeto"><a href="#">R</a></span> <span class="alfabeto"><a href="#">S</a></span> <span class="alfabeto"><a href="#">T</a></span>                    <span class="alfabeto"><a href="#">U</a></span> <span class="alfabeto"><a href="#">V</a></span> <span class="alfabeto"><a href="#">W</a></span> <span class="alfabeto"><a href="#">X</a></span> <span class="alfabeto"><a href="#">Y</a></span>                    <span class="alfabeto"><a href="#">Z</a></span></div>
+                  <div class="text-center">
+					<% ("A".."Z").each do |l| %>
+									<span class="alfabeto"><a href="<%= directorio_path(params: {conds: {inicial: l}}) %>"><%= l %></a></span>
+					<% end %> 
+<% if false %>
+<span class="alfabeto"><a href="#">B</a></span> <span class="alfabeto"><a href="#">C</a></span> <span class="alfabeto"><a href="#">D</a></span> <span class="alfabeto"><a href="#">E</a></span>                    <span class="alfabeto"><a href="#">F</a></span> <span class="alfabeto"><a href="#">G</a></span> <span class="alfabeto"><a href="#">H</a></span> <span class="alfabeto"><a href="#">I</a></span> <span class="alfabeto"><a href="#">J</a></span>                    <span class="alfabeto"><a href="#">K</a></span> <span class="alfabeto"><a href="#">L</a></span> <span class="alfabeto"><a href="#">M</a></span> <span class="alfabeto"><a href="#">N</a></span> <span class="alfabeto"><a href="#">O</a></span>                    <span class="alfabeto"><a href="#">P</a></span> <span class="alfabeto"><a href="#">Q</a></span> <span class="alfabeto"><a href="#">R</a></span> <span class="alfabeto"><a href="#">S</a></span> <span class="alfabeto"><a href="#">T</a></span>                    <span class="alfabeto"><a href="#">U</a></span> <span class="alfabeto"><a href="#">V</a></span> <span class="alfabeto"><a href="#">W</a></span> <span class="alfabeto"><a href="#">X</a></span> <span class="alfabeto"><a href="#">Y</a></span>                    <span class="alfabeto"><a href="#">Z</a></span>
+<% end %>
+									</div>
                 </div>
                 <div class="row">
                   <div class="col-md-5 col-sm-6">
@@ -137,11 +144,11 @@ function clean(){
 
 <% @pags.times do |c| %>
 	<% if c == 0 %>
-                        <li><a href="<%= directorio_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+                        <li><a id="tog-ant" href="<%= directorio_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
 	<% end %>
                         <li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
 	<% if c == @pags - 1 %>
-                        <li><a href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+                        <li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
 	<% end %>
 <% end %>
 
