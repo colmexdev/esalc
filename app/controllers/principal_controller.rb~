@@ -69,8 +69,8 @@ class PrincipalController < ApplicationController
       where = build_where(params[:conds])
     end
     limite = 5.0
-    @mags_c = Magazine.where(where).count
-    @mags = Magazine.where(where).order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @mags_c = Revista.where(where).count
+    @mags = Revista.where(where).order(nombre: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = @mags_c/limite.ceil
     respond_to do |format|
       format.html
