@@ -91,6 +91,15 @@ class PrincipalController < ApplicationController
     end
     if pars.key?(:nombre)
       where = where + (multi ? " AND " : "") + "lower(nombre) like '%" + pars[:nombre].downcase + "%'"
+      multi = true
+    end
+    if pars.key?(:autor)
+      where = where + (multi ? " AND " : "") + "lower(autores) like '%" + pars[:autor].downcase + "%'"
+      multi = true
+    end
+    if pars.key?(:temas)
+      where = where + (multi ? " AND " : "") + "lower(tematica) like '%" + pars[:temas].downcase + "%'"
+      multi = true
     end
     return where
   end
