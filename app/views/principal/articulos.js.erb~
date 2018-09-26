@@ -1,5 +1,5 @@
 var html_toggle = "";
-<% @mags.each do |p| %>
+<% @mags.each do |m| %>
                   html_toggle = html_toggle + '<dt>' +
                     '<a href="#"><h5 class="m-0 text-left"><%= m.articulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= m.autores %></h5></a>' +
                   '</dt>' +
