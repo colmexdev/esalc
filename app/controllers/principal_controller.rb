@@ -97,8 +97,8 @@ class PrincipalController < ApplicationController
       where = where + (multi ? " AND " : "") + "lower(autores) like '%" + pars[:autor].downcase + "%'"
       multi = true
     end
-    if pars.key?(:temas)
-      where = where + (multi ? " AND " : "") + "lower(tematica) like '%" + pars[:temas].downcase + "%'"
+    if pars.key?(:tema)
+      where = where + (multi ? " AND " : "") + "lower(tematica) like '%" + pars[:tema].downcase + "%'"
       multi = true
     end
     return where
