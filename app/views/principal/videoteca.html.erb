@@ -16,7 +16,7 @@
               </div>
               <div id="new-vids" class="row">
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$.ajax({
 		url: "https://coed.colmex.mx/catalogo_videos.json?crono=desc&vpp=3&tags=Latinoamerica",
 		success: function(result){
@@ -33,7 +33,7 @@ $(document).ready(function(){
                     '</div>' +
                   '</div>' +
                   '<div class="shop-price-cont ">' +
-                    '<a class="font-norm a-inv " href="https://www.youtube.com/embed/' + result["vids"][i]["v_id"] + '" target="_blank"><strong>' + result["vids"][i]["titulo"] + '</strong></a>' +
+                    '<a class="font-norm a-inv " href="https://www.youtube.com/watch?v=' + result["vids"][i]["v_id"] + '" target="_blank"><strong>' + result["vids"][i]["titulo"] + '</strong></a>' +
                   '</div>' +
                   '<div class="post-prev-title mb-20">' +
                     //'<h3 class="font-norm a-inv">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h3>'
@@ -48,7 +48,7 @@ $(document).ready(function(){
 			$("#new-vids").html(html_new_vids);
 		}
 	});
-});
+});*/
 </script>
                 <!-- VIDEOS Item 1 -->
 
@@ -76,6 +76,7 @@ $(document).ready(function(){
                     </div>
                   </div>
                 </div>
+<% end %>
                 <!-- VIDEOS Item 3 -->
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 wow fadeInUp pb-70">
                   <div class="row">
@@ -99,7 +100,7 @@ $(document).ready(function(){
                     </div>
                   </div>
                 </div>
-<% end %>
+
               </div>
             </div>
 
