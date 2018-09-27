@@ -1,5 +1,4 @@
 class PrincipalController < ApplicationController
-  protect_from_forgery except: :videoteca
   def principal
     @pubs = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
   end

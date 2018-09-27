@@ -1,3 +1,5 @@
+
+function fill_videoteca(){
 	$.ajax({
 		url: "https://coed.colmex.mx/catalogo_videos.json?crono=desc&vpp=3&tags=Latinoamerica",
 		success: function(result){
@@ -70,18 +72,7 @@ function find_tag(tags){
 }
 
 var pag_html = ""
-<% @pags.times do |c| %>
-	<% if c == 0 %>
-                        pag_html = pag_html + '<li><a id="tog-ant" href="<%= directorio_path(params: {offset: 0}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
-	<% end %>
-                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
-	<% if c == @pags - 1 %>
-                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
-	<% end %>
-<% end %>
-$("#pags").html(pag_html);
-$("#tog-ant").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centro").val() != "" ? ("&conds[centro]=" + $("#centro").val()) : "") );
-$("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : ""));
+
 
   // ACCORDION
   var accordPanels = $(".accordion > dd").hide();
@@ -120,3 +111,4 @@ $("#tog-nxt").attr("href", "<%= directorio_path(params: {offset: (params[:offset
       
       return false;
   });
+}
