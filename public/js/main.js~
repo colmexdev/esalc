@@ -33,7 +33,7 @@ function fill_videoteca(){
 
 	var conds = "";
 	$.ajax({
-		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+conds+"&crono=desc&vpp=10";
+		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+conds+"&crono=desc&vpp=10",
 		success: function(result){
 			var vids_html = "";
 			for(var i = 0; i < result["vids"].length; i++){
