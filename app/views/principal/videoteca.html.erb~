@@ -16,9 +16,9 @@
               </div>
               <div id="new-vids" class="row">
 <script>
-$(document).ready(function(){
+/*$(document).ready(function(){
 	$.ajax({
-		url: "https://coed.colmex.mx/catalogo_videos.json?crono=desc&vpp=2&tags=Latinoamerica",
+		url: "https://coed.colmex.mx/catalogo_videos.json?crono=desc&vpp=3&tags=Latinoamerica",
 		success: function(result){
 			var html_new_vids = "";
 			for(var i = 0; i < result["vids"].length; i++){
@@ -48,7 +48,7 @@ $(document).ready(function(){
 			$("#new-vids").html(html_new_vids);
 		}
 	});
-});
+});*/
 </script>
                 <!-- VIDEOS Item 1 -->
 
