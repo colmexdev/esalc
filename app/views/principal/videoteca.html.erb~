@@ -196,10 +196,7 @@ function clean(){
 
 <script>
 $(document).ready(function(){
-	$.ajax({
-		url: "/videoteca.js",
-		success: function(){}
-	});
+	fill_videoteca();
 });
 </script>
 

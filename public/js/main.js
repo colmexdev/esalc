@@ -72,44 +72,6 @@ function find_tag(tags){
 
 var pag_html = "";
 
-
-  // ACCORDION
-  var accordPanels = $(".accordion > dd").hide();
-  
-    accordPanels.first().slideDown("easeOutExpo");
-    $(".accordion > dt > a").first().addClass("active");
-    
-    $(".accordion > dt > a").click(function(){
-    
-      var current = $(this).parent().next("dd");
-      $(".accordion > dt > a").removeClass("active");
-      $(this).addClass("active");
-      accordPanels.not(current).slideUp("easeInExpo");
-      $(this).parent().next().slideDown("easeOutExpo");
-      
-      return false;
-            
-  });
-  
-  // TOGGLE
-  $(".toggle > dd").hide();
-  
-  $(".toggle > dt > a").click(function(){
-  
-      if ($(this).hasClass("active")) {
-      
-          $(this).parent().next().slideUp("easeOutExpo");
-          $(this).removeClass("active");
-          
-      }
-      else {
-          var current = $(this).parent().next("dd");
-          $(this).addClass("active");
-          $(this).parent().next().slideDown("easeOutExpo");
-      }
-      
-      return false;
-  });
 }
 
 

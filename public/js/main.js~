@@ -62,54 +62,18 @@ function fill_videoteca(){
 function find_tag(tags){
 	var temas = "";
 	if(tags.indexOf("Violencia") != -1) temas = "Violencia y Derechos Humanos";
-	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ? : "; " + "") + "Sociedad y economía";
-	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ? : "; " + "") + "Relaciones internacionales";
-	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ? : "; " + "") + "Política, partidos e instituciones";
-	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ? : "; " + "") + "Historia";
-	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ? : "; " + "") + "Lengua y Literatura";
+	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Sociedad y economía";
+	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Relaciones internacionales";
+	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Política, partidos e instituciones";
+	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Historia";
+	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
 	return temas;
 }
 
 var pag_html = "";
 
 
-  // ACCORDION
-  var accordPanels = $(".accordion > dd").hide();
-  
-    accordPanels.first().slideDown("easeOutExpo");
-    $(".accordion > dt > a").first().addClass("active");
-    
-    $(".accordion > dt > a").click(function(){
-    
-      var current = $(this).parent().next("dd");
-      $(".accordion > dt > a").removeClass("active");
-      $(this).addClass("active");
-      accordPanels.not(current).slideUp("easeInExpo");
-      $(this).parent().next().slideDown("easeOutExpo");
-      
-      return false;
-            
-  });
-  
-  // TOGGLE
-  $(".toggle > dd").hide();
-  
-  $(".toggle > dt > a").click(function(){
-  
-      if ($(this).hasClass("active")) {
-      
-          $(this).parent().next().slideUp("easeOutExpo");
-          $(this).removeClass("active");
-          
-      }
-      else {
-          var current = $(this).parent().next("dd");
-          $(this).addClass("active");
-          $(this).parent().next().slideDown("easeOutExpo");
-      }
-      
-      return false;
-  });
+
 }
 
 
