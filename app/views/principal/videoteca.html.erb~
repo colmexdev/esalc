@@ -198,6 +198,7 @@ function clean(){
 $(document).ready(function(){
 	fill_videoteca();
 	  // TOGGLE
+	setTimeout(function(){
   $(".toggle > dd").hide();
   
   $(".toggle > dt > a").click(function(){
@@ -216,6 +217,7 @@ $(document).ready(function(){
       
       return false;
   });
+	},300);
 });
 </script>
 
