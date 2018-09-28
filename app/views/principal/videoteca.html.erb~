@@ -197,7 +197,7 @@ function clean(){
 <script>
 $(document).ready(function(){
 	fill_videoteca();
-}
+});
 </script>
 
 <%= render 'principal/footer' %>
