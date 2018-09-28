@@ -72,6 +72,26 @@ function find_tag(tags){
 
 var pag_html = "";
 
+
+	  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });
 }
 
 
