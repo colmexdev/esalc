@@ -56,22 +56,6 @@ function fill_videoteca(){
 			$("#toggle").html(vids_html);
 			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
 			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
-		}
-	});
-
-function find_tag(tags){
-	var temas = "";
-	if(tags.indexOf("Violencia") != -1) temas = "Violencia y Derechos Humanos";
-	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Sociedad y economía";
-	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Relaciones internacionales";
-	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Política, partidos e instituciones";
-	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Historia";
-	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
-	return temas;
-}
-
-var pag_html = "";
-
 
 	  // TOGGLE
   $(".toggle > dd").hide();
@@ -92,6 +76,22 @@ var pag_html = "";
       
       return false;
   });
+		}
+	});
+
+function find_tag(tags){
+	var temas = "";
+	if(tags.indexOf("Violencia") != -1) temas = "Violencia y Derechos Humanos";
+	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Sociedad y economía";
+	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Relaciones internacionales";
+	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Política, partidos e instituciones";
+	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Historia";
+	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
+	return temas;
+}
+
+var pag_html = "";
+
 }
 
 
