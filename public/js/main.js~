@@ -72,8 +72,6 @@ function find_tag(tags){
 
 var pag_html = "";
 
-
-
 }
 
 
