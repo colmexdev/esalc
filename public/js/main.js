@@ -57,6 +57,13 @@ function fill_videoteca(){
 			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
 			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
 
+	var pag_html = '<li><a href="/directorio?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	for(i = 0; i < parseInt(result["pags"]); i++){
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/directorio?offset=' + i.toString() + '">' + i.toString() + '</a></li>'
+	}
+	pag_html = pag_html + '<li><a href="/directorio?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
+	$("#pags").html(pag_html);
+	
 	  // TOGGLE
   $(".toggle > dd").hide();
   
@@ -89,8 +96,6 @@ function find_tag(tags){
 	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
 	return temas;
 }
-
-var pag_html = "";
 
 }
 
