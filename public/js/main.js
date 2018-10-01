@@ -1,7 +1,10 @@
 function fill_videoteca(conds){
 	conds = conds || null;
 
-	var conds = "";
+  var regex = /\/videoteca\?offset=(.+)(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
+	var grupos = regex.exec(window.location.pathname);
+	console.log(grupos);
+	var conds = "&offset=" + grupos[1];
 	$.ajax({
 		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+conds+"&crono=desc&vpp=10",
 		success: function(result){
