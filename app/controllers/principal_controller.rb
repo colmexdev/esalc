@@ -22,6 +22,7 @@ class PrincipalController < ApplicationController
   end
 
   def videoteca
+    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "")
     respond_to do |format|
       format.html
       format.js
