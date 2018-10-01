@@ -22,7 +22,7 @@ class PrincipalController < ApplicationController
   end
 
   def videoteca
-    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params.key?(:conds) ? ((params[:conds].key?(:tema) ? "&tema=" + params[:conds][:tema] : "") + (params[:conds].key?(:autor) ? "&autor=" + params[:conds][:autor] : "") + (params[:conds].key?(:pais) ? "&pais=" + params[:conds][:pais] : "")) : "")
+    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params.key?(:conds) ? ((params[:conds].key?(:tema) ? "&tema=" + params[:conds][:tema] : "") + (params[:conds].key?(:autor) ? "&autor=" + params[:conds][:autor] : "") + (params[:conds].key?(:pais) ? "&pais=" + params[:conds][:pais] : "") + (params[:conds].key?(:fecha) ? "&fecha=" + params[:conds][:fecha] : "")) : "")
     respond_to do |format|
       format.html
       format.js
