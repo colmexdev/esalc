@@ -31,11 +31,11 @@ function fill_videoteca(conds){
 			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
 			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
 
-	var pag_html = '<li><a data-remote="true" href="/videoteca?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tema").val() != "" ? "&tema=" + $("#tema").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	var pag_html = '<li><a data-remote="true" href="/videoteca?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tema").val() != "" ? "&conds[tema]=" + $("#tema").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	for(i = 0; i < parseInt(result["pags"]); i++){
-		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/videoteca?offset=' + i.toString() + ($("#tema").val() != "" ? "&tema=" + $("#tema").val() : "") + '">' + (i + 1).toString() + '</a></li>'
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/videoteca?offset=' + i.toString() + ($("#tema").val() != "" ? "&conds[tema]=" + $("#tema").val() : "") + '">' + (i + 1).toString() + '</a></li>'
 	}
-	pag_html = pag_html + '<li><a data-remote="true" href="/videoteca?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#tema").val() != "" ? "&tema=" + $("#tema").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
+	pag_html = pag_html + '<li><a data-remote="true" href="/videoteca?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#tema").val() != "" ? "&conds[tema]=" + $("#tema").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
 	$("#pags").html(pag_html);
 	
 	  // TOGGLE
