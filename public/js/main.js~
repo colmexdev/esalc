@@ -1,7 +1,7 @@
 function fill_videoteca(conds){
 	conds = conds || null;
 
-  var regex = /\/videoteca\?offset=(.+)(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
+  var regex = /\/videoteca\?(offset=.+)?(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
 	var grupos = regex.exec(window.location.pathname);
 	console.log(grupos);
 	var conds = ""; //"&offset=" + grupos[1];
