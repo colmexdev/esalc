@@ -2,9 +2,9 @@ function fill_videoteca(conds){
 	conds = conds || null;
 
   var regex = /\?(offset=.+)?(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
-	var grupos = regex.exec(window.location.pathname);
+	var grupos = regex.exec(window.location.search);
 	console.log(grupos);
-	console.log(window.location.pathname);
+	console.log(window.location.search);
 	var offset = (grupos[1] !== undefined ? "&offset=" + grupos[1].split("=")[1] : "");
 	var conds = ""; //"&offset=" + grupos[1];
 	$.ajax({
