@@ -1,11 +1,11 @@
 function fill_videoteca(conds){
 	conds = conds || null;
 
-  var regex = /\?(offset=.+)?(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
+  var regex = /(\?)?(offset=.+)?(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
 	var grupos = regex.exec(window.location.search);
 	console.log(grupos);
 	console.log(window.location.search);
-	var offset = (grupos !== undefined ? "&offset=" + parseInt(grupos[1].split("=")[1]) : "");
+	var offset = (grupos !== undefined ? "&offset=" + parseInt(grupos[2].split("=")[1]) : "");
 	var conds = ""; //"&offset=" + grupos[1];
 	$.ajax({
 		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+conds+"&crono=desc&vpp=10" + offset,
