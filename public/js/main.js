@@ -4,6 +4,7 @@ function fill_videoteca(conds){
   var regex = /\/videoteca(\?)?(offset=.+)?(&autor=.+)?(&pais=.+)?(&fecha=.+)?(&tema=.+)?/;
 	var grupos = regex.exec(window.location.pathname);
 	console.log(grupos);
+	console.log(window.location.pathname);
 	var offset = (grupos[2] !== undefined ? "&offset=" + grupos[2].split("=")[1] : "");
 	var conds = ""; //"&offset=" + grupos[1];
 	$.ajax({
