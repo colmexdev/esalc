@@ -60,7 +60,7 @@ function fill_videoteca(conds){
 
 	var pag_html = '<li><a href="/videoteca.js?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	for(i = 0; i < parseInt(result["pags"]); i++){
-		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/videoteca.js?offset=' + i.toString() + '">' + (i + 1).toString() + '</a></li>'
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a href="/videoteca.js?offset=' + i.toString() + '">' + (i + 1).toString() + '</a></li>'
 	}
 	pag_html = pag_html + '<li><a href="/videoteca.js?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
 	$("#pags").html(pag_html);
