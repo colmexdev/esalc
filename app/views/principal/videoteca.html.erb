@@ -32,12 +32,26 @@
                 <div class="row">
 <script>
 function filter(f_ids){
-	
-	console.log(f_ids);
+	var where = "", multi = false, val;
+	for(var i=0;i<f_ids.length;i++){
+		val = $("#"+f_ids[i]).val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
+	}
+	$.ajax({
+		url: "/videoteca.js?offset=0"/* + where*/,
+		success: function(){}
+	});
 }
 
 function clean(){
-	console.log("limpiar");
+	$("#autor").val("");
+	$("#tema").val(null);
+	$("#pais").val(null);
+	$("#fecha").val(null);
+	$.ajax({
+		url: "/videoteca.js?offset=0",
+		success: function(){}
+	});
 }
 </script>
 
