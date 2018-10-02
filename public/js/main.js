@@ -14,11 +14,10 @@ function fill_videoteca(conds){
 		success: function(result){
 			var vids = [];
 			for(var i = 0; i < result["vids"].length; i++){
-				if(fecha != "" && result["vids"][i]["fecha"].substring(4) == fecha)
+				if(fecha != "" && result["vids"][i]["fecha"].substring(0,4) == fecha)
 					vids.push(result["vids"][i]);
 			}
 			console.log(vids);
-			console.log(result["vids"]);
 			var vids_html = "";
 			for(var i = 0; i < result["vids"].length; i++){
 				vids_html = vids_html + '<dt>' +
