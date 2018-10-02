@@ -18,7 +18,7 @@ function fill_videoteca(conds){
 					vids.push(result["vids"][i]);
 			}
 			console.log(vids);
-			cinsike.log(fecha);
+			console.log(fecha);
 			var vids_html = "";
 			for(var i = 0; i < result["vids"].length; i++){
 				vids_html = vids_html + '<dt>' +
