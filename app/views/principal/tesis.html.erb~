@@ -61,24 +61,24 @@ function clean(){
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
                           <select onchange="filter(['programa','centros']);" name="programa" id="programa" class="select-md input-border w-100">
                             <option value>Programa Académico</option>
-                            <option value="Licenciatura en Economía">Licenciatura en Economía</option>
-                            <option value="Licenciatura en Política y Administración Pública">Licenciatura en Política y Administración Pública</option>
-                            <option value="Licenciatura en Relaciones Internacionales">Licenciatura en Relaciones Internacionales</option>
-                            <option value="Maestría en Ciencia Política">Maestría en Ciencia Política</option>
-                            <option value="Maestría en Ciencia Social con especialidad en Sociología">Maestría en Ciencia Social con especialidad en Sociología</option>
-                            <option value="Maestría en Demografía">Maestría en Demografía</option>
-                            <option value="Maestría en Economía">Maestría en Economía</option>
-                            <option value="Maestría en Estudios de Asia y África">Maestría en Estudios de Asia y África</option>
-                            <option value="Maestría en Estudios de Género">Maestría en Estudios de Género</option>
-                            <option value="Maestría en Estudios Urbanos">Maestría en Estudios Urbanos</option>
-                            <option value="Maestría en Traducción">Maestría en Traducción</option>
-                            <option value="Doctorado en Ciencia Social con especialidad en Sociología">Doctorado en Ciencia Social con especialidad en Sociología</option>
-                            <option value="Doctorado en Economía">Doctorado en Economía</option>
-                            <option value="Doctorado en Estudios de Población">Doctorado en Estudios de Población</option>
-                            <option value="Doctorado en Estudios Urbanos y Ambientales">Doctorado en Estudios Urbanos y Ambientales</option>
-                            <option value="Doctorado en Historia">Doctorado en Historia</option>
-                            <option value="Doctorado en Lingüística">Doctorado en Lingüística</option>
-                            <option value="Doctorado en Literatura Hispánica">Doctorado en Literatura Hispánica</option>
+                            <option value="Licenciatura, en Economía">Licenciatura en Economía</option>
+                            <option value="Licenciatura, en Política y Administración Pública">Licenciatura en Política y Administración Pública</option>
+                            <option value="Licenciatura, en Relaciones Internacionales">Licenciatura en Relaciones Internacionales</option>
+                            <option value="Maestría, en Ciencia Política">Maestría en Ciencia Política</option>
+                            <option value="Maestría, en Ciencia Social con especialidad en Sociología">Maestría en Ciencia Social con especialidad en Sociología</option>
+                            <option value="Maestría, en Demografía">Maestría en Demografía</option>
+                            <option value="Maestría, en Economía">Maestría en Economía</option>
+                            <option value="Maestría, en Estudios de Asia y África">Maestría en Estudios de Asia y África</option>
+                            <option value="Maestría, en Estudios de Género">Maestría en Estudios de Género</option>
+                            <option value="Maestría, en Estudios Urbanos">Maestría en Estudios Urbanos</option>
+                            <option value="Maestría, en Traducción">Maestría en Traducción</option>
+                            <option value="Doctorado, en Ciencia Social con especialidad en Sociología">Doctorado en Ciencia Social con especialidad en Sociología</option>
+                            <option value="Doctorado, en Economía">Doctorado en Economía</option>
+                            <option value="Doctorado, en Estudios de Población">Doctorado en Estudios de Población</option>
+                            <option value="Doctorado, en Estudios Urbanos y Ambientales">Doctorado en Estudios Urbanos y Ambientales</option>
+                            <option value="Doctorado, en Historia">Doctorado en Historia</option>
+                            <option value="Doctorado, en Lingüística">Doctorado en Lingüística</option>
+                            <option value="Doctorado, en Literatura Hispánica">Doctorado en Literatura Hispánica</option>
                           </select>
                       </div>
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
