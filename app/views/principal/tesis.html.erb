@@ -124,7 +124,7 @@ function clean(){
                         <p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span><%= t.asesores %></span></p>
                         <p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span><%= t.grado + " en " + t.programa %></span></p>
                         <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span><%= t.anio %></span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= t.link %>" target="_blank" class="a-inv"><%= t.link[0..25] + (t.link.size >= 25 ? "..." : "") %></a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= t.link %>" target="_blank" class="a-inv"><%= t.link.present? ? (t.link[0..25] + (t.link.size >= 25 ? "..." : "")) : "" %></a></p>
                       </div>
                       <div class="col-md-4">
                         <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= t.tematica %></span></p>
