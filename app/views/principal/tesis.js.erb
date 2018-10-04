@@ -1,0 +1,77 @@
+var html_toggle = "";
+<% @tesis.each do |t| %>
+                        html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">Políticas públicas de mitigación de cambio climático en México y Brasil</h5><h5 class="verde-obscuro mt-10 mb-0">Pierard Manzano, Elena Christiane</h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-8">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>Ortega Ortiz, Reynaldo Yunuen</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>Licenciatura en Política y Administración Pública</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2016</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716" target="_blank" class="a-inv">https://colmex.userservices.exlibrisgroup.com/view/delivery/52COLMEX_INST/1270168220002716</a></p>' +
+                      '</div>' +
+                      '<div class="col-md-4">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>CEI</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>Español</span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+<% end %>
+$("#toggle").html(html_toggle);
+//$(".tog").removeClass("active");
+//$("<%= '#tog-' + params[:offset] %>").addClass("active");
+
+var pag_html = ""
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        pag_html = pag_html + '<li><a id="tog-ant" href="<%= tesis_path(params: {offset: 0}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	<% end %>
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+	<% if c == @pags - 1 %>
+                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+	<% end %>
+<% end %>
+$("#pags").html(pag_html);
+$("#tog-ant").attr("href", "<%= tesis_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") );
+$("#tog-nxt").attr("href", "<%= tesis_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : ""));
+$("#count_p").html('<%= ("<strong>Total: " + @tesis_c.to_s + "</strong>").html_safe %>');
+$("#count_pr").html('<%= ("<strong>Total: " + @tesis_c.to_s + "</strong>").html_safe %>');
+  // ACCORDION
+  var accordPanels = $(".accordion > dd").hide();
+  
+    accordPanels.first().slideDown("easeOutExpo");
+    $(".accordion > dt > a").first().addClass("active");
+    
+    $(".accordion > dt > a").click(function(){
+    
+      var current = $(this).parent().next("dd");
+      $(".accordion > dt > a").removeClass("active");
+      $(this).addClass("active");
+      accordPanels.not(current).slideUp("easeInExpo");
+      $(this).parent().next().slideDown("easeOutExpo");
+      
+      return false;
+            
+  });
+  
+  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });

@@ -106,15 +106,28 @@ class PrincipalController < ApplicationController
       where = where + (multi ? " AND " : "") + "lower(tematica) like '%" + pars[:tema].downcase + "%'"
       multi = true
     end
+    if pars.key?(:programa)
+      prog = pars[:programa].split(", en ")
+      where = where + (multi ? " AND " : "") + "lower(grado) = '" + prog[0].downcase + "' AND lower(programa) = '" + prog[1] + "'"
+      multi = true
+    end
     return where
   end
 
 
   def tesis
-   # @unit = "tesis"
-   # respond_to do |format|
-   #   format.html { render :catalogo}
-   # end
+    where = ""
+    if params.key?(:conds)
+      where = build_where(params[:conds])
+    end
+    limite = 10.0
+    @tesis_c = Tesis.where(where).count
+    @tesis = Tesis.where(where).order(titulo: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @pags = (@tesis_c/limite).ceil
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def eventos
