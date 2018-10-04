@@ -12,33 +12,6 @@ function fill_videoteca(conds){
 	$.ajax({
 		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+tema+"&crono=desc&vpp=10" + offset + autor + fecha,
 		success: function(result){
-			var vids = [];
-			if(fecha+autor == "")
-				vids = result["vids"]
-			else{
-				for(var i = 0; i < result["vids"].length; i++){
-					if(fecha != ""){
-						if(result["vids"][i]["fecha"].substring(0,4) == fecha){
-							if(autor != ""){
-								if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
-									vids.push(result["vids"][i]);
-								}
-							} else {
-								vids.push(result["vids"][i]);
-							}
-						}
-					} else {
-						if(autor != ""){
-							if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
-								vids.push(result["vids"][i]);
-							}
-						} else {
-							vids.push(result["vids"][i]);
-						}
-					}
-				}
-			}
-			console.log(vids);
 			var vids_html = "";
 			for(var i = 0; i < vids.length; i++){
 				vids_html = vids_html + '<dt>' +
