@@ -13,12 +13,32 @@ function fill_videoteca(conds){
 		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+tema+"&crono=desc&vpp=10" + offset,
 		success: function(result){
 			var vids = [];
-			for(var i = 0; i < result["vids"].length; i++){
-				if(fecha != "" && result["vids"][i]["fecha"].substring(0,4) == fecha)
-					vids.push(result["vids"][i]);
+			if(fecha+autor == "")
+				vids = result["vids"]
+			else{
+				for(var i = 0; i < result["vids"].length; i++){
+					if(fecha != ""){
+						if(result["vids"][i]["fecha"].substring(0,4) == fecha){
+							if(autor != ""){
+								if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
+									vids.push(result["vids"][i];
+								}
+							} else {
+								vids.push(result["vids"][i];
+							}
+						}
+					} else {
+						if(autor != ""){
+							if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
+								vids.push(result["vids"][i];
+							}
+						} else {
+							vids.push(result["vids"][i];
+						}
+					}
+				}
 			}
 			console.log(vids);
-			console.log(result["vids"]);
 			var vids_html = "";
 			for(var i = 0; i < result["vids"].length; i++){
 				vids_html = vids_html + '<dt>' +
@@ -27,7 +47,7 @@ function fill_videoteca(conds){
                         '<dd>' +
                           '<div class="row">' +
                             '<div class="col-md-7">' +
-                              //'<p class="text-left"><strong class="azul-obscuro">Proyecto:</strong> <span>Encuentro México-EE.UU.: Los Peligros de la coyuntura</span></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Descripción:</strong> <span>' + result["vids"][i]["descripcion"] + '</span></p>' +
                               '<p class="text-left"><strong class="azul-obscuro">Fecha de Publicación:</strong> <span>' + result["vids"][i]["fecha"] + '</span></p>' +
                             '</div>' +
                             '<div class="col-md-5">' +
