@@ -14,7 +14,7 @@ function fill_videoteca(conds){
 		success: function(result){
 			var vids_html = "";
 			for(var i = 0; i < result["vids"].length; i++){
-				var feca_vid = result["vids"][i]["fecha"].substring(0,10).split("-");
+				var fecha_vid = result["vids"][i]["fecha"].substring(0,10).split("-");
 				vids_html = vids_html + '<dt>' +
                               '<a href="#"><h5 class="m-0 text-left">' + result["vids"][i]["titulo"] + '</h5>' + //'<h5 class="verde-obscuro mt-10 mb-0">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h5></a>' +
                         '</dt>' +
