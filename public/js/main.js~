@@ -13,19 +13,19 @@ function fill_videoteca(conds){
 		url: "https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica"+tema+"&crono=desc&vpp=10" + offset + autor + fecha,
 		success: function(result){
 			var vids_html = "";
-			for(var i = 0; i < vids.length; i++){
+			for(var i = 0; i < result["vids"].length; i++){
 				vids_html = vids_html + '<dt>' +
-                              '<a href="#"><h5 class="m-0 text-left">' + vids[i]["titulo"] + '</h5>' + //'<h5 class="verde-obscuro mt-10 mb-0">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h5></a>' +
+                              '<a href="#"><h5 class="m-0 text-left">' + result["vids"][i]["titulo"] + '</h5>' + //'<h5 class="verde-obscuro mt-10 mb-0">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h5></a>' +
                         '</dt>' +
                         '<dd>' +
                           '<div class="row">' +
                             '<div class="col-md-7">' +
-                              '<p class="text-left"><strong class="azul-obscuro">Descripción:</strong> <span>' + vids[i]["descripcion"] + '</span></p>' +
-                              '<p class="text-left"><strong class="azul-obscuro">Fecha de Publicación:</strong> <span>' + vids[i]["fecha"] + '</span></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Descripción:</strong> <span>' + result["vids"][i]["descripcion"] + '</span></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Fecha de Publicación:</strong> <span>' + result["vids"][i]["fecha"].substring(0,10) + '</span></p>' +
                             '</div>' +
                             '<div class="col-md-5">' +
-                              '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + find_tag(vids[i]["tags"]) + '</span></p>' +
-                              '<p><a class="button medium  gray-light" href="https://www.youtube.com/watch?v=' + vids[i]["v_id"] + '" target="_blank">VER VIDEO <span class="icon icon-basic-video"></span></a></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + find_tag(result["vids"][i]["tags"]) + '</span></p>' +
+                              '<p><a class="button medium  gray-light" href="https://www.youtube.com/watch?v=' + result["vids"][i]["v_id"] + '" target="_blank">VER VIDEO <span class="icon icon-basic-video"></span></a></p>' +
                             '</div>' +
                           '</div>' +
                         '</dd>';
