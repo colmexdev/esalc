@@ -21,19 +21,19 @@ function fill_videoteca(conds){
 						if(result["vids"][i]["fecha"].substring(0,4) == fecha){
 							if(autor != ""){
 								if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
-									vids.push(result["vids"][i];
+									vids.push(result["vids"][i]);
 								}
 							} else {
-								vids.push(result["vids"][i];
+								vids.push(result["vids"][i]);
 							}
 						}
 					} else {
 						if(autor != ""){
 							if(result["vids"][i]["titulo"].indexOf(autor) != -1 || result["vids"][i]["descripcion"].indexOf(autor) != -1 || result["vids"][i]["tags"].indexOf(autor) != -1){
-								vids.push(result["vids"][i];
+								vids.push(result["vids"][i]);
 							}
 						} else {
-							vids.push(result["vids"][i];
+							vids.push(result["vids"][i]);
 						}
 					}
 				}
