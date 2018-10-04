@@ -40,6 +40,7 @@ function fill_videoteca(conds){
 			}
 			console.log(vids);
 			var vids_html = "";
+			result["vids"] = vids;
 			for(var i = 0; i < result["vids"].length; i++){
 				vids_html = vids_html + '<dt>' +
                               '<a href="#"><h5 class="m-0 text-left">' + result["vids"][i]["titulo"] + '</h5>' + //'<h5 class="verde-obscuro mt-10 mb-0">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h5></a>' +
