@@ -28,7 +28,7 @@ function filter(f_ids){
 		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+$("#"+f_ids[i]).val() : "");
 	}
 	$.ajax({
-		url: "/directorio.js?offset=0" + where,
+		url: "/tesis.js?offset=0" + where,
 		success: function(){}
 	});
 }
@@ -37,7 +37,7 @@ function clean(){
 	$("#programa").val("");
 	$("#centros").val("");
 	$.ajax({
-		url: "/directorio.js?offset=0",
+		url: "/tesis.js?offset=0",
 		success: function(){}
 	});
 }

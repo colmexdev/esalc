@@ -104,6 +104,31 @@
             <div class="row">
               <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
                 <!-- FORMULARIO DE BÚSQUEDA -->
+
+<script>
+function filter(f_ids){
+	var where = "", multi = false, val;
+	for(var i=0;i<f_ids.length;i++){
+		val = $("#"+f_ids[i]).val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
+	}
+	$.ajax({
+		url: "/videoteca.js?offset=0" + where,
+		success: function(){}
+	});
+}
+
+function clean(){
+	$("#autor").val("");
+	$("#centros").val(null);
+	$("#tema").val(null);
+	$("#fecha").val(null);
+	$.ajax({
+		url: "/videoteca.js?offset=0",
+		success: function(){}
+	});
+}
+</script>
                 <div class="row">
                   <div class="col-lg-3 col-md-12 col-sm-12">
                     <div class="row">
@@ -111,7 +136,7 @@
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-lg-8 col-md-12 pl-0">
-                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="">
+                        <input oninput="filter(['autor','centros','tema','fecha']);" id="autor" placeholder="Autor (es)" class="input-border w-100" type="text">
                       </div>
                     </div>
                   </div>
@@ -121,8 +146,7 @@
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
-                          <select name="centros" id="centros" class="select-md input-border w-100">
+                          <select onchange="filter(['autor','centros','tema','fecha']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centros de Estudio</option>
                             <option value="ceaa">CEAA</option>
                             <option value="cedua">CEDUA</option>
@@ -132,11 +156,9 @@
                             <option value="cell">CELL</option>
                             <option value="ces">CES</option>
                           </select>
-                        </form>
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
-                          <select name="tema" id="tema" class="select-md input-border w-100">
+                          <select onchange="filter(['autor','centros','tema','fecha']);" name="tema" id="tema" class="select-md input-border w-100">
                             <option value>Tema</option>
                             <option value="historia">Historia</option>
                             <option value="lengua">Lengua y Literatura</option>
@@ -145,11 +167,9 @@
                             <option value="sociedad">Sociedad y Economía</option>
                             <option value="violencia">Violencia y Derechos Humanos</option>
                           </select>
-                        </form>
                       </div>
                       <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
-                          <select name="fecha" id="fecha" class="select-md input-border w-100">
+                          <select onchange="filter(['autor','centros','tema','fecha']);" name="fecha" id="fecha" class="select-md input-border w-100">
                             <option value>Año</option>
                             <option value="2018">2018</option>
                             <option value="2017">2017</option>
@@ -161,22 +181,21 @@
                             <option value="2011">2011</option>
                             <option value="2010">2010</option>
                           </select>
-                        </form>
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
                     <br class="visible-sm visible-xs">
-                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                    <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>
                 </div>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
                 <div class="row mt-30 mb-40">
                   <div class="col-md-8 col-xs-12 text-left">
-                    <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
+                    <h3 id="count_p" class="verde-obscuro m-0"><%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %></h3>
                   </div>
                   <div class="col-md-4 hidden-sm hidden-xs text-right">
-                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                    <h3 id="count_pr" class="verde-obscuro m-0"><%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %></h3>
                   </div>
                   <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
                     <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>

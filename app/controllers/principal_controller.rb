@@ -4,6 +4,18 @@ class PrincipalController < ApplicationController
   end
 
   def libros
+    where = ""
+    if params.key?(:conds)
+      where = build_where(params[:conds])
+    end
+    limite = 10.0
+    @pubs_c = Publicacion.where(where).count
+    @pubs = Publicacion.where(where).order(updated_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @pags = (@pubs_c/limite).ceil
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def directorio
@@ -109,6 +121,10 @@ class PrincipalController < ApplicationController
     if pars.key?(:programa)
       prog = pars[:programa].split(", en ")
       where = where + (multi ? " AND " : "") + "lower(grado) = '" + prog[0].downcase + "' AND lower(programa) = '" + prog[1] + "'"
+      multi = true
+    end
+    if pars.key?(:fecha)
+      where = where + (multi ? " AND " : "") + "anio = " + pars[:fecha]
       multi = true
     end
     return where

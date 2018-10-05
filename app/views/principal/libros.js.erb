@@ -1,0 +1,78 @@
+var html_toggle = "";
+<% @pubs.each do |p| %>
+                  html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left"><%= p.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= p.autores %></h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-7">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span><%= p.lugar %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span><%= p.editorial %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= p.tematica %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= p.link %>" target="_blank" class="a-inv"><%= p.link.present? ? (p.link[0..25] + (p.link.size >= 25 ? "..." : "")) : "" %></a></p>' +
+                      '</div>' +
+                      '<div class="col-md-5">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Centro de estudios:</strong> <span><%= p.centro %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Edición:</strong> <span><%= p.edicion %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span><%= p.anio %></span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+<% end %>
+$("#toggle").html(html_toggle);
+//$(".tog").removeClass("active");
+//$("<%= '#tog-' + params[:offset] %>").addClass("active");
+
+var pag_html = ""
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	<% end %>
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= libros_path(params: {offset: c}) %>' + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+	<% if c == @pags - 1 %>
+                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+	<% end %>
+<% end %>
+$("#pags-mag").html(pag_html);
+$("#mag-ant").attr("href", "<%= libros_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : ""));
+$("#mag-nxt").attr("href", "<%= libros_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : ""));
+
+$("#count_p").html('<%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %>');
+$("#count_pr").html('<%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %>');
+  // ACCORDION
+  var accordPanels = $(".accordion > dd").hide();
+  
+    accordPanels.first().slideDown("easeOutExpo");
+    $(".accordion > dt > a").first().addClass("active");
+    
+    $(".accordion > dt > a").click(function(){
+    
+      var current = $(this).parent().next("dd");
+      $(".accordion > dt > a").removeClass("active");
+      $(this).addClass("active");
+      accordPanels.not(current).slideUp("easeInExpo");
+      $(this).parent().next().slideDown("easeOutExpo");
+      
+      return false;
+            
+  });
+  
+  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });

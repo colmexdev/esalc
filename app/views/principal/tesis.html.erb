@@ -34,6 +34,7 @@ function filter(f_ids){
 }
 
 function clean(){
+	$("#autor").val("");
 	$("#programa").val("");
 	$("#centros").val("");
 	$.ajax({
@@ -49,7 +50,7 @@ function clean(){
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-lg-8 col-md-12 pl-0">
-                        <input placeholder="Autor (es)" class="input-border w-100" type="text" required="">
+                        <input oninput="filter(['autor','programa','centros']);" id="autor" placeholder="Autor (es)" class="input-border w-100" type="text" required="">
                       </div>
                     </div>
                   </div>
@@ -59,7 +60,7 @@ function clean(){
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
-                          <select onchange="filter(['programa','centros']);" name="programa" id="programa" class="select-md input-border w-100">
+                          <select onchange="filter(['autor','programa','centros']);" name="programa" id="programa" class="select-md input-border w-100">
                             <option value>Programa Académico</option>
                             <option value="Licenciatura, en Economía">Licenciatura en Economía</option>
                             <option value="Licenciatura, en Política y Administración Pública">Licenciatura en Política y Administración Pública</option>
@@ -82,7 +83,7 @@ function clean(){
                           </select>
                       </div>
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
-                          <select onchange="filter(['programa','centros']);" name="centros" id="centros" class="select-md input-border w-100">
+                          <select onchange="filter(['autor','programa','centros']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centros de Estudio</option>
                             <option value="ceaa">CEAA</option>
                             <option value="cedua">CEDUA</option>

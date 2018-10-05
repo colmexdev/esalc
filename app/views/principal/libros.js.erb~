@@ -1,0 +1,77 @@
+var html_toggle = "";
+<% @mags.each do |m| %>
+                  html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left"><%= m.articulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= m.autores %></h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-7">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span><%= m.revista %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span><%= m.volumen %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Número:</strong> <span><%= m.numero %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= m.link %>" target="_blank" class="a-inv"><%= m.link[0..30] + (m.link.size >= 30 ? "..." : "") %></a></p>' +
+                      '</div>' +
+                      '<div class="col-md-5">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span><%= m.fecha %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span><%= m.tematica %></span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+<% end %>
+$("#toggle").html(html_toggle);
+//$(".tog").removeClass("active");
+//$("<%= '#tog-' + params[:offset] %>").addClass("active");
+
+var pag_html = ""
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= articulos_path(params: {offset: 0}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	<% end %>
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= articulos_path(params: {offset: c}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+	<% if c == @pags - 1 %>
+                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= articulos_path(params: {offset: 1}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+	<% end %>
+<% end %>
+$("#pags-mag").html(pag_html);
+$("#mag-ant").attr("href", "<%= articulos_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") );
+$("#mag-nxt").attr("href", "<%= articulos_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : ""));
+
+$("#count_p").html('<%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %>');
+$("#count_pr").html('<%= ("<strong>Total: " + @mags_c.to_s + "</strong>").html_safe %>');
+  // ACCORDION
+  var accordPanels = $(".accordion > dd").hide();
+  
+    accordPanels.first().slideDown("easeOutExpo");
+    $(".accordion > dt > a").first().addClass("active");
+    
+    $(".accordion > dt > a").click(function(){
+    
+      var current = $(this).parent().next("dd");
+      $(".accordion > dt > a").removeClass("active");
+      $(this).addClass("active");
+      accordPanels.not(current).slideUp("easeInExpo");
+      $(this).parent().next().slideDown("easeOutExpo");
+      
+      return false;
+            
+  });
+  
+  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });
