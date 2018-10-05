@@ -202,7 +202,29 @@ function clean(){
                   </div>
                 </div>
                 <!-- Toggle -->
-                <dl class="toggle">
+                <dl id="toggle" class="toggle">
+
+<% @pubs.each do |p| %>
+                  <dt>
+                    <a href="#"><h5 class="m-0 text-left"><%= p.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= p.autores %></h5></a>
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span><%= p.lugar %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span><%= p.editorial %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= p.tematica %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= p.link %>" target="_blank" class="a-inv"><%= p.link.present? ? (p.link[0..25] + (p.link.size >= 25 ? "..." : "")) : "" %></a></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Centro de estudios:</strong> <span><%= p.centro %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Edición:</strong> <span><%= p.edicion %></span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span><%= p.anio %></span></p>
+                      </div>
+                    </div>
+                  </dd>
+<% end %>
+<% if false %>
                   <dt>
                     <a href="#"><h5 class="m-0 text-left">ESTATALIDADES Y SOBERANÍAS DISPUTADAS. LA REORGANIZACIÓN CONTEMPORÁNEA</h5><h5 class="verde-obscuro mt-10 mb-0">Agudo Sanchíz, Alejandro; Estrada Saavedra, Marco; Braig, Marianne (eds.)</h5></a>
                   </dt>
@@ -257,24 +279,7 @@ function clean(){
                       </div>
                     </div>
                   </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">ESTATALIDADES Y SOBERANÍAS DISPUTADAS. LA REORGANIZACIÓN CONTEMPORÁNEA</h5><h5 class="verde-obscuro mt-10 mb-0">Agudo Sanchíz, Alejandro; Estrada Saavedra, Marco; Braig, Marianne (eds.)</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span>Ciudad de México</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span>El Colegio de México</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Instituciones políticas-Historia</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://libros.colmex.mx/" target="_blank" class="a-inv">https://libros.colmex.mx/</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Centro de estudios:</strong> <span>Centro de Estudios Sociológicos</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Edición:</strong> <span>1a</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>2017</span></p>
-                      </div>
-                    </div>
-                  </dd>
+<% end %>
                 </dl>
                 <!-- End Toggle -->
               </div>
@@ -283,14 +288,16 @@ function clean(){
           <div class="row mb-30">
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
-                <ul class="pagination">
-                  <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+                <ul id="pags-mag" class="pagination">
+<% @pags.times do |c| %>
+	<% if c == 0 %>
+                        <li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>
+	<% end %>
+                        <li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'tog ' + (c == 0 ? 'active' : '') %>"><a href="<%= libros_path(params: {offset: c}) %>" data-remote="true"><%= (c+1).to_s %></a></li>
+	<% if c == @pags - 1 %>
+                        <li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>
+	<% end %>
+<% end %>
                 </ul>
               </nav>
             </div>

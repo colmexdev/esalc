@@ -288,7 +288,7 @@ function clean(){
           <div class="row mb-30">
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
-                <ul id="pags-mag" class="pagination">
+                <ul id="pags" class="pagination">
 <% @pags.times do |c| %>
 	<% if c == 0 %>
                         <li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>

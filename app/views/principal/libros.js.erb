@@ -33,7 +33,7 @@ var pag_html = ""
                         pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
 <% end %>
-$("#pags-mag").html(pag_html);
+$("#pags").html(pag_html);
 $("#mag-ant").attr("href", "<%= libros_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1))}) %>" + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : ""));
 $("#mag-nxt").attr("href", "<%= libros_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1))}) %>" + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : ""));
 
