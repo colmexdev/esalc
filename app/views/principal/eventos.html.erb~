@@ -75,7 +75,7 @@
                         </form>
                       </div>
                       <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
+
                           <select name="tipo" id="tipo" class="select-md input-border w-100">
                             <option value>Tipo</option>
                             <option value="coloquio">Coloquio</option>
@@ -99,10 +99,10 @@
                             <option value="seminario">Seminario</option>
                             <option value="taller">Taller</option>
                           </select>
-                        </form>
+
                       </div>
                       <div class="col-lg-3 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
+
                           <select name="centro" id="centro" class="select-md input-border w-100">
                             <option value>Centro de Estudio</option>
                             <option value="ceaa">CEAA</option>
@@ -113,10 +113,10 @@
                             <option value="cell">CELL</option>
                             <option value="ces">CES</option>
                           </select>
-                        </form>
+
                       </div>
                       <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
+
                           <select name="fecha" id="fecha" class="select-md input-border w-100">
                             <option value>Año</option>
                             <option value="2018">2018</option>
@@ -129,7 +129,7 @@
                             <option value="2011">2011</option>
                             <option value="2010">2010</option>
                           </select>
-                        </form>
+
                       </div>
                     </div>
                   </div>
