@@ -147,7 +147,7 @@ class PrincipalController < ApplicationController
   end
 
   def eventos
-    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params.key?(:conds) ? ((params[:conds].key?(:tipo) ? "&tipo=" + params[:conds][:tipo] : "") + (params[:conds].key?(:centros) ? "&centros=" + params[:conds][:centros] : "") + (params[:conds].key?(:fecha) ? "&anio=" + params[:conds][:fecha] : "")) : "")
+    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params.key?(:conds) ? ((params[:conds].key?(:tipo) ? "&tipo=" + params[:conds][:tipo] : "") + (params[:conds].key?(:centros) ? "&centros=" + params[:conds][:centros] : "") + (params[:conds].key?(:fecha) ? "&fecha=" + params[:conds][:fecha] : "")) : "")
     respond_to do |format|
       format.html
       format.js
