@@ -82,7 +82,7 @@ function fill_eventos(conds){
 	console.log(conds);
   var regex = /(\?)?(offset=[^&]+)?(&amp;tipo=[^&]+)?(&amp;centros=[^&]+)?(&amp;fecha=.+)?/;
 	var grupos = regex.exec(conds);
-	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1]) + 1) : "");
+	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
 	var tipo = (grupos !== undefined && grupos[3] !== undefined ? "&tipo=" + grupos[3].split("=")[1] : "");
 	var centros = (grupos !== undefined && grupos[4] !== undefined ? "&centro=" + grupos[4].split("=")[1] : "");
 	var fecha = (grupos !== undefined && grupos[6] !== undefined ? "&anio=" + grupos[6].split("=")[1] : "");
