@@ -85,7 +85,7 @@ function fill_eventos(conds){
 	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
 	var tipo = (grupos !== undefined && grupos[3] !== undefined ? "&tipo=" + grupos[3].split("=")[1] : "");
 	var centros = (grupos !== undefined && grupos[4] !== undefined ? "&centro=" + grupos[4].split("=")[1] : "");
-	var fecha = (grupos !== undefined && grupos[6] !== undefined ? "&anio=" + grupos[6].split("=")[1] : "");
+	var fecha = (grupos !== undefined && grupos[6] !== undefined ? "&anio=" + grupos[5].split("=")[1] : "");
 	$.ajax({
 		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&crono=desc&limit=10" + offset + centros + tipo + fecha,
 		success: function(result){
