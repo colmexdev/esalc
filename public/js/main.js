@@ -98,12 +98,12 @@ function fill_eventos(conds){
                   '<dd>' +
                     '<div class="row">' +
                       '<div class="col-md-7">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>' +
+                        //'<p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>' + result["videos"][i]["centroSiglas"] + '</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>' + result["videos"][i]["fechaInicio"] + '</span></p>' +
                       '</div>' +
                       '<div class="col-md-5">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>' +
+                        //'<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>' + result["videos"][i]["tipoActividad"] + '</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>' + result["videos"][i]["sede"] + '</span></p>' +
                       '</div>' +
@@ -123,7 +123,7 @@ function fill_eventos(conds){
 
 	var pag_html = '<li><a data-remote="true" href="/eventos?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	for(i = 0; i < parseInt(result["pages"]); i++){
-		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/eventos?offset=' + i.toString() + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '">' + (i + 1).toString() + '</a></li>'
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i ? ' class="active"' : '') + '><a data-remote="true" href="/eventos?offset=' + i.toString() + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '">' + (i + 1).toString() + '</a></li>'
 	}
 	pag_html = pag_html + '<li><a data-remote="true" href="/eventos?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
 	$("#pags").html(pag_html);

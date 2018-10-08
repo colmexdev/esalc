@@ -98,18 +98,18 @@ function fill_eventos(conds){
                   '<dd>' +
                     '<div class="row">' +
                       '<div class="col-md-7">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>' +
+                        //'<p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>' + result["videos"][i]["centroSiglas"] + '</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>' + result["videos"][i]["fechaInicio"] + '</span></p>' +
                       '</div>' +
                       '<div class="col-md-5">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>' +
+                        //'<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>' + result["videos"][i]["tipoActividad"] + '</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>' + result["videos"][i]["sede"] + '</span></p>' +
                       '</div>' +
                       '<div class="col-md-12">' +
                         '<p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="' + result["videos"][i]["liga"] + '" target="_blank" class="a-inv">' + result["videos"][i]["liga"] + '</a></p>' +
-                        '<p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>' +
+                        //'<p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>' +
                         //'<p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
                           //<a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
                           //<a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
@@ -121,7 +121,7 @@ function fill_eventos(conds){
 			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
 			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
 
-	var pag_html = '<li><a data-remote="true" href="/eventos?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	var pag_html = '<li><a data-remote="true" href="/eventos?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	for(i = 0; i < parseInt(result["pages"]); i++){
 		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/eventos?offset=' + i.toString() + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '">' + (i + 1).toString() + '</a></li>'
 	}
