@@ -124,7 +124,7 @@ class PrincipalController < ApplicationController
       multi = true
     end
     if pars.key?(:fecha)
-      where = where + (multi ? " AND " : "") + "anio = " + pars[:fecha] + ""
+      where = where + (multi ? " AND " : "") + "anio = " + pars[:fecha]
       multi = true
     end
     return where
