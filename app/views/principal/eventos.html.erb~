@@ -217,7 +217,7 @@ $(document).ready(function(){
                     '</div>' +
                   '</div>';
 			}
-			ev_html = ev_html + '</div>'
+			ev_html = ev_html + '</div>';
 			$("#wrap-evs").html(ev_html);
 			//$("#carr-evs").owlCarousel();
 		}
