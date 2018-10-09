@@ -213,7 +213,7 @@ $(document).ready(function(){
 			for(var i = 0; i < result["videos"].length; i++){
 				ev_html = ev_html + '<div class="item m-0">' +
                     '<div>' +
-                      '<a href="' + result["videos"][i]["liga"] + '" target="_blank"><img alt="Slide 1" src="' + result["videos"][i]["ligaImagen"] + '"></a>' +
+                      '<a href="' + result["videos"][i]["liga"] + '" target="_blank"><img alt="Slide 1" src="' + result["videos"][i]["ligaImagen"].replace("http://","https://") + '"></a>' +
                     '</div>' +
                   '</div>';
 			}
