@@ -14,7 +14,7 @@
               <div class="mb-30">
                 <h2 class="section-title pr-0 "><span class="bold ">EVENTOS</span> RECIENTES</h2>
               </div>
-              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 mb-50">
+              <div id="wrap-evs" class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 mb-50">
                 <!-- CAROUSEL DE PRÓXIMOS EVENTOS -->
                 <div id="carr-evs" class="owl-1-pag-auto owl-carousel owl-dark-bg owl-pag-2">
                   <!-- ITEM -->
@@ -204,10 +204,10 @@ function clean(){
 
 <script>
 $(document).ready(function(){
-/*	$.ajax({
+	$.ajax({
 		url: 'https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina&crono=desc&limit=3',
 		success: function(result){
-			var ev_html = "";
+			var ev_html = '<div id="carr-evs" class="owl-1-pag-auto owl-carousel owl-dark-bg owl-pag-2">';
 			for(var i = 0; i < result["videos"].length; i++){
 				ev_html = ev_html + '<div class="item m-0">' +
                     '<div>' +
@@ -215,9 +215,11 @@ $(document).ready(function(){
                     '</div>' +
                   '</div>';
 			}
-			$("#carr-evs").html(ev_html);
+			ev_html = ev_html + '</div>'
+			$("#wrap-evs").html(ev_html);
+			$("#carr-evs").owlCarousel();
 		}
-	});*/
+	});
 	fill_eventos();
 });
 </script>
