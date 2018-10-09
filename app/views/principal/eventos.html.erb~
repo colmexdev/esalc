@@ -16,7 +16,7 @@
               </div>
               <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 mb-50">
                 <!-- CAROUSEL DE PRÓXIMOS EVENTOS -->
-                <div class="owl-1-pag-auto owl-carousel owl-dark-bg owl-pag-2">
+                <div id="carr-evs" class="owl-1-pag-auto owl-carousel owl-dark-bg owl-pag-2">
                   <!-- ITEM -->
                   <div class="item m-0">
                     <div>
@@ -107,21 +107,21 @@ function clean(){
                             <option value="coloquio">Coloquio</option>
                             <option value="conferencia">Conferencia</option>
                             <option value="congreso">Congreso</option>
-                            <option value="congresointernacional">Congreso internacional</option>
+                            <option value="congreso internacional">Congreso internacional</option>
                             <option value="conversatorio">Conversatorio</option>
                             <option value="curso">Curso</option>
-                            <option value="cursoespecializado">Curso especializado</option>
+                            <option value="curso especializado">Curso especializado</option>
                             <option value="debate">Debate sobre libro</option>
-                            <option value="encuentrointernacional">Encuentro Internacional</option>
-                            <option value="exposicion">Exposición</option>
-                            <option value="exposicionpresentacionlibro">Exposición y presentación de libro</option>
+                            <option value="encuentro internacional">Encuentro Internacional</option>
+                            <option value="exposición">Exposición</option>
+                            <option value="exposicion y presentación de libro">Exposición y presentación de libro</option>
                             <option value="homenaje">Homenaje</option>
-                            <option value="mesaredonda">Mesa redonda</option>
-                            <option value="mesaredondalibro">Mesa redonda sobre libro</option>
-                            <option value="platica">Plática</option>
-                            <option value="presentacionlibro">Presentación de libro</option>
-                            <option value="presentacionproyecto">Presentación de proyecto</option>
-                            <option value="presentacionreporte">Presentación de Reporte</option>
+                            <option value="mesa redonda">Mesa redonda</option>
+                            <option value="mesa redonda sobre libro">Mesa redonda sobre libro</option>
+                            <option value="plática">Plática</option>
+                            <option value="presentación de libro">Presentación de libro</option>
+                            <option value="presentación de proyecto">Presentación de proyecto</option>
+                            <option value="presentación de reporte">Presentación de Reporte</option>
                             <option value="seminario">Seminario</option>
                             <option value="taller">Taller</option>
                           </select>
@@ -204,6 +204,12 @@ function clean(){
 
 <script>
 $(document).ready(function(){
+	$.ajax({
+		url: 'https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina&crono=desc&limit=3',
+		success: function(result){
+			
+		}
+	});
 	fill_eventos();
 });
 </script>
