@@ -161,7 +161,39 @@ function find_tag(tags){
 	return temas;
 }
 
+        // CAROUSEL ONE ITEM INLINE, NO CONTROLS, NO AUTO PLAY, WITH PAGINATION  
+			  $(".owl-1-pag").owlCarousel({
+			 
+				  //Set AutoPlay to 3 seconds
+          //autoPlay : 5000,
+				  items : 1,
+				  itemsDesktop : [1000,1], 
+					itemsDesktopSmall : [900,1], 
+          itemsTablet: [470,1], 
+          itemsMobile : false, 
+				  
+				  //Pagination
+					pagination : true,
+					paginationNumbers: false,
+			 
+			  });
 
+        // CAROUSEL ONE ITEM INLINE, NO CONTROLS, AUTO PLAY, WITH PAGINATION
+			  $(".owl-1-pag-auto").owlCarousel({
+			 
+				  //Set AutoPlay to 3 seconds
+          autoPlay : 5000,
+				  items : 1,
+				  itemsDesktop : [1000,1], 
+					itemsDesktopSmall : [900,1], 
+          itemsTablet: [470,1], 
+          itemsMobile : false, 
+				  
+				  //Pagination
+					pagination : true,
+					paginationNumbers: false,
+			 
+			  });
 
 
 
