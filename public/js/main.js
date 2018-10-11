@@ -173,7 +173,7 @@ function fill_seminarios(conds){
   var regex = /(\?)?(offset=[^&]+)?(&amp;centros=.+)?/;
 	var grupos = regex.exec(conds);
 	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
-	var centros = (grupos !== undefined && grupos[4] !== undefined ? "&centro=" + grupos[4].split("=")[1] : "");
+	var centros = (grupos !== undefined && grupos[3] !== undefined ? "&centro=" + grupos[3].split("=")[1] : "");
 	$.ajax({
 		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&crono=desc&limit=10&tipos=seminario" + offset + centros,
 		success: function(result){
@@ -209,11 +209,11 @@ function fill_seminarios(conds){
 			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
 			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
 
-	var pag_html = '<li><a data-remote="true" href="/eventos?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	var pag_html = '<li><a data-remote="true" href="/seminarios?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	for(i = 0; i < parseInt(result["pages"]); i++){
-		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/eventos?offset=' + i.toString() + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '">' + (i + 1).toString() + '</a></li>';
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/seminarios?offset=' + i.toString() + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + '">' + (i + 1).toString() + '</a></li>';
 	}
-	pag_html = pag_html + '<li><a data-remote="true" href="/eventos?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
+	pag_html = pag_html + '<li><a data-remote="true" href="/seminarios?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
 	$("#pags").html(pag_html);
 	
 	  // TOGGLE
