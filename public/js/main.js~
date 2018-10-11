@@ -78,8 +78,8 @@ function find_tag(tags){
 //--------------------------------------------------------------------------------------------------
 
 function fill_eventos(conds){
-	conds = conds || null;
-	console.log(conds);
+	conds = conds || "";
+
   var regex = /(\?)?(offset=[^&]+)?(&amp;tipo=[^&]+)?(&amp;centros=[^&]+)?(&amp;fecha=.+)?/;
 	var grupos = regex.exec(conds);
 	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
@@ -161,46 +161,99 @@ function find_tag(tags){
 	return temas;
 }
 
-        // CAROUSEL ONE ITEM INLINE, NO CONTROLS, NO AUTO PLAY, WITH PAGINATION  
-			  $(".owl-1-pag").owlCarousel({
-			 
-				  //Set AutoPlay to 3 seconds
-          //autoPlay : 5000,
-				  items : 1,
-				  itemsDesktop : [1000,1], 
-					itemsDesktopSmall : [900,1], 
-          itemsTablet: [470,1], 
-          itemsMobile : false, 
-				  
-				  //Pagination
-					pagination : true,
-					paginationNumbers: false,
-			 
-			  });
-
-        // CAROUSEL ONE ITEM INLINE, NO CONTROLS, AUTO PLAY, WITH PAGINATION
-			  $(".owl-1-pag-auto").owlCarousel({
-			 
-				  //Set AutoPlay to 3 seconds
-          autoPlay : 5000,
-				  items : 1,
-				  itemsDesktop : [1000,1], 
-					itemsDesktopSmall : [900,1], 
-          itemsTablet: [470,1], 
-          itemsMobile : false, 
-				  
-				  //Pagination
-					pagination : true,
-					paginationNumbers: false,
-			 
-			  });
-
 
 
 }
 
 //---------------------------------------------------------------------------------------------
 
+function fill_seminarios(conds){
+	conds = conds || "";
+
+  var regex = /(\?)?(offset=[^&]+)?(&amp;centros=.+)?/;
+	var grupos = regex.exec(conds);
+	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
+	var centros = (grupos !== undefined && grupos[4] !== undefined ? "&centro=" + grupos[4].split("=")[1] : "");
+	$.ajax({
+		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&crono=desc&limit=10&tipos=seminario" + offset + centros,
+		success: function(result){
+			var vids_html = "";
+			for(var i = 0; i < result["videos"].length; i++){
+				//var fecha_vid = result["videos"][i]["fecha"].substring(0,10).split("-");
+				vids_html = vids_html + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>'
+                  </dt>
+                  <dd>
+                    <div class="row">
+                      <div class="col-md-7">
+                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
+                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
+                      </div>
+                      <div class="col-md-12">
+                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
+                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
+                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
+                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
+                      </div>
+                    </div>
+                  </dd>
+			}
+			$("#toggle").html(vids_html);
+			$("#count_p").html("<strong>Total: " + result["total"] + "</strong>");
+			$("#count_pr").html("<strong>Total: " + result["total"] + "</strong>");
+
+	var pag_html = '<li><a data-remote="true" href="/eventos?offset=' + (result["prev_page"] == null ? '0' : result["prev_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+	for(i = 0; i < parseInt(result["pages"]); i++){
+		pag_html = pag_html + '<li' + (parseInt(result["curr_page"]) == i + 1 ? ' class="active"' : '') + '><a data-remote="true" href="/eventos?offset=' + i.toString() + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '">' + (i + 1).toString() + '</a></li>';
+	}
+	pag_html = pag_html + '<li><a data-remote="true" href="/eventos?offset=' + (result["next_page"] == null ? '0' : result["next_page"]) + ($("#tipo").val() != "" ? "&conds[tipo]=" + $("#tipo").val() : "") + ($("#centros").val() != "" ? "&conds[centros]=" + $("#centros").val() : "") + ($("#fecha").val() != "" ? "&conds[fecha]=" + $("#fecha").val() : "") + '"><i class="fa fa-angle-right"></i><span class="Siguiente</span></a></li>';
+	$("#pags").html(pag_html);
+	
+	  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });
+		}
+	});
+
+function find_tag(tags){
+	var temas = "";
+	if(tags.indexOf("Violencia") != -1) temas = "Violencia y Derechos Humanos";
+	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Sociedad y economía";
+	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Relaciones internacionales";
+	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Política, partidos e instituciones";
+	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Historia";
+	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
+	return temas;
+}
+
+
+
+}
+
+//---------------------------------------------------------------------------------------------
 
     $(document).ready(function() {
       //NAV SIDEBAR------------------------------------------------------------------

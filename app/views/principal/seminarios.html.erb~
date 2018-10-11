@@ -211,6 +211,27 @@
             </div>
 
             <!-- FORMULARIO DE BÚSQUEDA -->
+<script>
+function filter(f_ids){
+	var where = "", multi = false, val;
+	for(var i=0;i<f_ids.length;i++){
+		val = $("#"+f_ids[i]).val();
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
+	}
+	$.ajax({
+		url: "/seminarios.js?offset=0" + where,
+		success: function(){}
+	});
+}
+
+function clean(){
+	$("#centros").val(null);
+	$.ajax({
+		url: "/seminarios.js?offset=0",
+		success: function(){}
+	});
+}
+</script>
             <div class="row">
               <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
                 <!-- FORMULARIO DE BÚSQUEDA -->
@@ -221,7 +242,7 @@
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
+<% if false %>
                           <select name="proyecto" id="proyecto" class="select-md input-border w-100">
                             <option value>Proyecto</option>
                             <option value="ggm">El Grupo Guatemala-México. Migración y Desarrollo</option>
@@ -237,11 +258,11 @@
                             <option value="sih">Seminario Institucional de Historiografía</option>
                             <option value="sihe">Seminario Interinstitucional de Historia Económica</option>
                           </select>
-                        </form>
+<% end %>
                       </div>
                       <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
-                        <form method="post" action="#" class="form">
-                          <select name="centro" id="centro" class="select-md input-border w-100">
+
+                          <select onchange="filter(['centros']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centro de Estudio</option>
                             <option value="ceaa">CEAA</option>
                             <option value="cedua">CEDUA</option>
@@ -251,13 +272,13 @@
                             <option value="cell">CELL</option>
                             <option value="ces">CES</option>
                           </select>
-                        </form>
+
                       </div>
                     </div>
                   </div>
                   <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
                     <br class="visible-sm visible-xs">
-                    <button type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                    <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>
                 </div>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
@@ -266,14 +287,14 @@
                     <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
                   </div>
                   <div class="col-md-4 hidden-sm hidden-xs text-right">
-                    <h3 class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                    <h3 id="count_p" class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
                   </div>
                   <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
-                    <h3 class="verde-obscuro"><strong>Total: 000</strong></h3>
+                    <h3 id="count_pr" class="verde-obscuro"><strong>Total: 000</strong></h3>
                   </div>
                 </div>
                 <!-- Toggle -->
-                <dl class="toggle">
+                <dl id="toggle" class="toggle">
                   <dt>
                     <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
                   </dt>
@@ -378,14 +399,8 @@
           <div class="row mb-30">
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
-                <ul class="pagination">
-                  <li><a href="#"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a></li>
-                  <li class="active"><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a></li>
+                <ul id="pags" class="pagination">
+
                 </ul>
               </nav>
             </div>
