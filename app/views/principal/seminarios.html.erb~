@@ -287,110 +287,15 @@ function clean(){
                     <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
                   </div>
                   <div class="col-md-4 hidden-sm hidden-xs text-right">
-                    <h3 id="count_p" class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                    <h3 id="count_p" class="verde-obscuro m-0"></h3>
                   </div>
                   <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
-                    <h3 id="count_pr" class="verde-obscuro"><strong>Total: 000</strong></h3>
+                    <h3 id="count_pr" class="verde-obscuro"></h3>
                   </div>
                 </div>
                 <!-- Toggle -->
                 <dl id="toggle" class="toggle">
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
-                      </div>
-                      <div class="col-md-12">
-                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
-                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
-                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
-                      </div>
-                    </div>
-                  </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
-                      </div>
-                      <div class="col-md-12">
-                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
-                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
-                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
-                      </div>
-                    </div>
-                  </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
-                      </div>
-                      <div class="col-md-12">
-                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
-                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
-                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
-                      </div>
-                    </div>
-                  </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">América Latina ante los distintos escenarios de salida de la crisis global</h5><h5 class="verde-obscuro mt-10 mb-0">Seminario de América Latina</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Ponente (s):</strong> <span>Varios</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Organización:</strong> <span>Dirección CEI-Ilan Bizberg</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Fecha:</strong> <span>28-29 de febrero 2016</span></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>Crisis global</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Tipo de evento:</strong> <span>Conferencia</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Lugar:</strong> <span>Sala Alfonso Reyes</span></p>
-                      </div>
-                      <div class="col-md-12">
-                        <p class="text-left"><strong class="azul-obscuro">Enlace al evento:</strong> <a href="http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf" target="_blank" class="a-inv">http://cei.colmex.mx/Proyecto%20Bizberg%20Am%C3%A9rica%20Latina/Programa%20Conferencia%20Am%C3%A9rica%20Latina.pdf</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Programa:</strong> <a href="http://www.h-mexico.unam.mx/node/17683" target="_blank" class="a-inv">http://www.h-mexico.unam.mx/node/17683</a></p>
-                        <p class="text-left"><strong class="azul-obscuro">Videos relacionados:</strong> <a href="#" target="_blank" class="a-inv">Crisis, política y gestión migratoria con Demetrios Papademetriou</a>,
-                          <a href="#" target="_blank" class="a-inv">Efectos del control migratorio en el sitio de trabajo con Pia Orrenius</a>, <a href="#" target="_blank" class="a-inv">El rol del Estado en la gestión migratoria con James Hollifield</a>,
-                          <a href="#" target="_blank" class="a-inv">Migración y desarrollo con Hein de Haas</a></p>
-                      </div>
-                    </div>
-                  </dd>
+
                 </dl>
                 <!-- End Toggle -->
               </div>
