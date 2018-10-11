@@ -155,7 +155,7 @@ class PrincipalController < ApplicationController
   end
 
   def seminarios
-    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params[:conds].key?(:centros) ? "&centros=" + params[:conds][:centros] : "")
+    @url = "?" + (params.key?(:offset) ? ("offset=" + params[:offset]) : "") + (params.key?(:conds) ? (params[:conds].key?(:centros) ? ("&centros=" + params[:conds][:centros]) : "") : "")
     respond_to do |format|
       format.html
       format.js
