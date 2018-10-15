@@ -44,7 +44,7 @@ class PrincipalController < ApplicationController
   def historia
     @tema = "Historia"
     where = "lower(tematica) like '%historia%'"
-    @profs = Directorio.where(where)
+    #@profs = Directorio.where(where)
     @revs = Revista.where(where)
     @pubs = Publicacion.where(where)
     @tesis = Tesis.where(where)
