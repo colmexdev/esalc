@@ -71,7 +71,7 @@ class PrincipalController < ApplicationController
 
   def partidos_politicos
     @tema = "Política, partidos e instituciones"
-    where = "lower(tematica) like '%pol?tic%'"
+    where = "lower(tematica) like '%pol_tic%'"
     #@profs = Directorio.where(where)
     @revs = Revista.where(where)
     @pubs = Publicacion.where(where)
@@ -97,7 +97,7 @@ class PrincipalController < ApplicationController
 
   def sociedad_economia
     @tema = "Sociedad y economía"
-    where = "lower(tematica) like '%econ?m%'"
+    where = "lower(tematica) like '%econ_m%'"
     #@profs = Directorio.where(where)
     @revs = Revista.where(where)
     @pubs = Publicacion.where(where)

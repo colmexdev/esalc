@@ -57,6 +57,12 @@ class PrincipalController < ApplicationController
 
   def lengua_literatura
     @tema = "Lengua y literatura"
+    where = "lower(tematica) like '%lengua%'"
+    #@profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=lengua y literatura"
     respond_to do |format|
       format.html {render :historia}
       format.js {render :historia}
@@ -65,6 +71,12 @@ class PrincipalController < ApplicationController
 
   def partidos_politicos
     @tema = "Política, partidos e instituciones"
+    where = "lower(tematica) like '%pol?tic%'"
+    #@profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=politic"
     respond_to do |format|
       format.html {render :historia}
     end
@@ -72,6 +84,12 @@ class PrincipalController < ApplicationController
 
   def relaciones_internacionales
     @tema = "Relaciones internacionales"
+    where = "lower(tematica) like '%internacionales%'"
+    #@profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=relaciones internacionales"
     respond_to do |format|
       format.html {render :historia}
     end
@@ -79,6 +97,12 @@ class PrincipalController < ApplicationController
 
   def sociedad_economia
     @tema = "Sociedad y economía"
+    where = "lower(tematica) like '%econ?m%'"
+    #@profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=econom"
     respond_to do |format|
       format.html {render :historia}
     end
@@ -86,6 +110,12 @@ class PrincipalController < ApplicationController
 
   def violencia
     @tema = "Violencia y Derechos Humanos"
+    where = "lower(tematica) like '%violencia%'"
+    #@profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=violencia"
     respond_to do |format|
       format.html {render :historia}
     end
