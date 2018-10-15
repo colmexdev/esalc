@@ -168,9 +168,9 @@
 $.ajax({
 	url: 'https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamérica, <%= @tema %>',
 	success: function(result){
-		var pubs = <%= @pubs %>;
-		var revs = <%= @revs %>;
-		var tesis = <%= @tesis %>;
+		var pubs = JSON.parse('<%= @pubs %>');
+		var revs = JSON.parse('<%= @revs %>');
+		var tesis = JSON.parse('<%= @tesis %>');
 		var todo = pubs.concat(revs,tesis);
 		console.log(todo);
 	}
