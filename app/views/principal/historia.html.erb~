@@ -164,7 +164,16 @@
         </div>
         <!-- FIN CONTENT CONTAINER -->
       </div>
-<%= @revs.first %>
-<%= @tesis.first %>
-<%= @pubs.first %>
+<script>
+$.ajax({
+	url: 'https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamérica, <%= @tema %>',
+	success: function(result){
+		var pubs = <%= @pubs %>;
+		var revs = <%= @revs %>;
+		var tesis = <%= @tesis %>;
+		var todo = pubs.concat(revs,tesis);
+		console.log(todo);
+	}
+})
+</script>
 <%= render 'principal/footer' %>
