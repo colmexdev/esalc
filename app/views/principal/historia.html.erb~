@@ -191,8 +191,10 @@ $.ajax({
 			result["vids"][i]["sect"] = "vid";
 		}
 		var todo = pubs.concat(revs,tesis,result["vids"]);
-		var pags = Math.ceil(todo.length/limit);
+		console.log(todo);
 
+
+		var pags = Math.ceil(todo.length/limit);
 		var pag_html = ""
 		for(var i = 0; i < pags; i++){
 			if(i == 0){
