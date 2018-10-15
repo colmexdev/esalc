@@ -164,7 +164,7 @@
         </div>
         <!-- FIN CONTENT CONTAINER -->
       </div>
-<%= @revs.first %>
-<%= @tesis.first %>
-<%= @pubs.first %>
+<%= @revs.first[:sect] %>
+<%= @tesis.first[:sect] %>
+<%= @pubs.first[:sect] %>
 <%= render 'principal/footer' %>
