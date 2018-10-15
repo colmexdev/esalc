@@ -164,5 +164,8 @@
         </div>
         <!-- FIN CONTENT CONTAINER -->
       </div>
-<%= @profs %>
+<%= @profs.count %>
+<%= @revs.count %>
+<%= @tesis.count %>
+<%= @pubs.count %>
 <%= render 'principal/footer' %>
