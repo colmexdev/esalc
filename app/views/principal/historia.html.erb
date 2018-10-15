@@ -171,7 +171,10 @@ $.ajax({
 		var pubs = <%= raw @pubs.to_json %>;
 		var revs = <%= raw @revs.to_json %>;
 		var tesis = <%= raw @tesis.to_json %>;
-		var todo = pubs.concat(revs,tesis);
+		for(var i = 0; i < result["vids"].length; i++){
+			result["vids"][i]["sect"] = "vid";
+		}
+		var todo = pubs.concat(revs,tesis,result["vids"]);
 		console.log(todo);
 	}
 })
