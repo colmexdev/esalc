@@ -22,7 +22,7 @@ function filter(f_ids){
 		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
-		url: "/seminarios.js?offset=0&conds[tema]=Historia" + where,
+		url: "/historia.js?offset=0&conds[tema]=Historia" + where,
 		success: function(){}
 	});
 }
