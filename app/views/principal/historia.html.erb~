@@ -164,7 +164,7 @@
         </div>
         <!-- FIN CONTENT CONTAINER -->
       </div>
-<%= @revs.first[:sect] %>
-<%= @tesis.first[:sect] %>
-<%= @pubs.first[:sect] %>
+<%= @revs.first.as_json %>
+<%= @tesis.first.as_json %>
+<%= @pubs.first.as_json %>
 <%= render 'principal/footer' %>
