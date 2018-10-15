@@ -86,9 +86,9 @@ class PrincipalController < ApplicationController
     @tema = "Relaciones internacionales"
     where = "lower(tematica) like '%internacionales%'"
     #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
+    @revs = Revista.where(where).map {|m| m[:sect]: "rev" }
+    @pubs = Publicacion.where(where).map {|m| m[:sect]: "pub" }
+    @tesis = Tesis.where(where).map {|m| m[:sect]: "tesis" }
     @url = "?" + "tema=relaciones internacionales"
     respond_to do |format|
       format.html {render :historia}
