@@ -26,11 +26,11 @@ $("#toggle").html(html_toggle);
 var pag_html = ""
 <% @pags.times do |c| %>
 	<% if c == 0 %>
-                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>' + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	<% end %>
                         pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= libros_path(params: {offset: c}) %>' + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
 	<% if c == @pags - 1 %>
-                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>' + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
 <% end %>
 $("#pags").html(pag_html);
