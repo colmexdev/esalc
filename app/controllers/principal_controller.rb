@@ -45,9 +45,9 @@ class PrincipalController < ApplicationController
     @tema = "Historia"
     where = "lower(tematica) like '%historia%'"
     #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
+    @revs = Revista.where(where).each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where).each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where).each {|m| m[:sect] = "tesis" }
     @url = "?" + "tema=historia"
     respond_to do |format|
       format.html
