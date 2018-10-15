@@ -43,12 +43,23 @@ class PrincipalController < ApplicationController
 
   def historia
     @tema = "Historia"
+    where = "lower(tematica) like '%historia%'"
+    @profs = Directorio.where(where)
+    @revs = Revista.where(where)
+    @pubs = Publicacion.where(where)
+    @tesis = Tesis.where(where)
+    @url = "?" + "tema=historia"
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def lengua_literatura
     @tema = "Lengua y literatura"
     respond_to do |format|
       format.html {render :historia}
+      format.js {render :historia}
     end
   end
 
