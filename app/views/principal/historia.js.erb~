@@ -11,6 +11,8 @@ $.ajax({
 		var todo = ("<%= @tipo %>" == "pub" ? pubs : ("<%= @tipo %>" == "rev" ? revs : ("<%= @tipo %>" == "tesis" ? tesis : ("<%= @tipo %>" == "vid" ? result["vids"] : pubs.concat(revs,tesis,result["vids"])))));
 		var limit = 10;
 		var offset = <%= params.key?(:offset) ? params[:offset].to_i : 0 %>;
+		console.log(offset);
+		console.log("<%= params.key?(:offset) ? params[:offset] : '' ) %>");
 		var html_toggle = "";
 		for(var i = 0; i < limit; i++){
 			if((limit*offset)+i >= todo.length) break;
