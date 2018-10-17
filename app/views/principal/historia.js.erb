@@ -1,1 +1,145 @@
-console.log("Hola mundo");
+$.ajax({
+	url: 'https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamérica, <%= @tema %>',
+	success: function(result){
+		var limit = 10;
+		var pubs = <%= raw @pubs.to_json %>;
+		var revs = <%= raw @revs.to_json %>;
+		var tesis = <%= raw @tesis.to_json %>;
+		for(var i = 0; i < result["vids"].length; i++){
+			result["vids"][i]["sect"] = "vid";
+		}
+		var todo = ("<%= @tipo %>" == "pub" ? pubs : ("<%= @tipo %>" == "rev" ? revs : ("<%= @tipo %>" == "tesis" ? tesis : ("<%= @tipo %>" == "vid" ? result["vids"] : pubs.concat(revs,tesis,result["vids"])))));
+		var limit = 10;
+		var offset = <%= params.key?(:offset) ? params[:offset].to_i : 0 %>;
+		var html_toggle = "";
+		for(var i = 0; i < limit; i++){
+			if((limit*offset)+i >= todo.length) break;
+			if(todo[i]["sect"] == "pub"){
+                  html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">' + todo[i]["titulo"] + '</h5><h5 class="verde-obscuro mt-10 mb-0">' + todo[i]["autores"] + '</h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-7">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span>' + todo[i]["lugar"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span>' + todo[i]["editorial"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + todo[i]["tematica"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="' + todo[i]["link"] + '" target="_blank" class="a-inv">' + todo[i]["link"] + '</a></p>' +
+                      '</div>' +
+                      '<div class="col-md-5">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Centro de estudios:</strong> <span>' + todo[i]["centro"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Edición:</strong> <span>' + todo[i]["edicion"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>' + todo[i]["anio"] + '</span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+			} else if(todo[i]["sect"] == "rev"){
+                  html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">' + todo[i]["articulo"] + '</h5><h5 class="verde-obscuro mt-10 mb-0">' + todo[i]["autores"] + '</h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-7">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>' + todo[i]["revista"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>' + todo[i]["volumen"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>' + todo[i]["numero"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="' + todo[i]["link"] + '" target="_blank" class="a-inv">' + todo[i]["link"] + '</a></p>' +
+                      '</div>' +
+                      '<div class="col-md-5">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>' + todo[i]["fecha"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>' + todo[i]["tematica"] + '</span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+			} else if(todo[i]["sect"] == "tesis"){
+                        html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">' + todo[i]["titulo"] + '</h5><h5 class="verde-obscuro mt-10 mb-0">' + todo[i]["autores"] + '</h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-8">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>' + todo[i]["asesores"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span>' + todo[i]["grado"] + ' en ' + todo[i]["programa"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span>' + todo[i]["anio"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="' + todo[i]["link"] + '" target="_blank" class="a-inv">' + todo[i]["link"] + '</a></p>' +
+                      '</div>' +
+                      '<div class="col-md-4">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + todo[i]["tematica"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Centro de Estudios:</strong> <span>' + todo[i]["centro"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Idioma:</strong> <span>' + todo[i]["idioma"] + '</span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+			} else if(todo[i]["sect"] == "vid"){
+				var fecha_vid = todo[i]["fecha"].substring(0,10).split("-");
+				html_toggle = html_toggle + '<dt>' +
+                              '<a href="#"><h5 class="m-0 text-left">' + todo[i]["titulo"] + '</h5>' + //'<h5 class="verde-obscuro mt-10 mb-0">Miguel Basáñez; José Romero; Gerardo Esquivel; Leonardo Curzio</h5></a>' +
+                        '</dt>' +
+                        '<dd>' +
+                          '<div class="row">' +
+                            '<div class="col-md-7">' +
+                              '<p class="text-left"><strong class="azul-obscuro">Descripción:</strong> <span>' + todo[i]["descripcion"] + '</span></p>' +
+                              '<p class="text-left"><strong class="azul-obscuro">Fecha de Publicación:</strong> <span>' + fecha_vid[2] + "-" + fecha_vid[1] + "-" + fecha_vid[0] + '</span></p>' +
+                            '</div>' +
+                            '<div class="col-md-5">' +
+                              '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + find_tag(todo[i]["tags"]) + '</span></p>' +
+                              '<p><a class="button medium  gray-light" href="https://www.youtube.com/watch?v=' + todo[i]["v_id"] + '" target="_blank">VER VIDEO <span class="icon icon-basic-video"></span></a></p>' +
+                            '</div>' +
+                          '</div>' +
+                        '</dd>';
+			}
+		}
+		$("#toggle").html(html_toggle);
+		console.log(todo);
+
+
+		var pags = Math.ceil(todo.length/limit);
+		var pag_html = ""
+		for(var i = 0; i < pags; i++){
+			if(i == 0){
+				                    pag_html = pag_html + '<li><a id="mag-ant" href="<%= historia_path(params: {offset: 0, conds: {tema: "Historia"}}) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+			}
+				                    pag_html = pag_html + '<li data-i="' + i + '" id="mag-' + i +'" class="mag ' + (i ==  <%= params[:offset].to_i %> ? 'active' : '') + '"><a href="/historia?offset=' + i + "&conds[tema]=Historia" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true">' + (i+1) + '</a></li>';
+			if(i == pags - 1){
+				                    pag_html = pag_html + '<li><a id="mag-nxt" href="<%= historia_path(params: {offset: 1, conds: {tema: "Historia"}}) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+			}
+		}
+		$("#pags").html(pag_html);
+		$("#mag-ant").attr("href", "<%= historia_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1)), conds: {tema: 'Historia'}}) %>" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
+		$("#mag-nxt").attr("href", "<%= historia_path(params: {conds: {tema: 'Historia'}}) %>" + "&offset=" + (pags - 1 == parseInt(<%= params[:offset] %>) ? pags - 1 : parseInt(<%= params[:offset] %>) ) + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
+
+		$("#count_p").html('<strong>Total: ' + todo.length + '</strong>');
+		$("#count_pr").html('<strong>Total: ' + todo.length + '</strong>');
+
+	  // TOGGLE
+  $(".toggle > dd").hide();
+  
+  $(".toggle > dt > a").click(function(){
+  
+      if ($(this).hasClass("active")) {
+      
+          $(this).parent().next().slideUp("easeOutExpo");
+          $(this).removeClass("active");
+          
+      }
+      else {
+          var current = $(this).parent().next("dd");
+          $(this).addClass("active");
+          $(this).parent().next().slideDown("easeOutExpo");
+      }
+      
+      return false;
+  });
+		}
+	});
+
+function find_tag(tags){
+	var temas = "";
+	if(tags.indexOf("Violencia") != -1) temas = "Violencia y Derechos Humanos";
+	if(tags.indexOf("Cuestiones socioeconómicas") != -1 || tags.indexOf("Sociedad y economía") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Sociedad y economía";
+	if(tags.indexOf("Relaciones internacionales") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Relaciones internacionales";
+	if(tags.indexOf("Instituciones políticas") != -1 || tags.indexOf("Política, partidos e instituciones") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Política, partidos e instituciones";
+	if(tags.indexOf("Historia") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Historia";
+	if(tags.indexOf("Lengua y Literatura") != -1) temas = temas + (temas.length != 0 ?  "; " : "") + "Lengua y Literatura";
+	return temas;
+}
