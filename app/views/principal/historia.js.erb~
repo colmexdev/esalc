@@ -12,7 +12,7 @@ $.ajax({
 		var limit = 10;
 		var offset = <%= params.key?(:offset) ? params[:offset].to_i : 0 %>;
 		console.log(offset);
-		console.log("<%= params.key?(:offset) ? params[:offset] : '' ) %>");
+		console.log("<%= params.key?(:offset) ? params[:offset] : ''  %>");
 		var html_toggle = "";
 		for(var i = 0; i < limit; i++){
 			if((limit*offset)+i >= todo.length) break;
