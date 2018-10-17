@@ -44,7 +44,6 @@ class PrincipalController < ApplicationController
   def historia
     @tema = "Historia"
     where = "lower(tematica) like '%historia%'"
-    #@profs = Directorio.where(where)
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
@@ -59,11 +58,11 @@ class PrincipalController < ApplicationController
   def lengua_literatura
     @tema = "Lengua y literatura"
     where = "lower(tematica) like '%lengua%'"
-    #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
-    @url = "?" + "tema=lengua y literatura"
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
+    @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
       format.js {render :historia}
@@ -73,11 +72,11 @@ class PrincipalController < ApplicationController
   def partidos_politicos
     @tema = "Política, partidos e instituciones"
     where = "lower(tematica) like '%pol_tic%'"
-    #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
-    @url = "?" + "tema=politic"
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
+    @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
     end
@@ -86,11 +85,11 @@ class PrincipalController < ApplicationController
   def relaciones_internacionales
     @tema = "Relaciones internacionales"
     where = "lower(tematica) like '%internacionales%'"
-    #@profs = Directorio.where(where)
-    @revs = Revista.where(where).each {|m| m[:sect] = "rev" }
-    @pubs = Publicacion.where(where).each {|m| m[:sect] = "pub" }
-    @tesis = Tesis.where(where).each {|m| m[:sect] = "tesis" }
-    @url = "?" + "tema=relaciones internacionales"
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
+    @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
     end
@@ -99,11 +98,11 @@ class PrincipalController < ApplicationController
   def sociedad_economia
     @tema = "Sociedad y economía"
     where = "lower(tematica) like '%econ_m%'"
-    #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
-    @url = "?" + "tema=econom"
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
+    @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
     end
@@ -112,11 +111,11 @@ class PrincipalController < ApplicationController
   def violencia
     @tema = "Violencia y Derechos Humanos"
     where = "lower(tematica) like '%violencia%'"
-    #@profs = Directorio.where(where)
-    @revs = Revista.where(where)
-    @pubs = Publicacion.where(where)
-    @tesis = Tesis.where(where)
-    @url = "?" + "tema=violencia"
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
+    @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
     end

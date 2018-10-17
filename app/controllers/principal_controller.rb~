@@ -45,9 +45,9 @@ class PrincipalController < ApplicationController
     @tema = "Historia"
     where = "lower(tematica) like '%historia%'"
     #@profs = Directorio.where(where)
-    @revs = Revista.where(where).as_json.each {|m| m[:sect] = "rev" }
-    @pubs = Publicacion.where(where).as_json.each {|m| m[:sect] = "pub" }
-    @tesis = Tesis.where(where).as_json.each {|m| m[:sect] = "tesis" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
+    @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
 		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
