@@ -22,7 +22,7 @@ function filter(f_ids){
 		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
-		url: "/seminarios.js?offset=0&conds[tema]=Historia" + where,
+		url: "/historia.js?offset=0&conds[tema]=Historia" + where,
 		success: function(){}
 	});
 }
@@ -68,7 +68,7 @@ function clean(){
                   </div>
                   <div class="col-md-3 col-sm-6 plr-0">
                     <br class="visible-sm visible-xs">
-                    <button onclick="clena();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
+                    <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>
                 </div>
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
@@ -190,7 +190,34 @@ $.ajax({
 		for(var i = 0; i < result["vids"].length; i++){
 			result["vids"][i]["sect"] = "vid";
 		}
-		var todo = pubs.concat(revs,tesis,result["vids"]);
+		var todo = ("<%= @tipo %>" == "pub" ? pubs : ("<%= @tipo %>" == "rev" ? revs : ("<%= @tipo %>" == "tesis" ? tesis : ("<%= @tipo %>" == "vid" ? result["vids"] : pubs.concat(revs,tesis,result["vids"])))));
+		var limit = 10;
+		var offset = <%= params.key?(:offset) ? params[:offset].to_i : 0 %>;
+		var html_toggle = "";
+		for(var i = 0; i < limit; i++){
+			if((limit*offset)+i >= todo.length) break;
+			if(todo[i]["sect"] == "pub"){
+                  html_toggle = html_toggle + '<dt>' +
+                    '<a href="#"><h5 class="m-0 text-left">' + todo[i]["titulo"] + '</h5><h5 class="verde-obscuro mt-10 mb-0">' + todo[i]["autores"] + '</h5></a>' +
+                  '</dt>' +
+                  '<dd>' +
+                    '<div class="row">' +
+                      '<div class="col-md-7">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span>' + todo[i]["lugar"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span>' + todo[i]["editorial"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span>' + todo[i]["tematica"] + '</span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= p.link %>" target="_blank" class="a-inv"><%= p.link.present? ? (p.link[0..25] + (p.link.size >= 25 ? "..." : "")) : "" %></a></p>' +
+                      '</div>' +
+                      '<div class="col-md-5">' +
+                        '<p class="text-left"><strong class="azul-obscuro">Centro de estudios:</strong> <span><%= p.centro %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Edición:</strong> <span><%= p.edicion %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span><%= p.anio %></span></p>' +
+                      '</div>' +
+                    '</div>' +
+                  '</dd>';
+
+			}
+		}
 		console.log(todo);
 
 

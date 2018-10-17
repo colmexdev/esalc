@@ -49,6 +49,7 @@ class PrincipalController < ApplicationController
     @pubs = Publicacion.where(where).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where).as_json.each {|m| m[:sect] = "tesis" }
     @url = "?" + "tema=historia"
+		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html
       format.js
