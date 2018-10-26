@@ -276,7 +276,7 @@ class PanelController < ApplicationController
       }, "Publicaciones": {
         model: Publicacion,
         fields: {autores: "Autor(es)", titulo: "Título", centro: "Centro de Estudios", editorial: "Editorial", lugar: "Lugar de publicación", traduccion: "Traducido por", edicion: "Edición", anio: "Año", tematica: "Temática(s)", link: "Liga", link_vid: "Ligas de videos asociados"},
-        imgs: {},
+        imgs: {portada: "Portada"},
         trix: []
       }, "Personal del Directorio": {
         model: Directorio,
@@ -310,7 +310,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Tesis"
       params.require(:tesis).permit(:autores, :titulo, :asesores, :anio, :idioma, :link, :grado, :programa, :centro, tematica:[])
     elsif params[:set] == "Publicaciones"
-      params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :link, :link_vid, tematica:[])
+      params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :link, :link_vid, :portada, tematica:[])
     elsif params[:set] == "Personal del Directorio"
       params.require(:directorio).permit(:nombre, :centro, :temas, :correo, :sitio)
     end
