@@ -1,5 +1,5 @@
 class AddPortadaToPublicacions < ActiveRecord::Migration
   def change
-    add_attachment :publicacions, :portada
+    add_column :publicacions, :portada, :attachment
   end
 end
