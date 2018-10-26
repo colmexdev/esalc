@@ -29,8 +29,3 @@
 		<% end %>
 	</tbody>
 </table>
-<% if false %>
-<a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_editar_path(:set => params[:set], :id => @obj.id) %>')">Editar</a><br>
-<a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_index_path(:set => params[:set]) %>')">Regresar</a><br>
-<a class="uk-link" onclick="hideLink(event,'#index-panel','<%= panel_princ_path %>')">Inicio</a>
-<% end %>
