@@ -64,18 +64,18 @@
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wow fadeInUp pb-70">
                       <div class="row">
                         <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                          <a href="shop-single.html "><img src="https://libros.colmex.mx/wp-content/plugins/documentos/portadas2/H405.jpg" alt="Historia Mínima del futbol en América Latina"></a>
+                          <a href="shop-single.html "><img src="<%= p.portada.url %>" alt="<%= p.titulo %>"></a>
                         </div>
                       </div>
                       <div class="shop-price-cont ">
-                        <a class="font-norm a-inv " href="https://libros.colmex.mx/ficha/?b=2795" target="_blank"><strong>Historia Mínima del futbol en América Latina</strong></a>
+                        <a class="font-norm a-inv " href="<%= p.link %>" target="_blank"><strong><%= p.titulo %></strong></a>
                       </div>
                       <div class="post-prev-title mb-20">
-                        <h3 class="font-norm a-inv">Pablo Alabarces</h3>
+                        <h3 class="font-norm a-inv"><%= p.autores %></h3>
                       </div>
                       <div class="post-prev-more-cont clearfix ">
                         <div class="shop-add-btn-cont ">
-                          <a class="button medium gray-light shop-add-btn" href="https://libros.colmex.mx/ficha/?b=2795" target="_blank">CONSULTAR</a>
+                          <a class="button medium gray-light shop-add-btn" href="<%= p.link %>" target="_blank">CONSULTAR</a>
                         </div>
                       </div>
                     </div>
