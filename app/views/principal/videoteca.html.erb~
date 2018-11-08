@@ -46,7 +46,7 @@ function filter(f_ids){
 function clean(){
 	$("#autor").val("");
 	$("#tema").val(null);
-	$("#pais").val(null);
+	//$("#pais").val(null);
 	$("#fecha").val(null);
 	$.ajax({
 		url: "/videoteca.js?offset=0",

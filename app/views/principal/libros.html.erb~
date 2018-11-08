@@ -113,7 +113,7 @@ function filter(f_ids){
 		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
-		url: "/videoteca.js?offset=0" + where,
+		url: "/libros.js?offset=0" + where,
 		success: function(){}
 	});
 }
@@ -124,7 +124,7 @@ function clean(){
 	$("#tema").val(null);
 	$("#fecha").val(null);
 	$.ajax({
-		url: "/videoteca.js?offset=0",
+		url: "/libros.js?offset=0",
 		success: function(){}
 	});
 }

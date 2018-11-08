@@ -12,7 +12,7 @@
             <!-- PUBLICACIONES RECIENTES -->
             <div class="page-section pt-40">
               <div class="mb-30">
-                <h2 class="section-title pr-0 "><span class="bold ">SEMINARIOS</span></h2>
+                <h2 class="section-title pr-0 mb-20"><span class="bold ">SEMINARIOS</span></h2>
               </div>
               <div class="row mb-20">
                 <div class="col-md-10 col-sm-12 col-md-offset-1">
@@ -318,5 +318,9 @@ function clean(){
   </div>
   <!-- FIN CONTENT CONTAINER -->
   </div>
-
+<script>
+$(document).ready(function(){
+	fill_seminarios();
+});
+</script>
 <%= render 'principal/footer' %>
