@@ -124,9 +124,9 @@ function filter(f_ids){
 
 function clean(){
 	$("#autor").val("");
-	$("#centros").val(null);
-	$("#tema").val(null);
-	$("#fecha").val(null);
+	$("#centros").val("");
+	$("#tema").val("");
+	$("#fecha").val("");
 	$.ajax({
 		url: "/libros.js?offset=0",
 		success: function(){}

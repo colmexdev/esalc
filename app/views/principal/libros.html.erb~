@@ -114,7 +114,7 @@ function filter(f_ids){
 	var where = "", multi = false, val;
 	for(var i=0;i<f_ids.length;i++){
 		val = $("#"+f_ids[i]).val();
-		where = where + (val != "" && val != null ? "&conds["+f_ids[i]+"]="+ val : "");
+		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
 		url: "/libros.js?offset=0" + where,
