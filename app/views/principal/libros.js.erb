@@ -19,6 +19,7 @@ var html_toggle = "";
                     '</div>' +
                   '</dd>';
 <% end %>
+console.log("<%= @pubs.as_json %>");
 $("#toggle").html(html_toggle);
 //$(".tog").removeClass("active");
 //$("<%= '#tog-' + params[:offset] %>").addClass("active");
