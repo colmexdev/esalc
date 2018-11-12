@@ -124,9 +124,9 @@ function filter(f_ids){
 
 function clean(){
 	$("#autor").val("");
-	$("#centros").val(null);
-	$("#tema").val(null);
-	$("#fecha").val(null);
+	$("#centros").val("");
+	$("#tema").val("");
+	$("#fecha").val("");
 	$.ajax({
 		url: "/libros.js?offset=0",
 		success: function(){}
@@ -208,7 +208,7 @@ function clean(){
                 <!-- Toggle -->
                 <dl id="toggle" class="toggle">
 
-<% @pubs.each do |p| %>
+<% @pubs_t.each do |p| %>
                   <dt>
                     <a href="#"><h5 class="m-0 text-left"><%= p.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= p.autores %></h5></a>
                   </dt>
