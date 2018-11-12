@@ -29,7 +29,7 @@ var pag_html = ""
 	<% if c == 0 %>
                         pag_html = pag_html + '<li><a id="mag-ant" href="<%= libros_path(params: {offset: 0}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	<% end %>
-                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= libros_path(params: {offset: c}) %>' + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + ($("#tema").val() != "" ? ("&conds[tema]=" + $("#tema").val()) : "") + ($("#fecha").val() != "" ? ("&conds[fecha]=" + $("#fecha").val()) : "") + ($("#autor").val() != "" ? ("&conds[autor]=" + $("#autor").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+
 	<% if c == @pags - 1 %>
                         pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: 1}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
