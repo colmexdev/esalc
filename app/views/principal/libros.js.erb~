@@ -8,7 +8,7 @@ var html_toggle = "";
                       '<div class="col-md-7">' +
                         '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span><%= p.lugar %></span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span><%= p.editorial %></span></p>' +
-                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= p.tematica.present? p.tematica : "" %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= p.tematica.present? ? p.tematica : "" %></span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= p.link %>" target="_blank" class="a-inv"><%= p.link.present? ? (p.link[0..25] + (p.link.size >= 25 ? "..." : "")) : "" %></a></p>' +
                       '</div>' +
                       '<div class="col-md-5">' +
