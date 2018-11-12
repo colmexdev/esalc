@@ -1,4 +1,5 @@
 var html_toggle = "";
+console.log("HOLA");
 <% @pubs_t.each do |p| %>
                   html_toggle = html_toggle + '<dt>' +
                     '<a href="#"><h5 class="m-0 text-left"><%= p.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= p.autores %></h5></a>' +
@@ -19,7 +20,6 @@ var html_toggle = "";
                     '</div>' +
                   '</dd>';
 <% end %>
-console.log("<%= @pubs.as_json %>");
 $("#toggle").html(html_toggle);
 //$(".tog").removeClass("active");
 //$("<%= '#tog-' + params[:offset] %>").addClass("active");
