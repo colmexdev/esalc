@@ -4,6 +4,7 @@ class PrincipalController < ApplicationController
   end
 
   def libros
+    @pubs_r = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
     where = ""
     if params.key?(:conds)
       where = build_where(params[:conds])
