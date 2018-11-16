@@ -9,7 +9,7 @@ class PrincipalController < ApplicationController
     if params.key?(:conds)
       where = build_where(params[:conds])
     end
-    limite = 10.0
+    limite = 1.0
     @pubs_c = Publicacion.where(where).count
     @pubs = Publicacion.where(where).order(updated_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = (@pubs_c/limite).ceil
