@@ -11,9 +11,8 @@ class PrincipalController < ApplicationController
     end
     limite = 10.0
     @pubs_c = Publicacion.where(where).count
-    @pubs = Publicacion.where(where).order(updated_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @pubs_t = Publicacion.where(where).order(updated_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = (@pubs_c/limite).ceil
-    logger.debug @pubs.as_json
     respond_to do |format|
       format.html
       format.js
