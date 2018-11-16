@@ -23,17 +23,7 @@ $("#toggle").html(html_toggle);
 //$(".tog").removeClass("active");
 //$("<%= '#tog-' + params[:offset] %>").addClass("active");
 
-var pag_html = ""
-<% @pags.times do |c| %>
-	<% if c == 0 %>
-                        pag_html = pag_html + '<li><a id="mag-ant" href="<%= libros_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1)), conds: {centros: (params[:conds][:centros] if params.key?(:conds) && params[:conds].key?(:centros)), tema: (params[:conds][:tema] if params.key?(:conds) && params[:conds].key?(:tema)), fecha: (params[:conds][:fecha] if params.key?(:conds) && params[:conds].key?(:fecha)), autor: (params[:conds][:autor] if params.key?(:conds) && params[:conds].key?(:autor))}.reject{|k,v| v.nil?}}) %>" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
-	<% end %>
-                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'mag-' + c.to_s %>" class="<%= 'mag ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= libros_path(params: {offset: c, conds: {centros: (params[:conds][:centros] if params.key?(:conds) && params[:conds].key?(:centros)), tema: (params[:conds][:tema] if params.key?(:conds) && params[:conds].key?(:tema)), fecha: (params[:conds][:fecha] if params.key?(:conds) && params[:conds].key?(:fecha)), autor: (params[:conds][:autor] if params.key?(:conds) && params[:conds].key?(:autor))}.reject{|k,v| v.nil?}}) %>" data-remote="true"><%= (c+1).to_s %></a></li>';
-	<% if c == @pags - 1 %>
-                        pag_html = pag_html + '<li><a id="mag-nxt" href="<%= libros_path(params: {offset: (params[:offset] == (@pags-1).to_s ? (@pags-1).to_s : (params[:offset].to_i + 1)), conds: {centros: (params[:conds][:centros] if params.key?(:conds) && params[:conds].key?(:centros)), tema: (params[:conds][:tema] if params.key?(:conds) && params[:conds].key?(:tema)), fecha: (params[:conds][:fecha] if params.key?(:conds) && params[:conds].key?(:fecha)), autor: (params[:conds][:autor] if params.key?(:conds) && params[:conds].key?(:autor))}.reject{|k,v| v.nil?}}) %>" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
-	<% end %>
-<% end %>
-$("#pags").html(pag_html);
+
 
 $("#count_p").html('<%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %>');
 $("#count_pr").html('<%= ("<strong>Total: " + @pubs_c.to_s + "</strong>").html_safe %>');
