@@ -1,14 +1,14 @@
 var html_toggle = "";
 <% @pubs.each do |p| %>
                   html_toggle = html_toggle + '<dt>' +
-                    '<a href="#"><h5 class="m-0 text-left"><%= raw p.titulo.gsub("'","&#39;").gsub("\r","").gsub("\n","").gsub("\t","") %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= raw p.autores.gsub("'","&#39;") %></h5></a>' +
+                    '<a href="#"><h5 class="m-0 text-left"><%= raw p.titulo.gsub("'","&#39;").strip %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= raw p.autores.gsub("'","&#39;") %></h5></a>' +
                   '</dt>' +
                   '<dd>' +
                     '<div class="row">' +
                       '<div class="col-md-7">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span><%= raw p.lugar.gsub("'","&#39;").gsub("\r","").gsub("\n","").gsub("\t","") %></span></p>' +
-                        '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span><%= raw p.editorial.gsub("'","&#39;").gsub("\r","").gsub("\n","").gsub("\t","") %></span></p>' +
-                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= raw p.tematica.gsub("'","&#39;").gsub("\r","").gsub("\n","").gsub("\t","") %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Lugar de publicación:</strong> <span><%= raw p.lugar.gsub("'","&#39;").strip %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Editorial:</strong> <span><%= raw p.editorial.gsub("'","&#39;").strip %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Tema:</strong> <span><%= raw p.tematica.gsub("'","&#39;").strip %></span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= p.link %>" target="_blank" class="a-inv"><%= p.link.present? ? (p.link[0..25] + (p.link.size >= 25 ? "..." : "")) : "" %></a></p>' +
                       '</div>' +
                       '<div class="col-md-5">' +
