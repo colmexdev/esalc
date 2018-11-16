@@ -151,7 +151,7 @@ function clean(){
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
                           <select onchange="filter(['autor','centros','tema','fecha']);" name="centros" id="centros" class="select-md input-border w-100">
-                            <option value>Centros de Estudio</option>
+                            <option value="">Centros de Estudio</option>
                             <option value="ceaa">CEAA</option>
                             <option value="cedua">CEDUA</option>
                             <option value="cee">CEE</option>
@@ -163,18 +163,18 @@ function clean(){
                       </div>
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
                           <select onchange="filter(['autor','centros','tema','fecha']);" name="tema" id="tema" class="select-md input-border w-100">
-                            <option value>Tema</option>
-                            <option value="historia">Historia</option>
+                            <option value="">Tema</option>
+                            <option value="hist">Historia</option>
                             <option value="lengua">Lengua y Literatura</option>
                             <option value="pol_tic">Política, Partidos e Instituciones</option>
-                            <option value="relaciones">Relaciones internacionales</option>
+                            <option value="relaci">Relaciones internacionales</option>
                             <option value="soci">Sociedad y Economía</option>
                             <option value="violencia">Violencia y Derechos Humanos</option>
                           </select>
                       </div>
                       <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
                           <select onchange="filter(['autor','centros','tema','fecha']);" name="fecha" id="fecha" class="select-md input-border w-100">
-                            <option value>Año</option>
+                            <option value="">Año</option>
                             <option value="2018">2018</option>
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
