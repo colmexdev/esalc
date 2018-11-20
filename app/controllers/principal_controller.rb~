@@ -45,6 +45,7 @@ class PrincipalController < ApplicationController
   def historia
     @path = 'historia'
     @tema = "Historia"
+    @topic = "historia"
     where = "lower(tematica) like '%historia%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
@@ -60,6 +61,7 @@ class PrincipalController < ApplicationController
   def lengua_literatura
     @path = 'lengua-y-literatura'
     @tema = "Lengua y literatura"
+    @topic = "lengua"
     where = "lower(tematica) like '%lengua%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
@@ -75,6 +77,7 @@ class PrincipalController < ApplicationController
   def partidos_politicos
     @path = 'politica-partidos-instituciones'
     @tema = "Política, partidos e instituciones"
+    @topic = "partidos"
     where = "lower(tematica) like '%pol_tic%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
@@ -89,6 +92,7 @@ class PrincipalController < ApplicationController
   def relaciones_internacionales
     @path = 'relaciones-internacionales'
     @tema = "Relaciones internacionales"
+    @topic = "relaciones"
     where = "lower(tematica) like '%internacionales%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
@@ -103,6 +107,7 @@ class PrincipalController < ApplicationController
   def sociedad_economia
     @path = 'sociedad-economia'
     @tema = "Sociedad y economía"
+    @topic = "soci_"
     where = "lower(tematica) like '%econ_m%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
@@ -117,6 +122,7 @@ class PrincipalController < ApplicationController
   def violencia
     @path = 'violencia-derechos-humanos'
     @tema = "Violencia y Derechos Humanos"
+    @topic = "violencia"
     where = "lower(tematica) like '%violencia%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "pub" }
