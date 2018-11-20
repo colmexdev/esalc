@@ -99,11 +99,11 @@ $.ajax({
 		var pag_html = ""
 		for(var i = 0; i < pags; i++){
 			if(i == 0){
-				                    pag_html = pag_html + '<li><a id="mag-ant" href="<%= historia_path(params: {offset: 0, conds: {tema: @tema}}) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
+				                    pag_html = pag_html + '<li><a id="mag-ant" href="<%= historia_path(params: {offset: 0, conds: {tema: @tema}}).gsub("/historia","/"+@path) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 			}
-				                    pag_html = pag_html + '<li data-i="' + i + '" id="mag-' + i +'" class="mag ' + (i ==  <%= params[:offset].to_i %> ? 'active' : '') + '"><a href="/historia?offset=' + i + "&conds[tema]=<%= @tema %>" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true">' + (i+1) + '</a></li>';
+				                    pag_html = pag_html + '<li data-i="' + i + '" id="mag-' + i +'" class="mag ' + (i ==  <%= params[:offset].to_i %> ? 'active' : '') + '"><a href="/<%= @path %>?offset=' + i + "&conds[tema]=<%= @tema %>" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true">' + (i+1) + '</a></li>';
 			if(i == pags - 1){
-				                    pag_html = pag_html + '<li><a id="mag-nxt" href="<%= historia_path(params: {offset: 1, conds: {tema: @tema}}) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+				                    pag_html = pag_html + '<li><a id="mag-nxt" href="<%= historia_path(params: {offset: 1, conds: {tema: @tema}}).gsub("/historia","/"+@path) %>' + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 			}
 		}
 		$("#pags").html(pag_html);
