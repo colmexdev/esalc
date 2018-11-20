@@ -162,7 +162,7 @@ class PrincipalController < ApplicationController
     end
     if pars.key?(:programa)
       prog = pars[:programa].split(", en ")
-      where = where + (multi ? " AND " : "") + "lower(grado) = '" + prog[0].downcase + "' AND lower(programa) = '" + prog[1] + "'"
+      where = where + (multi ? " AND " : "") + "lower(grado) = '" + prog[0].downcase + "' AND lower(programa) = '" + prog[1].downcase + "'"
       multi = true
     end
     if pars.key?(:fecha)
