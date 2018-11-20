@@ -287,8 +287,8 @@ $.ajax({
 			}
 		}
 		$("#pags").html(pag_html);
-		$("#mag-ant").attr("href", "<%= historia_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1)), conds: {tema: @tema }}).gsub("/historia","/"+@path) %>" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
-		$("#mag-nxt").attr("href", "<%= historia_path(params: {conds: {tema:  @tema }}).gsub("/historia","/"+@path) %>" + "&offset=" + (pags - 1 == parseInt(<%= params[:offset] %>) ? pags - 1 : parseInt(<%= params[:offset] %>) ) + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
+		//$("#mag-ant").attr("href", "<%= historia_path(params: {offset: (params[:offset] == '0' ? 0 : (params[:offset].to_i - 1)), conds: {tema: @tema }}).gsub("/historia","/"+@path) %>" + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
+		//$("#mag-nxt").attr("href", "<%= historia_path(params: {conds: {tema:  @tema }}).gsub("/historia","/"+@path) %>" + "&offset=" + (pags - 1 == parseInt(<%= params[:offset] %>) ? pags - 1 : parseInt(<%= params[:offset] %>) ) + ($("#sect").val() != "" ? ("&conds[sect]=" + $("#sect").val()) : "") + ($("#key").val() != "" ? ("&conds[key]=" + $("#key").val()) : "") );
 
 		$("#count_p").html('<strong>Total: ' + todo.length + '</strong>');
 		$("#count_pr").html('<strong>Total: ' + todo.length + '</strong>');

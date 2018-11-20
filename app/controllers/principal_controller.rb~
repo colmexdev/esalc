@@ -43,6 +43,7 @@ class PrincipalController < ApplicationController
   end
 
   def historia
+    @path = 'historia'
     @tema = "Historia"
     where = "lower(tematica) like '%historia%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
@@ -57,6 +58,7 @@ class PrincipalController < ApplicationController
   end
 
   def lengua_literatura
+    @path = 'lengua-y-literatura'
     @tema = "Lengua y literatura"
     where = "lower(tematica) like '%lengua%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
@@ -71,6 +73,7 @@ class PrincipalController < ApplicationController
   end
 
   def partidos_politicos
+    @path = 'politica-partidos-instituciones'
     @tema = "Política, partidos e instituciones"
     where = "lower(tematica) like '%pol_tic%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
@@ -84,6 +87,7 @@ class PrincipalController < ApplicationController
   end
 
   def relaciones_internacionales
+    @path = 'relaciones-internacionales'
     @tema = "Relaciones internacionales"
     where = "lower(tematica) like '%internacionales%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
@@ -97,6 +101,7 @@ class PrincipalController < ApplicationController
   end
 
   def sociedad_economia
+    @path = 'sociedad-economia'
     @tema = "Sociedad y economía"
     where = "lower(tematica) like '%econ_m%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
@@ -110,6 +115,7 @@ class PrincipalController < ApplicationController
   end
 
   def violencia
+    @path = 'violencia-derechos-humanos'
     @tema = "Violencia y Derechos Humanos"
     where = "lower(tematica) like '%violencia%'"
     @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
