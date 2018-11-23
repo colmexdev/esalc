@@ -18,7 +18,7 @@
 	$(document).ready(function(){
 		var loc = window.location.pathname.substr(1);
 		$("#" + (loc == "" ? "main" : loc)).addClass("current");
-		if(["libros","articulos","tesis"].indexOf(loc) != -1)
-			$("#parent").addClass("current");
+		if(["libros","articulos","tesis","acerca-de","equipo","contacto"].indexOf(loc) != -1)
+			$("#" + loc).parent().parent().addClass("current");
 	});
 </script>
