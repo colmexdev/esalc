@@ -1,0 +1,39 @@
+<%= render 'principal/header' %>
+
+      <!-- CONTENT CONTAINER -->
+      <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
+        <div class="row">
+          <!-- SIDENAV HIDE -->
+          <%= render 'principal/sidebar' %>
+          <!-- COTENT  -->
+          <!-- INTRODUCCIÓN  -->
+          <div class="col-lg-9 col-md-8 col-sm-12 plr-50">
+
+            <!-- PUBLICACIONES RECIENTES -->
+            <div class="page-section pt-40">
+              <div class="mb-30">
+                <h2 class="section-title pr-0 "><span class="bold ">¿QUÉ ES <em>ESALC</em>?</span></h2>
+              </div>
+              <div class="row mb-20">
+                <div class="col-md-10 col-sm-12 col-md-offset-1">
+                  <p>Estudios sobre América Latina y el Caribe (ESALC) es una base de datos que reúne las actividades académicas, en Ciencias Sociales y Humanidades, realizadas por El Colegio de México sobre temas relativos a América Latina y el Caribe.</p>
+                  <p>Este proyecto de carácter público se organiza alrededor de dos ejes:</p>
+                  <ul style="font-family: 'Open Sans', Arial, Helvetica, sans-serif;font-size:17px;">
+                    <li>La presentación de las actividades según su tipo: libros, artículos científicos, tesis, actos académicos y videos. Además, contiene un directorio de las y los Profesores-Investigadores de El Colegio de México que desarrollan estudios
+                      vinculados a la región.</li>
+                    <li>La clasificación de las actividades a partir de cinco temáticas: Historia, Lengua y literatura, Política, partidos e instituciones, Relaciones internacionales, Sociedad y economa y Violencia y Derechos Humanos.</li>
+                  </ul>
+                  <p>El proyecto tiene el objetivo de ofrecer información útil para los miembros de la comunidad académica, nacional e internacional, y a la sociedad en general. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <div class="col-md-3 visible-md"></div>
+
+
+          <!-- FIN ROW -->
+        </div>
+        <!-- FIN CONTENT CONTAINER -->
+      </div>
+<%= render 'principal/footer' %>

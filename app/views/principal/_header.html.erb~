@@ -34,7 +34,7 @@
                         </a>
                       </li>
 											<!-- MENU ITEM -->
-                      <li>
+                      <li id="proyecto" class="parent">
                         <a href="#">
                           <div class="main-menu-title">El proyecto</div>
                         </a>
