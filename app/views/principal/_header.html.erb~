@@ -43,7 +43,7 @@
                             <a href="<%= acerca_path %>">Acerca de</a>
                           </li>
                           <li>
-                            <a href="equipo.html">Equipo</a>
+                            <a href="<%= equipo_path %>">Equipo</a>
                           </li>
                           <li>
                             <a href="contacto.html">Contacto</a>
