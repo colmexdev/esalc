@@ -215,64 +215,10 @@ function clean(){
                     </div>
                   </dd>
 <% end %>
-<% if false %>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
-                      </div>
-                    </div>
-                  </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
-                      </div>
-                    </div>
-                  </dd>
-                  <dt>
-                    <a href="#"><h5 class="m-0 text-left">Distorsiones regionales en la asignación de recursos y productividad de las manufacturas en México</h5><h5 class="verde-obscuro mt-10 mb-0">Pedro J. Martínez Alanis</h5></a>
-                  </dt>
-                  <dd>
-                    <div class="row">
-                      <div class="col-md-7">
-                        <p class="text-left"><strong class="azul-obscuro">Revista:</strong> <span>Revista de Estudios Económicos</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Volumen:</strong> <span>27</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Número:</strong> <span>1 (53)</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf" target="_blank" class="a-inv">https://estudioseconomicos.colmex.mx/archivo/EstudiosEconomicos2012/3-59.pdf</a></p>
-                      </div>
-                      <div class="col-md-5">
-                        <p class="text-left"><strong class="azul-obscuro">Fecha de publicación:</strong> <span>enero-junio de 2012</span></p>
-                        <p class="text-left"><strong class="azul-obscuro">Temática:</strong> <span>Cuestiones socio-económicas</span></p>
-                      </div>
-                    </div>
-                  </dd>
-<% end %>
                 </dl>
                 <!-- End Toggle -->
               </div>
-            </div>
-          </div>
+
           <div class="row mb-30">
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
@@ -290,6 +236,10 @@ function clean(){
               </nav>
             </div>
           </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
