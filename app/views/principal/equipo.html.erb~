@@ -48,6 +48,9 @@
 
 <%= render 'principal/footer' %>
   <script>
+		$(document.ready(function(){
+			$(window).trigger("resize");
+		});
 		$(window).on("resize",function(){
 			if($(document).width() < 1656)
 				$("#cont-text").css("padding-top","0");
