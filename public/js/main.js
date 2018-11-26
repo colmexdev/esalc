@@ -278,7 +278,7 @@ function find_tag(tags){
       });
       //SIDEBAR STICKY---------------------------------------------
       var //offsetSb = $('.page-title-bg').height(),
-        offsetFooter = $('#footer-offset').height() + 30;
+        offsetFooter = $('#footer-offset').height() + 90;
       // DM Menu
       jQuery('#sidebar-stiky').affix({
         offset: {
