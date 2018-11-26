@@ -10360,7 +10360,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 }
 
 /* #HEADER LEFT ***************************************************/
-@media (min-width: 1025px) {
+@media (min-width: 1456px) {
   .header-menu-left .logo-row {
     float: right;
     width:148px;
@@ -10370,7 +10370,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
   text-align:right;
   padding-right:15px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1455px) {
   .header-menu-left .menu-btn-respons-container {
     right:inherit;
   }

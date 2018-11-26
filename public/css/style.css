@@ -10496,7 +10496,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 
 /* #STICKY HEADER ON MOBILE
 ***************************************************/
-@media (max-width: 1024px) {
+@media (max-width: 1455px) {
   .header.affix-on-mobile{
     position: fixed;
     width: 100%;
