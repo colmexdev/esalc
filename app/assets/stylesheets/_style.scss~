@@ -1207,7 +1207,7 @@ support for no js
 }
 .section-title {
   margin:0;
-  padding: 12px 25px;
+  padding: 12px 25px 12px 25px;
   font-family: 'PT Sans Narrow', Arial, Helvetica, sans-serif;
 	font-weight:300;
 	font-size:24px;
