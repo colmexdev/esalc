@@ -10341,7 +10341,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 }
 
 /* #HEADER CENTER ***************************************************/
-@media (min-width: 1025px) {
+@media (min-width: 1456px) {
   .navbar-collapse.collapse.nav-center {
     display: -webkit-box !important;
     display: -ms-flexbox !important;

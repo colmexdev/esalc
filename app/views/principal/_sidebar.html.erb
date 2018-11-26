@@ -20,5 +20,9 @@
 		$("#" + (loc == "" ? "main" : loc)).addClass("current");
 		if(["libros","articulos","tesis","acerca-de","equipo","contacto"].indexOf(loc) != -1)
 			$("#" + loc).parent().parent().addClass("current");
+    if(["historia","lengua-literatura","politica-partidos-instituciones","relaciones-internacionales","sociedad-economia","violencia-derechos-humanos"].indexOf(loc) != -1){
+			$("#"+loc.substr(0,4)).parent().parent().addClass("current");
+			$("#"+loc.substr(0,4)).addClass("current");
+		}
 	});
 </script>
