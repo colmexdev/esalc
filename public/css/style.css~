@@ -8190,7 +8190,7 @@ h2.portfolio-timeline-title {
 /******************************************************************************
   Min Width "1025px" DESKTOP
 *******************************************************************************/
-@media (min-width: 1025px) {
+@media (min-width: 1456px) {
   .navbar-collapse {
     display: block !important;
     height: auto !important;
