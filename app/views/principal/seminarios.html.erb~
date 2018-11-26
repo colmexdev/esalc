@@ -20,7 +20,6 @@
                 </div>
               </div>
               <!-- FEATURES 4 -->
-              <div class="container">
                 <div class="row">
                   <div class="col-xs-12 col-sm-4 col-md-4">
                     <div class="fes4-box wow fadeIn" data-wow-delay="200ms">
@@ -207,7 +206,7 @@
                   </div>
                 </div>
 
-              </div>
+              
             </div>
 
             <!-- FORMULARIO DE BÚSQUEDA -->

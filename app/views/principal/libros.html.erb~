@@ -208,7 +208,7 @@ function clean(){
                 <!-- Toggle -->
                 <dl id="toggle" class="toggle">
 
-<% @pubs_t.each do |p| %>
+<% @pubs.each do |p| %>
                   <dt>
                     <a href="#"><h5 class="m-0 text-left"><%= p.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= p.autores %></h5></a>
                   </dt>

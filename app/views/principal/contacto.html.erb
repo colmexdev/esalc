@@ -1,130 +1,11 @@
-
-      <header id="nav" class="header header-1 no-transparent mobile-no-transparent">
-        <div class="header-wrapper">
-          <div class="container-m-30 clearfix">
-            <div class="logo-row">
-              <!-- LOGO -->
-              <div class="logo-container-2">
-                <div class="logo-2">
-                  <a href="index.html" class="clearfix">
-                      <img src="images/esalc-colmex.png" class="logo-img" alt="Logo">
-                    </a>
-                </div>
-              </div>
-              <!-- BUTTON -->
-              <div class="menu-btn-respons-container">
-                <button type="button" class="navbar-toggle btn-navbar collapsed" data-toggle="collapse" data-target="#main-menu .navbar-collapse">
-  								<span aria-hidden="true" class="icon_menu hamb-mob-icon"></span>
-  							</button>
-              </div>
-            </div>
-          </div>
-          <!-- MAIN MENU CONTAINER -->
-          <div class="main-menu-container">
-            <div class="container-m-30 clearfix">
-              <!-- MAIN MENU -->
-              <div id="main-menu">
-                <div class="navbar navbar-default" role="navigation">
-                  <!-- MAIN MENU LIST -->
-                  <nav class="collapse collapsing navbar-collapse right-1024">
-                    <ul class="nav navbar-nav bold a-text-cont">
-                      <!-- MENU ITEM -->
-                      <li>
-                        <a href="index.html">
-                          <div class="main-menu-title">Inicio</div>
-                        </a>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li class="current parent">
-                        <a href="#">
-                          <div class="main-menu-title">El proyecto</div>
-                        </a>
-                        <ul class="sub">
-                          <li>
-                            <a href="acercade.html">Acerca de</a>
-                          </li>
-                          <li>
-                            <a href="equipo.html">Equipo</a>
-                          </li>
-                          <li>
-                            <a href="contacto.html">Contacto</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li>
-                        <a href="directorio.html">
-                          <div class="main-menu-title">Directorio</div>
-                        </a>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li class="parent">
-                        <a href="#">
-                          <div class="main-menu-title">Publicaciones</div>
-                        </a>
-                        <ul class="sub">
-                          <li>
-                            <a href="libros.html">Libros</a>
-                          </li>
-                          <li>
-                            <a href="articulos.html">Artículos</a>
-                          </li>
-                          <li>
-                            <a href="tesis.html">Tesis</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li>
-                        <a href="seminarios.html">
-                          <div class="main-menu-title">Seminarios</div>
-                        </a>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li>
-                        <a href="eventos.html">
-                          <div class="main-menu-title">Eventos</div>
-                        </a>
-                      </li>
-                      <!-- MENU ITEM -->
-                      <li>
-                        <a href="videoteca.html">
-                          <div class="main-menu-title">Videoteca</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!-- END main-menu -->
-            </div>
-            <!-- END container-m-30 -->
-          </div>
-          <!-- END main-menu-container -->
-        </div>
-        <!-- END header-wrapper -->
-      </header>
+<%= render 'principal/header' %>
 
       <!-- CONTENT CONTAINER -->
       <div class="container page-section pt-140-b-80-cont pl-50-min-1169 pr-50-min-1169">
         <div class="row">
           <!-- SIDENAV HIDE -->
-          <div class="col-lg-2 col-md-3 hidden-xs hidden-sm">
-            <div id="sidebar-stiky" class="bs-sidebar clearfix" role="complementary">
-              <div class="heading-underline h4-line" style="padding-top: 24px;">
-                <h4 class="mt-0">TEMAS DE <br>INVESTIGACIÓN</h4>
-              </div>
-              <ul id="nav-sidebar" class="nav bs-sidenav blog-categories links-list bold a-text-cont">
-                <li><a href="historia.html">Historia</a></li>
-                <li><a href="lengua-y-literatura.html">Lengua y Literatura</a></li>
-                <li><a href="politica-partidos-instituciones.html">Política, partidos e <br>instituciones</a></li>
-                <li><a href="relaciones-internacionales.html">Relaciones <br>internacionales</a></li>
-                <li><a href="sociedad-economia.html">Sociedad y Economía</a></li>
-                <li><a href="violencia-derechos-humanos.html">Violencia y <br>Derechos Humanos</a></li>
-              </ul>
-            </div>
-          </div>
-
+          <%= render 'principal/sidebar' %>
+          <!-- COTENT  -->
           <!-- INTRODUCCIÓN  -->
           <div class="col-lg-9 col-md-8 col-sm-12 plr-50">
 
@@ -152,53 +33,44 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3 visible-md"></div>
-    <!-- FIN ROW -->
-  </div>
-  <!-- FIN CONTENT CONTAINER -->
-  </div>
-  <!-- Inicia footer-offset -->
-  <div id="footer-offset">
-    <!-- PIE DE PÁGINA -->
-    <footer id="footer3" class="page-section pt-30 pb-0 footer2-black">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 widget text-center">
-            <div class="logo-footer-cont">
-              <a href="https://www.colmex.mx/" target="_blank">
-                    <img class="logo-footer" src="https://www.colmex.mx/assets/colmex-pie-11574ae7eb2daa4f7ed874bf99b3ef3aa5b4f3ee3c82f218355cdb5c6cfe795d.png" alt="logo">
-                  </a>
-            </div>
-            <div class="logo-footer-cont">
-              <img class="logo-footer" src="https://www.colmex.mx/assets/creative-commons-c376b41beeaa05f745d4a8aaf2dc3f84a033c72ff8f81d5896bc70602ae5d635.png" alt="logo">
-            </div>
-            <div class="footer-2-text-cont">
-              <address>
-                    Derechos reservados, El Colegio de México A.C. © 2018<br>
-      Carretera Picacho Ajusco 20, Col. Ampliación Fuentes del Pedregal, C.P. 14110 Tlalpan, Ciudad de México Tel.: +52 55 54493000
-                  </address>
-            </div>
-            <div class="footer-2-soc-a">
-              <a href="https://www.facebook.com/elcolmex/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
-              <a href="https://twitter.com/ELCOLMEX" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-              <a href="https://www.youtube.com/c/elcolegiodemexicociudaddemexico" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a>
-              <a href="https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573" title="iTunesU" target="_blank"><i class="fa fa-apple"></i></a>
-              <a href="https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
-              <a href="https://plus.google.com/+ElColegiodeM%C3%A9xico081040" title="Google+" target="_blank"><i class="fa  fa-google-plus"></i></a>
-              <a href="https://www.instagram.com/elcolmex/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
-              <a href="https://soundcloud.com/elcolmex/" title="SoundCloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- BACK TO TOP -->
-    <p id="back-top">
-      <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
-    </p>
-  </div>
 
+
+          <!-- FIN ROW -->
+        </div>
+        <!-- FIN CONTENT CONTAINER -->
+      </div>
+<%= render 'principal/footer' %>
+  <script>
+    $(document).ready(function() {
+      //NAV SIDEBAR------------------------------------------------------------------
+      var top_offset = $('header').height() - 1; // get height of fixed navbar
+      $('#nav-sidebar').onePageNav({
+        currentClass: 'current',
+        changeHash: false,
+        scrollSpeed: 700,
+        scrollOffset: top_offset,
+        scrollThreshold: 0.5,
+        filter: '',
+        easing: 'swing',
+        begin: function() {
+          //I get fired when the animation is starting
+        },
+        end: function() {
+          //I get fired when the animation is ending
+        },
+        scrollChange: function($currentListItem) {
+          //I get fired when you enter a section and I pass the list item of the section
+        }
+      });
+      //SIDEBAR STICKY---------------------------------------------
+      var //offsetSb = $('.page-title-bg').height(),
+        offsetFooter = $('#footer-offset').height() + 30;
+      // DM Menu
+      jQuery('#sidebar-stiky').affix({
+        offset: {
+          top: 300, //top offset for header 1 for others headers it will have other value
+          bottom: offsetFooter
+        }
+      });
+    });
+  </script>
