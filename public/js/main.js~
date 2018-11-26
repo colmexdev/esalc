@@ -87,7 +87,7 @@ function fill_eventos(conds){
 	var centros = (grupos !== undefined && grupos[4] !== undefined ? "&centro=" + grupos[4].split("=")[1] : "");
 	var fecha = (grupos !== undefined && grupos[5] !== undefined ? "&anio=" + grupos[5].split("=")[1] : "");
 	$.ajax({
-		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&crono=true&limit=10" + offset + centros + tipo + fecha,
+		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&ordercrono=desc&limit=10" + offset + centros + tipo + fecha,
 		success: function(result){
 			var vids_html = "";
 			for(var i = 0; i < result["videos"].length; i++){
@@ -175,7 +175,7 @@ function fill_seminarios(conds){
 	var offset = (grupos !== undefined && grupos[2] !== undefined ? "&offset=" + (parseInt(grupos[2].split("=")[1])) : "");
 	var centros = (grupos !== undefined && grupos[3] !== undefined ? "&centro=" + grupos[3].split("=")[1] : "");
 	$.ajax({
-		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&crono=true&limit=10&tipos=seminario" + offset + centros,
+		url: "https://www.colmex.mx/catalogo_eventos.json?categoria=1:Estudios sobre América Latina" + "&ordercrono=desc&limit=10&tipos=seminario" + offset + centros,
 		success: function(result){
 			var vids_html = "";
 			for(var i = 0; i < result["videos"].length; i++){

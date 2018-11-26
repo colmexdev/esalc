@@ -746,7 +746,7 @@ function initAffixCheck(){
     offset: { top: 1, }
   });
   
-  if((windowT.width() < 1025) && (!$('#nav').hasClass('affix-on-mobile')) ) {
+  if((windowT.width() < 1456) && (!$('#nav').hasClass('affix-on-mobile')) ) {
     //FIXED HEADER OFF
     windowT.off('.affix');
     navAffix.removeData('bs.affix').removeClass('affix affix-top affix-bottom');

@@ -9327,7 +9327,7 @@ img.mfp-img {
 
 
 /* #INDEX-PORTFOLOLIO 2 NEW 	****************************************/
-@media (min-width: 1025px) {
+@media (min-width: 1456px) {
   #header-left {
     position:relative;
     margin-bottom: 0;
@@ -10496,7 +10496,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 
 /* #STICKY HEADER ON MOBILE
 ***************************************************/
-@media (max-width: 1024px) {
+@media (max-width: 1455px) {
   .header.affix-on-mobile{
     position: fixed;
     width: 100%;
