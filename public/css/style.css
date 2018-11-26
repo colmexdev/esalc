@@ -10572,5 +10572,5 @@ color: #d3d3d3;
 subfield {color: red}
 
 @media (min-width: 1456px){
-	.hide-opt-temas { display: none; }
+	.parent.hide-opt-temas { display: none; }
 }

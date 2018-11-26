@@ -51,7 +51,7 @@
                         </ul>
                       </li>
 											<!-- MENU ITEM -->
-                      <li id="temas" class="parent hide-bar">
+                      <li id="temas" class="parent">
                         <a href="#">
                           <div class="main-menu-title">Temas de investigación</div>
                         </a>
