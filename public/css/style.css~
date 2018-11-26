@@ -10571,6 +10571,6 @@ color: #d3d3d3;
 ***************************************************/
 subfield {color: red}
 
-@media (min-width: 1456px){
-	.hide-opt-temas { display: none; }
+@media (min-width: 973px){
+	.parent.hide-opt-temas { display: none; }
 }
