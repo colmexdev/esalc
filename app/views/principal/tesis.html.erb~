@@ -140,8 +140,8 @@ function clean(){
                 <!-- End Toggle -->
               </div>
             </div>
-          </div>
-          <div class="row mb-30">
+
+<div class="row mb-30">
             <div class="col-md-12 text-center">
               <nav class="blog-pag">
                 <ul id="pags" class="pagination">
@@ -157,6 +157,8 @@ function clean(){
                 </ul>
               </nav>
             </div>
+          </div>
+
           </div>
         </div>
       </div>
