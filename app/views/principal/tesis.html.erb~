@@ -44,22 +44,22 @@ function clean(){
 }
 </script>
                 <div class="row">
-                  <div class="col-lg-3 col-md-12 col-sm-12">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row">
-                      <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
+                      <div class="col-lg-3 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
-                      <div class="col-lg-8 col-md-12 pl-0">
+                      <div class="col-lg-9 col-md-12 pl-0">
                         <input oninput="filter(['autor','programa','centros']);" id="autor" placeholder="Autor (es)" class="input-border w-100" type="text" required="">
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-7 col-md-12 col-sm-12">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row">
-                      <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                      <div class="col-lg-12 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
-                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
                           <select onchange="filter(['autor','programa','centros']);" name="programa" id="programa" class="select-md input-border w-100">
                             <option value>Programa Académico</option>
                             <option value="Licenciatura, en Economía">Licenciatura en Economía</option>
@@ -82,7 +82,7 @@ function clean(){
                             <option value="Doctorado, en Literatura Hispánica">Doctorado en Literatura Hispánica</option>
                           </select>
                       </div>
-                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
                           <select onchange="filter(['autor','programa','centros']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centro de Estudios</option>
                             <option value="ceaa">CEAA</option>
