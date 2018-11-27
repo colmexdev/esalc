@@ -40,22 +40,22 @@ function clean(){
               <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
                 <!-- FORMULARIO DE BÚSQUEDA -->
                 <div class="row">
-                  <div class="col-md-5 col-sm-6">
+                  <div class="col-md-12 col-sm-6">
                     <div class="row">
-                      <div class="col-md-4 col-sm-12 plr-0">
+                      <div class="col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
-                      <div class="col-md-8 pl-0">
+                      <div class="col-md-11 pl-0">
                         <input oninput="filter(['key','sect']);" id="key" placeholder="Palabra(s) clave" class="input-border w-100" type="text" required="">
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 col-sm-6">
+                  <div class="col-md-12 col-sm-6">
                     <div class="row">
-                      <div class="col-md-4 col-sm-12 plr-0">
+                      <div class="col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
-                      <div class="col-md-8 pl-0">
+                      <div class="col-md-11 pl-0">
                           <select onchange="filter(['key','sect']);" name="sect" id="sect" class="select-md input-border w-100">
                             <option value>Tipo</option>
                             <option value="pub">Publicaciones</option>
@@ -66,7 +66,7 @@ function clean(){
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-3 col-sm-6 plr-0">
+                  <div class="col-md-4 col-sm-6 plr-0">
                     <br class="visible-sm visible-xs">
                     <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>

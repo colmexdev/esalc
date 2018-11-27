@@ -74,13 +74,13 @@ function clean(){
                 <!-- FIN FORMULARIO DE BÚSQUEDA -->
                 <div class="row mt-30 mb-40">
                   <div class="col-md-8 col-xs-12 text-left">
-                    <h3 class="verde-obscuro m-0"><strong>Se muestran los resultados de las búquedas</strong></h3>
+                    <h3 class="verde-obscuro m-0 resultados"><strong>Se muestran los resultados de la búsqueda</strong></h3>
                   </div>
                   <div class="col-md-4 hidden-sm hidden-xs text-right">
-                    <h3 id="count_p" class="verde-obscuro m-0"><strong>Total: 000</strong></h3>
+                    <h3 id="count_p" class="verde-obscuro m-0 resultados"><strong>Total: 000</strong></h3>
                   </div>
                   <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text-left">
-                    <h3 id="count_pr" class="verde-obscuro"><strong>Total: 000</strong></h3>
+                    <h3 id="count_pr" class="verde-obscuro resultados"><strong>Total: 000</strong></h3>
                   </div>
                 </div>
                 <!-- TOGGLES  -->
