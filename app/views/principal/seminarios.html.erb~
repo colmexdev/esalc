@@ -235,13 +235,13 @@ function clean(){
               <div class="col-md-12 mt-40 plr-xs-0 plr-50 ">
                 <!-- FORMULARIO DE BÚSQUEDA -->
                 <div class="row">
-                  <div class="col-lg-10 col-md-12 col-sm-12">
+                  <div class="col-lg-8 col-md-12 col-sm-12">
                     <div class="row">
                       <div class="col-lg-3 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
 <% if false %>
-                      <div class="col-lg-5 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-9 col-md-12 col-sm-12 pl-0">
                           <select name="proyecto" id="proyecto" class="select-md input-border w-100">
                             <option value>Proyecto</option>
                             <option value="ggm">El Grupo Guatemala-México. Migración y Desarrollo</option>
@@ -275,7 +275,7 @@ function clean(){
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-12 col-sm-12 plr-0">
+                  <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
                     <br class="visible-sm visible-xs">
                     <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>
