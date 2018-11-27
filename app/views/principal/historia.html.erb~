@@ -50,7 +50,7 @@ function clean(){
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-12 col-sm-6">
+                  <div class="col-md-6 col-sm-6">
                     <div class="row">
                       <div class="col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
@@ -66,7 +66,7 @@ function clean(){
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-4 col-sm-6 plr-0">
+                  <div class="col-md-6 col-sm-6 plr-0 mt-25">
                     <br class="visible-sm visible-xs">
                     <button onclick="clean();" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                   </div>
