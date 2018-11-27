@@ -86,6 +86,7 @@ class PrincipalController < ApplicationController
 		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
+      format.js {render :historia}
     end
   end
 
@@ -101,6 +102,7 @@ class PrincipalController < ApplicationController
 		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
+      format.js {render :historia}
     end
   end
 
@@ -116,6 +118,7 @@ class PrincipalController < ApplicationController
 		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
+      format.js {render :historia}
     end
   end
 
@@ -131,6 +134,7 @@ class PrincipalController < ApplicationController
 		@tipo = (params.key?(:conds) && params[:conds].key?(:sect) ? params[:conds][:sect] : "")
     respond_to do |format|
       format.html {render :historia}
+      format.js {render :historia}
     end
   end
 
