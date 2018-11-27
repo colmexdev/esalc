@@ -10538,7 +10538,7 @@ ul#flickr-feeds li a, ul#flickr-sfeeds li a img {
 ***************************************************/
 
 address {font-size: 18px;}
-@media only screen and (max-width: 1455px) {.pt-140-b-80-cont {padding-top: 40px;}}
+@media only screen and (max-width: 1455px) {.pt-140-b-80-cont {padding-top: 0px;}}
 
 option border {padding: 20px;}
 .azul-obscuro {color: #27807f;}

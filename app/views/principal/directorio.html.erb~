@@ -35,7 +35,7 @@
                       <div class="col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
-                      <div class="col-md-8 pl-0">
+                      <div class="col-md-11 pl-0">
                         <input id="nombre" placeholder="Nombre y/o apellido" class="input-border w-100" type="text" oninput="filter(['nombre','centros']);">
                       </div>
                     </div>
@@ -45,7 +45,7 @@
                       <div class="col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
-                      <div class="col-md-8 pl-0">
+                      <div class="col-md-11 pl-0">
                         <form method="post" action="#" class="forma">
                           <select onchange="filter(['nombre','centros']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centro de Estudios</option>

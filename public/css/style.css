@@ -10580,3 +10580,5 @@ subfield {color: red}
 @media (min-width: 973px){
 	.parent.hide-opt-temas { display: none; }
 }
+
+h3.resultados {font-family: 'PT Sans Narrow', Arial, Helvetica, sans-serif;}

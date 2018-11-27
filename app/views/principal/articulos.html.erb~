@@ -49,7 +49,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 col-sm-6 plr-0">
+                <div class="col-md-6 col-sm-6 plr-0 mt-25">
                   <br class="visible-sm visible-xs">
                   <button onclick="clean();" type="submit" class="button medium hover-thin deeporange w-100-767">LIMPIAR BÚSQUEDA</button>
                 </div>
