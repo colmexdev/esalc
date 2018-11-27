@@ -28,9 +28,9 @@ var pag_html = ""
 	<% if c == 0 %>
                         pag_html = pag_html + '<li><a id="tog-ant" href="<%= tesis_path(params: {offset: 0}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-left"></i><span class="sr-only">Anterior</span></a></li>';
 	<% end %>
-                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= directorio_path(params: {offset: c}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
+                        pag_html = pag_html + '<li data-i="<%= c %>" id="<%= 'tog-' + c.to_s %>" class="<%= 'tog ' + (c == params[:offset].to_i ? 'active' : '') %>"><a href="<%= tesis_path(params: {offset: c}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><%= (c+1).to_s %></a></li>';
 	<% if c == @pags - 1 %>
-                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= directorio_path(params: {offset: 1}) %>' + ($("#nombre").val() != "" ? ("&conds[nombre]=" + $("#nombre").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
+                        pag_html = pag_html + '<li><a id="tog-nxt" href="<%= tesis_path(params: {offset: 1}) %>' + ($("#programa").val() != "" ? ("&conds[programa]=" + $("#programa").val()) : "") + ($("#centros").val() != "" ? ("&conds[centros]=" + $("#centros").val()) : "") + '" data-remote="true"><i class="fa fa-angle-right"></i><span class="sr-only">Siguiente</span></a></li>';
 	<% end %>
 <% end %>
 $("#pags").html(pag_html);

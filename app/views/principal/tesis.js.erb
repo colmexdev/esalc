@@ -1,12 +1,12 @@
 var html_toggle = "";
 <% @tesis.each do |t| %>
                         html_toggle = html_toggle + '<dt>' +
-                    '<a href="#"><h5 class="m-0 text-left"><%= t.titulo %></h5><h5 class="verde-obscuro mt-10 mb-0"><%= t.autores %></h5></a>' +
+                    '<a href="#"><h5 class="m-0 text-left">' + '<%= raw(t.titulo.gsub("'","&quot;").strip.to_json) %>'.slice(1,-1) + '</h5><h5 class="verde-obscuro mt-10 mb-0">' + '<%= raw(t.autores.gsub("'","&quot;").strip.to_json) %>'.slice(1,-1) + '</h5></a>' +
                   '</dt>' +
                   '<dd>' +
                     '<div class="row">' +
                       '<div class="col-md-8">' +
-                        '<p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span><%= t.asesores %></span></p>' +
+                        '<p class="text-left"><strong class="azul-obscuro">Asesor (es):</strong> <span>' + '<%= raw(t.asesores.gsub("'","&quot;").strip.to_json) %>'.slice(1,-1) + '</span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Programa Académico:</strong> <span><%= t.grado + " en " + t.programa %></span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Año:</strong> <span><%= t.anio %></span></p>' +
                         '<p class="text-left"><strong class="azul-obscuro">Enlace:</strong> <a href="<%= t.link %>" target="_blank" class="a-inv"><%= t.link.present? ? (t.link[0..25] + (t.link.size >= 25 ? "..." : "")) : "" %></a></p>' +
