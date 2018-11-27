@@ -61,7 +61,7 @@ function clean(){
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
                       <div class="col-lg-8 col-md-12 pl-0">
-                        <input id="autor" placeholder="Autor (es)" class="input-border w-100" type="text" oninput="filter(['autor','pais','fecha','tema'])">
+                        <input id="autor" placeholder="Palabra clave" class="input-border w-100" type="text" oninput="filter(['autor','pais','fecha','tema'])">
                       </div>
                     </div>
                   </div>
@@ -76,7 +76,7 @@ function clean(){
                             <option value>Tema</option>
                             <option value="historia">Historia</option>
 		                        <option value="lengua">Lengua y Literatura</option>
-		                        <option value="polític">Política, Partidos e Instituciones</option>
+		                        <option value="pol_tic">Política, Partidos e Instituciones</option>
 		                        <option value="internacionales">Relaciones internacionales</option>
 		                        <option value="economi">Sociedad y Economía</option>
 		                        <option value="violencia">Violencia y Derechos Humanos</option>

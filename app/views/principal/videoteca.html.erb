@@ -55,22 +55,22 @@ function clean(){
 }
 </script>
 
-                  <div class="col-lg-3 col-md-12 col-sm-12">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row">
-                      <div class="col-lg-4 col-md-12 col-sm-12 plr-0">
+                      <div class="col-lg-12 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Buscar por: </strong></h4>
                       </div>
-                      <div class="col-lg-8 col-md-12 pl-0">
+                      <div class="col-lg-6 col-md-12 pl-0">
                         <input id="autor" placeholder="Palabra clave" class="input-border w-100" type="text" oninput="filter(['autor','pais','fecha','tema'])">
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-7 col-md-12 col-sm-12">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="row">
-                      <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                      <div class="col-lg-12 col-md-12 col-sm-12 plr-0">
                         <h4 class="mt-10"><strong>Filtrar por: </strong></h4>
                       </div>
-                      <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select name="tema" id="tema" class="select-md input-border w-100" onchange="filter(['autor','pais','fecha','tema'])">
                             <option value>Tema</option>
@@ -84,7 +84,7 @@ function clean(){
 
                       </div>
 <% if false %>
-                      <div class="col-lg-4 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-4 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select name="pais" id="pais" class="select-md input-border w-100" onchange="filter(['autor','pais','fecha','tema'])">
                             <option value>País</option>
@@ -139,7 +139,7 @@ function clean(){
                       </div>
 <% end %>
 
-                      <div class="col-lg-2 col-md-12 col-sm-12 pl-0">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select name="fecha" id="fecha" class="select-md input-border w-100" onchange="filter(['autor','pais','fecha','tema'])">
                             <option value>Año</option>
@@ -157,7 +157,7 @@ function clean(){
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-2 col-md-12 col-sm-12 plr-0">
+                  <div class="col-lg-12 col-md-12 col-sm-12 plr-0">
                     <br class="visible-sm visible-xs">
                     <button class="button medium hover-thin deeporange w-100-767" onclick="clean()">LIMPIAR BÚSQUEDA</button>
                   </div>
