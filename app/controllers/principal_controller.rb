@@ -47,7 +47,7 @@ class PrincipalController < ApplicationController
     @tema = "Historia"
     @topic = "historia"
     where = "lower(tematica) like '%historia%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
@@ -63,7 +63,7 @@ class PrincipalController < ApplicationController
     @tema = "Lengua y literatura"
     @topic = "lengua"
     where = "lower(tematica) like '%lengua%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
@@ -79,7 +79,7 @@ class PrincipalController < ApplicationController
     @tema = "Política, partidos e instituciones"
     @topic = "partidos"
     where = "lower(tematica) like '%pol_tic%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :desc).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
@@ -95,7 +95,7 @@ class PrincipalController < ApplicationController
     @tema = "Relaciones internacionales"
     @topic = "relaciones"
     where = "lower(tematica) like '%internacionales%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :desc).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
@@ -111,7 +111,7 @@ class PrincipalController < ApplicationController
     @tema = "Sociedad y economía"
     @topic = "soci_"
     where = "lower(tematica) like '%econ_m%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :desc).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
@@ -127,7 +127,7 @@ class PrincipalController < ApplicationController
     @tema = "Violencia y Derechos Humanos"
     @topic = "violencia"
     where = "lower(tematica) like '%violencia%'"
-    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :desc).as_json.each {|m| m[:sect] = "rev" }
+    @revs = Revista.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (articulo like '%" + params[:conds][:key] +"%' OR autores like '%" + params[:conds][:key] + "%' OR revista like '%" + params[:conds][:key] + "%')") : "")).order(created_at: :asc).as_json.each {|m| m[:sect] = "rev" }
     @pubs = Publicacion.where(where + (params.key?(:conds) && params[:conds].key?(:key) ? (" AND (titulo like '%" + params[:conds][:key] + "%' OR autores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "pub" }
     @tesis = Tesis.where(where +(params.key?(:conds) && params[:conds].key?(:key) ? (" AND (autores like '%" + params[:conds][:key] + "%' OR titulo like '%" + params[:conds][:key] + "%' OR asesores like '%" + params[:conds][:key] + "%')") : "")).order(anio: :desc, updated_at: :desc).as_json.each {|m| m[:sect] = "tesis" }
     @url = (params.key?(:conds) && params[:conds].key?(:key) ? ("&clave=" + params[:conds][:key]) : "")
