@@ -145,7 +145,7 @@ class PrincipalController < ApplicationController
     end
     limite = 10.0
     @mags_c = Revista.where(where).count
-    @mags = Revista.where(where).order(created_at: :desc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
+    @mags = Revista.where(where).order(created_at: :asc).offset(params.key?(:offset) ? (params[:offset].to_i * limite) : 0).limit(limite)
     @pags = (@mags_c/limite).ceil
     respond_to do |format|
       format.html
