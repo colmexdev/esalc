@@ -5,6 +5,7 @@ class PrincipalController < ApplicationController
 
   def libros
     @pubs_r = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
+		@pubs_hm = Publicacion.where("titulo like 'Historia Mínima%'").order(anio: :desc, updated_at: :desc).limit(4)
     where = ""
     if params.key?(:conds)
       where = build_where(params[:conds])
