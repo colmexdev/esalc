@@ -250,7 +250,7 @@ class PanelController < ApplicationController
     keys = params[:keyword].split(/ +/).map {|k| " like '%" + k.downcase + "%'"}
     @fields.keys.each do |f|
       h = ""
-      if ["fecha","likes","dislikes","favs","comentarios","vistas"].include?(f.to_s)
+      if ["anio"].include?(f.to_s)
         next
       end
       keys.each_with_index do |k,i|
