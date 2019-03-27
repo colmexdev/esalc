@@ -105,7 +105,7 @@ function clean(){
                       <div class="col-lg-4 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select onchange="filter(['tipo','centros','fecha']);" name="tipo" id="tipo" class="select-md input-border w-100">
-                            <option value>Tipo</option>
+                            <option value="">Tipo</option>
                             <option value="coloquio">Coloquio</option>
                             <option value="conferencia">Conferencia</option>
                             <option value="congreso">Congreso</option>
