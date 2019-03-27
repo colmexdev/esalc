@@ -130,7 +130,7 @@ function clean(){
 
                       </div>
 <% end %>
-                      <div class="col-lg-8 col-md-12 col-sm-12 pl-0 mb-15">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select onchange="filter(['tipo','centros','fecha']);" name="centros" id="centros" class="select-md input-border w-100">
                             <option value>Centro de Estudios</option>
@@ -144,7 +144,7 @@ function clean(){
                           </select>
 
                       </div>
-                      <div class="col-lg-8 col-md-12 col-sm-12 pl-0 mb-15">
+                      <div class="col-lg-6 col-md-12 col-sm-12 pl-0 mb-15">
 
                           <select onchange="filter(['tipo','centros','fecha']);" name="fecha" id="fecha" class="select-md input-border w-100">
                             <option value>Año</option>
