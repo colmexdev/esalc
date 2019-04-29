@@ -16,6 +16,10 @@
     <%= f.text_field :nombre, placeholder: "Apellido(s), nombre(s)" %>
   </div>
   <div class="field">
+    <%= f.label :beca, "Beca postdoctoral" %><br>
+    <%= f.text_field :beca %>
+  </div>
+  <div class="field">
     <%= f.label :centro, "Centro de Estudios" %><br>
     <%= f.select(:centro,[["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
   </div>

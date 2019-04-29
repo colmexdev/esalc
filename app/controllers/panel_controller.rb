@@ -280,7 +280,7 @@ class PanelController < ApplicationController
         trix: []
       }, "Personal del Directorio": {
         model: Directorio,
-        fields: {nombre: "Nombre (Apellidos, Nombre(s))", centro: "Centro de Estudios", temas: "Temas de investigación", correo: "Correo electrónico", sitio: "Sitio web"},
+        fields: {nombre: "Nombre (Apellidos, Nombre(s))", beca: "Beca postdoctoral", centro: "Centro de Estudios", temas: "Temas de investigación", correo: "Correo electrónico", sitio: "Sitio web"},
         imgs: {},
         trix: []
       }
@@ -312,7 +312,7 @@ class PanelController < ApplicationController
     elsif params[:set] == "Publicaciones"
       params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :link, :link_vid, :portada, tematica:[])
     elsif params[:set] == "Personal del Directorio"
-      params.require(:directorio).permit(:nombre, :centro, :temas, :correo, :sitio)
+      params.require(:directorio).permit(:nombre, :centro, :temas, :correo, :sitio, :beca)
     end
   end
 end

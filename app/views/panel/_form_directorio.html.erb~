@@ -12,53 +12,26 @@
   <% end %>
 <%= hidden_field_tag :authenticity_token, form_authenticity_token -%>
   <div class="field">
-    <%= f.label :titulo, "Título" %><br>
-    <%= f.text_field :titulo %>
-  </div>
-  <div class="field">
-    <%= f.label :autores, "Autor(es)" %><br>
-    <%= f.text_area :autores, placeholder: "(Apellidos, nombre(s)), separados por punto y coma (;)" %>
+    <%= f.label :nombre, "Nombre" %><br>
+    <%= f.text_field :nombre, placeholder: "Apellido(s), nombre(s)" %>
   </div>
   <div class="field">
     <%= f.label :centro, "Centro de Estudios" %><br>
     <%= f.select(:centro,[["CEAA","CEAA"],["CEDUA","CEDUA"],["CEE","CEE"],["CEH","CEH"],["CEI","CEI"],["CELL","CELL"],["CES","CES"]], selected: (@obj.centro || "CEAA")) %>
   </div>
   <div class="field">
-    <%= f.label :editorial, "Editorial" %><br>
-    <%= f.text_field :editorial %>
+    <%= f.label :temas, "Tema(s) de investigación" %><br>
+    <%= f.text_area :temas, placeholder: "Temas separados por punto y coma (;)" %>
   </div>
   <div class="field">
-    <%= f.label :lugar, "Lugar de publicación" %><br>
-    <%= f.text_field :lugar %>
+    <%= f.label :correo, "Correo electrónico" %><br>
+    <%= f.email_field :correo %>
   </div>
   <div class="field">
-    <%= f.label :traduccion, "Encargado de traducción (si aplica)" %><br>
-    <%= f.text_field :traduccion %>
-  </div>
-  <div class="field">
-    <%= f.label :edicion, "Edición" %><br>
-    <%= f.text_field :edicion %>
-  </div>
-  <div class="field">
-    <%= f.label :anio, "Año" %><br>
-    <%= f.number_field :anio, min: 1900, step: 1 %>
-  </div>
-  <div class="field">
-    <%= f.label :tematica, "Temática(s)" %><br>
-		<% ["Historia","Lengua y literatura","Instituciones políticas","Cuestiones socioeconómicas","Relaciones internacionales","Violencia"].each do |t| %>
-    	<%= f.check_box :tematica, {multiple: true}, t, nil %>
-			<%= f.label :tematica, t %><br>
-		<% end %>
-  </div>
-  <div class="field">
-    <%= f.label :link, "Liga a la publicación" %><br>
-    <%= f.text_field :link %>
-  </div>
-  <div class="field">
-    <%= f.label :link_vid, "Liga(s) de video(s) asociado(s)" %><br>
-    <%= f.text_area :link_vid, placeholder: "Ligas separadas por punto y coma (;)" %>
+    <%= f.label :sitio, "Sitio web" %><br>
+    <%= f.text_field :sitio %>
   </div>
   <div class="actions">
-    <%= f.submit "Guardar publicación" %>
+    <%= f.submit "Guardar docente" %>
   </div>
 <% end %>
