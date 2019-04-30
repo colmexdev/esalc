@@ -40,7 +40,7 @@
                 </div>
                 <!-- DESCRIPCIÓN DEL PROYECTO -->
                 <div class="mb-50 mt-50">
-                  <h2 class="section-title pr-0 "><span class="bold ">ACERCA DEL </span>PROYECTO</h2>
+                  <h2 class="section-title pr-0 "><span class="bold ">ACERCA DE </span>"ESTUDIOS SOBRE AMÉRICA LATINA Y EL CARIBE"</h2>
                 </div>
                 <div class="row">
                   <div class="col-md-4 fes1-img-cont wow fadeInLeft mb-20" style="visibility: visible; animation-name: fadeInTop;"><img src="<%= image_url('esalc-reducido.png') %>" alt="Logo"></div>
