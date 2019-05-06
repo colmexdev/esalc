@@ -318,6 +318,8 @@ class PanelController < ApplicationController
       params.require(:publicacion).permit(:autores, :titulo, :centro, :editorial, :lugar, :traduccion, :edicion, :anio, :link, :link_vid, :portada, tematica:[])
     elsif params[:set] == "Personal del Directorio"
       params.require(:directorio).permit(:nombre, :centro, :temas, :correo, :sitio, :beca)
+    elsif params[:set] == "Boletines"
+      params.require(:boletin).permit(:titulo, :fecha, :documento)
     end
   end
 end
