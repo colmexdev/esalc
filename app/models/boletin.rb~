@@ -7,6 +7,6 @@ class Boletin < ActiveRecord::Base
                     :path => ":rails_root/public/assets/boletines/:style/:id_:basename.:extension",
                     :default_url => "/vacio.png" 
 
-  validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png', 'image/jpg']
+  validates_attachment_content_type :documento, :content_type => ['application/pdf']
   validates_attachment_presence :documento
 end
