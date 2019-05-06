@@ -13,11 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require bootstrap.min
-//= require jquery.magnific-popup.min
-//= require imagesloaded.pkgd.min
-//= require jquery.appear
-//= require owl.carousel.min
-//= require jquery.nav
 //= require backend
 
