@@ -7,6 +7,7 @@ gem 'rails', '4.2.6'
 gem 'pg', '~> 0.15'
 gem 'tiny_tds'
 gem 'activerecord-sqlserver-adapter'
+gem 'bootstrap-datepicker-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.6'
