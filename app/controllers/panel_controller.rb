@@ -283,6 +283,11 @@ class PanelController < ApplicationController
         fields: {nombre: "Nombre (Apellidos, Nombre(s))", beca: "Beca postdoctoral", centro: "Centro de Estudios", temas: "Temas de investigación", correo: "Correo electrónico", sitio: "Sitio web"},
         imgs: {},
         trix: []
+      }, "Boletines": {
+        model: Boletin,
+        fields: {titulo: "Título", fecha: "Fecha de lanzamiento"},
+        imgs: {documento: "Boletín"},
+        trix: []
       }
     }
   end

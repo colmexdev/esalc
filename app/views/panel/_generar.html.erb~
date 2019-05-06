@@ -1,3 +1,3 @@
-<% parts = {"Listas de reproducción": "playlists", "Cursos breves": "cursos"} %>
+<% parts = {"Revistas": "revistas", "Tesis": "tesis", "Publicaciones": "pubs", "Personal del Directorio": "directorio"} %>
 	<%= render ('panel/form_'+parts[params[:set].to_sym]) %>
 

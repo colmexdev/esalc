@@ -27,14 +27,18 @@
 	<div class="body-gest">
 		<div id="menu-lat">
 			<ul id="ops-lat">
-
 				<li class="op-gest">
-				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Listas de reproducción", :offset => 0) %>')">Listas de reproducción</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Revistas", :offset => 0) %>')">Revistas</a>
 				</li>
 				<li class="op-gest">
-				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Videos", :offset => 0) %>')">Videos</a>
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Tesis", :offset => 0) %>')">Tesis</a>
 				</li>
-
+				<li class="op-gest">
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Publicaciones", :offset => 0) %>')">Publicaciones</a>
+				</li>
+				<li class="op-gest">
+				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Personal del Directorio", :offset => 0) %>')">Personal del Directorio</a>
+				</li>
 				<li class="op-gest">
 				<a class="link-panel" onclick="hideLink(event,'#ops-lat','<%= panel_index_path(:set => "Usuarios gestores", :offset => 0) %>')">Usuarios gestores</a>
 				</li>
