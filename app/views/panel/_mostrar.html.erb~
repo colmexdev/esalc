@@ -18,6 +18,8 @@
 				<td class="ind-cell left-align"><%= image_tag(@obj.imagen.url) %></td>
 			<% elsif val == "Ícono" %>
 				<td class="ind-cell left-align"><%= image_tag(@obj.icono.url) %></td>	
+			<% elsif val == "Portada" %>
+				<td class="ind-cell left-align"><%= image_tag(@obj.portada.url) %></td>	
 			<% elsif val == "Badge" %>
 				<td class="ind-cell left-align"><%= image_tag(@obj.badge.url) %></td>	
 			<% elsif val == "Badge (Inglés)" %>
