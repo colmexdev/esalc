@@ -24,8 +24,8 @@
 				<td class="ind-cell left-align"><%= image_tag(@obj.badge.url) %></td>	
 			<% elsif val == "Badge (Inglés)" %>
 				<td class="ind-cell left-align"><%= image_tag(@obj.badge_eng.url) %></td>	
-			<% elsif val == "Archivo" %>
-				<td class="ind-cell left-align"><%= link_to image_tag("documento.png"), @obj.archivo.url, target: "_blank" %></td>
+			<% elsif val == "Documento" %>
+				<td class="ind-cell left-align"><%= link_to image_tag("documento.png"), @obj.documento.url, target: "_blank" %></td>
 			<% end %>
 		</tr>
 		<% end %>
