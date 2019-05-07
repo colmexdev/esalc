@@ -42,7 +42,7 @@
 					<% elsif f.to_s == "portada" %>
 						<td class="ind-cell"><%= image_tag(s.portada.url) %></td>
 					<% elsif f.to_s == "documento" %>
-						<td class="ind-cell"><%= link_to image_tag(s.documento.url(:pdf_thumbnail)), s.documento.url(:original), target: "_blank" %></td>
+						<td class="ind-cell"><%= link_to(image_tag(s.documento.url(:pdf_thumbnail)), s.documento.url(:original), target: "_blank") %></td>
 					<% end %>
 				<% end %>
 				<td class="ind-cell-img" style="width:130px;">
