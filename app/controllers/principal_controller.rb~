@@ -1,12 +1,12 @@
 class PrincipalController < ApplicationController
   def principal
     @pubs = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
-		@pubs_hm = Publicacion.where("lower(titulo) like 'historia m_nima%' and titulo not like '%M_xico%'").order(created_at: :desc, anio: :desc).limit(4)
+		@pubs_hm = Publicacion.where("lower(titulo) like 'historia m_nima%' and titulo not like '%M_xico%'").order(updated_at: :desc, anio: :desc).limit(4)
   end
 
   def libros
     @pubs_r = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
-		@pubs_hm = Publicacion.where("lower(titulo) like 'historia mínima%' and titulo not like '%M_xico%'").order(created_at: :desc, anio: :desc).limit(4)
+		@pubs_hm = Publicacion.where("lower(titulo) like 'historia mínima%' and titulo not like '%M_xico%'").order(updated_at: :desc, anio: :desc).limit(4)
     where = ""
     if params.key?(:conds)
       where = build_where(params[:conds])

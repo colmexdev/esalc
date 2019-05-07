@@ -2,6 +2,7 @@ class PrincipalController < ApplicationController
   def principal
     @pubs = Publicacion.order(anio: :desc, updated_at: :desc).limit(4)
 		@pubs_hm = Publicacion.where("lower(titulo) like 'historia m_nima%' and titulo not like '%M_xico%'").order(updated_at: :desc, anio: :desc).limit(4)
+    @boletin = Boletin.order(fecha: :desc).first
   end
 
   def libros
