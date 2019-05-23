@@ -47,6 +47,9 @@
                   <div class="col-md-8">
                     <p>Con esta plataforma se desea dar visibilidad a la labor que los integrantes de El Colegio de México impulsan en publicaciones, tesis, seminarios, coloquios y proyectos que tienen como denominador común a América Latina y el Caribe.
                     </p>
+		                <div style="margin-bottom:15px;">
+		                  <a class="button medium gray-light shop-add-btn" href="<%= acerca_path %>">VER MÁS</a>
+		                </div>
                   </div>
                 </div>
                 <!-- PUBLICACIONES RECIENTES -->

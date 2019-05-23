@@ -223,4 +223,8 @@ class PrincipalController < ApplicationController
     end
   end
 
+  def boletines
+    @boletines = Boletin.order(fecha: :desc)
+  end
+
 end
