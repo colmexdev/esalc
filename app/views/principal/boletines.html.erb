@@ -17,13 +17,12 @@
               <div class="row mb-20">
                 <div class="col-md-10 col-sm-12 col-md-offset-1">
 <% @boletines.each do |b| %>
-<div class="row" style="border:solid 1px #CCC;padding: 15px 0;width:90%;margin:0 auto;">
-	<div class="col-xs-4">
-  	<a target="_blank" href="<%= b.documento.url(:original) %>"><img src="<%= b.documento.url(:pdf_thumbnail) %>" alt="anuncio"></a>
-	</div>
-	<div class="col-xs-8">
-		<p><%= b.titulo %></p>
-	</div>
+<div style="padding: 15px 0;width:90%;margin:0 auto; text-align:center">
+	<p style="color:#6b8e4d;font-size:30px;font-weight:bold;text-align:center;"><%= b.titulo %></p>
+
+  	<a target="_blank" href="<%= b.documento.url(:original) %>"><img src="<%= b.documento.url(:pdf_thumbnail) %>" alt="boletin" style="height:400px;width:330px;max-width:none;margin:10px auto;"></a>
+
+		
 </div>
 <% end %>
                 </div>
