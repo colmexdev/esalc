@@ -36,61 +36,32 @@
                   </div>
                 </div>
 <% end %>
-<% if false %>
-                <!-- PUBLICACIONES Item 2 -->
+              </div>
+            </div>
+
+            <!-- PUBLICACIONES RECIENTES -->
+            <div class="page-section pt-40">
+              <div class="mb-50 ">
+                <h2 class="section-title pr-0 "><span class="bold ">HISTORIAS </span>MÍNIMAS</h2>
+              </div>
+              <div class="row">
+<% @pubs_hm.each do |p| %>
+                <!-- PUBLICACIONES Item 1 -->
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wow fadeInUp pb-70">
                   <div class="row">
                     <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                      <a href="shop-single.html "><img src="https://libros.colmex.mx/wp-content/plugins/documentos/portadas2/S138.jpg" alt="Temas de política social de México y América Latina"></a>
+                      <a href="shop-single.html "><img src="<%= p.portada.url %>" alt="<%= p.titulo %>"></a>
                     </div>
                   </div>
                   <div class="shop-price-cont ">
-                    <a class="font-norm a-inv " href="https://libros.colmex.mx/ficha/?b=2787" target="_blank"><strong>Temas de política social de México y América Latina</strong></a>
+                    <a class="font-norm a-inv " href="<%= p.link %>" target="_blank"><strong><%= p.titulo %></strong></a>
                   </div>
                   <div class="post-prev-title mb-20">
-                    <h3 class="font-norm a-inv">Fernando Cortés (coordinador)</h3>
+                    <h3 class="font-norm a-inv"><%= p.autores %></h3>
                   </div>
                   <div class="post-prev-more-cont clearfix ">
                     <div class="shop-add-btn-cont ">
-                      <a class="button medium gray-light shop-add-btn" href="https://libros.colmex.mx/ficha/?b=2787" target="_blank">CONSULTAR</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- PUBLICACIONES Item 3 -->
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wow fadeInUp pb-70">
-                  <div class="row">
-                    <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                      <a href="shop-single.html "><img src="https://libros.colmex.mx/wp-content/plugins/documentos/portadas2/H397.jpg" alt="Historia Mínima de Colombia"></a>
-                    </div>
-                  </div>
-                  <div class="shop-price-cont ">
-                    <a class="font-norm a-inv " href="https://libros.colmex.mx/ficha/?b=2760" target="_blank"><strong>Historia Mínima de Colombia</strong></a>
-                  </div>
-                  <div class="post-prev-title mb-20">
-                    <h3 class="font-norm a-inv">Jorge Orlando Melo</h3>
-                  </div>
-                  <div class="post-prev-more-cont clearfix ">
-                    <div class="shop-add-btn-cont ">
-                      <a class="button medium gray-light shop-add-btn" href="https://libros.colmex.mx/ficha/?b=2760" target="_blank">CONSULTAR</a>
-                    </div>
-                  </div>
-                </div>
-                <!-- PUBLICACIONES Item 4 -->
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 wow fadeInUp pb-70">
-                  <div class="row">
-                    <div class="post-prev-img col-lg-10 col-lg-offset-1 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
-                      <a href="shop-single.html "><img src="https://libros.colmex.mx/wp-content/plugins/documentos/portadas2/PE022.jpg" alt="Tribulaciones de dos empresas petroleras estatales, 1900-2014 (Trayectorias comparadas de PEMEX y PDVSA)"></a>
-                    </div>
-                  </div>
-                  <div class="shop-price-cont ">
-                    <a class="font-norm a-inv " href="https://libros.colmex.mx/ficha/?b=2741" target="_blank"><strong>Tribulaciones de dos empresas petroleras estatales, 1900-2014 (Trayectorias comparadas de PEMEX y PDVSA)</strong></a>
-                  </div>
-                  <div class="post-prev-title mb-20">
-                    <h3 class="font-norm a-inv">Isabel  Rousseau</h3>
-                  </div>
-                  <div class="post-prev-more-cont clearfix ">
-                    <div class="shop-add-btn-cont ">
-                      <a class="button medium gray-light shop-add-btn" href="https://libros.colmex.mx/ficha/?b=2741" target="_blank">CONSULTAR</a>
+                      <a class="button medium gray-light shop-add-btn" href="<%= p.link %>" target="_blank">CONSULTAR</a>
                     </div>
                   </div>
                 </div>
