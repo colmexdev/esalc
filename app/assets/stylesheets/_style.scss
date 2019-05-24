@@ -8202,7 +8202,7 @@ h2.portfolio-timeline-title {
     margin-left: 54px;
   }
   .main-menu-container {
-    /*position: absolute;*/
+    position: absolute;
     top: 0;
     right: 0;
     width: 100%;
@@ -9506,7 +9506,8 @@ img.mfp-img {
     position:relative;
   }
   #header-left.header-1 #main-menu .nav.navbar-nav {
-    margin-right: 0;
+    /*margin-right: 0;*/
+		margin-left: 54px;
   }
   #header-left #main-menu .navbar .nav .open-sub:before {
     content: "\e232";
