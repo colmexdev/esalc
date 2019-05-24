@@ -8199,7 +8199,7 @@ h2.portfolio-timeline-title {
     overflow: visible !important;
   }
   .header-1 #main-menu .nav.navbar-nav {
-    margin-right: 54px;
+    margin-left: 54px;
   }
   .main-menu-container {
     position: absolute;
