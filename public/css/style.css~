@@ -3130,6 +3130,12 @@ select.input-border {
 
 /* #FOOTER 1 NEW
 =====================================================*/
+#footer-offset{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 .footer-copy {
   margin-top:5px;
 }

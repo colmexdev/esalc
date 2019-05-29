@@ -1,0 +1,41 @@
+      <!-- Inicia footer-offset -->
+      <div id="footer-offset" class="fixed-bottom">
+        <!-- PIE DE PÁGINA -->
+        <footer id="footer3" class="page-section pt-30 pb-0 footer2-black">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 widget text-center">
+                <div class="logo-footer-cont">
+                  <a href="https://www.colmex.mx/" target="_blank">
+                    <img class="logo-footer" src="https://www.colmex.mx/assets/colmex-pie-11574ae7eb2daa4f7ed874bf99b3ef3aa5b4f3ee3c82f218355cdb5c6cfe795d.png" alt="logo">
+                  </a>
+                </div>
+                <div class="logo-footer-cont">
+                  <img class="logo-footer" src="https://www.colmex.mx/assets/creative-commons-c376b41beeaa05f745d4a8aaf2dc3f84a033c72ff8f81d5896bc70602ae5d635.png" alt="logo">
+                </div>
+                <div class="footer-2-text-cont">
+                  <address>
+                    Derechos reservados, El Colegio de México A.C. © 2018<br>
+  Carretera Picacho Ajusco 20, Col. Ampliación Fuentes del Pedregal, C.P. 14110 Tlalpan, Ciudad de México Tel.: +52 55 54493000
+                  </address>
+                </div>
+                <div class="footer-2-soc-a">
+                  <a href="https://www.facebook.com/elcolmex/" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://twitter.com/ELCOLMEX" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.youtube.com/c/elcolegiodemexicociudaddemexico" title="YouTube" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                  <a href="https://itunes.apple.com/mx/institution/el-colegio-de-mexico/id443160573" title="iTunesU" target="_blank"><i class="fa fa-apple"></i></a>
+                  <a href="https://www.linkedin.com/edu/el-colegio-de-m%C3%A9xico-14986" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
+                  <a href="https://plus.google.com/+ElColegiodeM%C3%A9xico081040" title="Google+" target="_blank"><i class="fa  fa-google-plus"></i></a>
+                  <a href="https://www.instagram.com/elcolmex/" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                  <a href="https://soundcloud.com/elcolmex/" title="SoundCloud" target="_blank"><i class="fa fa-soundcloud"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!-- BACK TO TOP -->
+        <p id="back-top">
+          <a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a>
+        </p>
+      </div>
+      <!-- Fin footer-offset -->

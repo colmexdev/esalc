@@ -124,7 +124,7 @@
   <script src="/js/jquery.nav.js"></script>
   <script>
     $(document).ready(function() {
-			$("div.grey-bg").css("min-height", ($("#footer-offset").outerHeight(true) + $("header").outerHeight(true) + $("#sidebar-stiky").outerHeight(true)) + "px")
+			$("div.grey-bg").css("min-height", (/*$("#footer-offset").outerHeight(true) +*/ $("header").outerHeight(true) + $("#sidebar-stiky").outerHeight(true)) + "px")
       //NAV SIDEBAR------------------------------------------------------------------
       var top_offset = $('header').height() - 1; // get height of fixed navbar
       $('#nav-sidebar').onePageNav({
