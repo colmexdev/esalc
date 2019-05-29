@@ -2356,7 +2356,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 
 .post-prev-img img {
   width: auto !important;
-	max-height: 350px !important;
+	max-height: 280px !important;
 }
 .post-prev-title h3{
   margin:0;

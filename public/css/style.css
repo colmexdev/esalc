@@ -3132,7 +3132,7 @@ select.input-border {
 /* #FOOTER 1 NEW
 =====================================================*/
 #footer-offset{
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 0;
 	width: 100%;
 }
