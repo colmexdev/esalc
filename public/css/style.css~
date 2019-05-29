@@ -9513,7 +9513,8 @@ img.mfp-img {
     position:relative;
   }
   #header-left.header-1 #main-menu .nav.navbar-nav {
-    margin-right: 0;
+    /*margin-right: 0;*/
+		margin-left: 54px;
   }
   #header-left #main-menu .navbar .nav .open-sub:before {
     content: "\e232";
