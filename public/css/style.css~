@@ -3877,7 +3877,7 @@ header.affix  .logo-2, .header.affix.no-transparent .logo-2 {
 }
 
 @media only screen and (max-width: 750px){
-	.logo-img { height: auto; max-width: 350px; }
+	.logo-img { height: auto; max-width: 350px; width: 80%; }
 }
 
 header .logo .logo-img {
