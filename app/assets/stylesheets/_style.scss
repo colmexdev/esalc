@@ -3853,6 +3853,19 @@ header.affix  .logo-2, .header.affix.no-transparent .logo-2 {
   height: 80px;
 }
 
+#menu-header-opciones{
+	margin-left:470px;
+}
+
+@media only screen and (max-width: 1455px){
+	#menu-header-opciones { margin-left: 0; }
+}
+
+@media only screen and (max-width: 750px){
+	.logo-img { height: auto; max-width: 350px; }
+}
+
+
 header .logo .logo-img {
 	transition: all .4s ease 0s;
 }
