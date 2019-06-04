@@ -3866,6 +3866,7 @@ header.affix  .logo-2, .header.affix.no-transparent .logo-2 {
 }
 .logo-img {
   height: 80px;
+	max-width: 400px !important;
 }
 
 header .logo .logo-img {
