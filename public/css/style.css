@@ -3866,7 +3866,18 @@ header.affix  .logo-2, .header.affix.no-transparent .logo-2 {
 }
 .logo-img {
   height: 80px;
-	max-width: 400px !important;
+}
+
+#menu-header-opciones{
+	margin-left:470px;
+}
+
+@media only screen and (max-width: 1455px){
+	#menu-header-opciones { margin-left: 0; }
+}
+
+@media only screen and (max-width: 750px){
+	.logo-img { height: auto; max-width: 350px; }
 }
 
 header .logo .logo-img {
