@@ -8060,7 +8060,7 @@ h2.portfolio-timeline-title {
     padding-right: 15px;
   }
   #main-menu .navbar .nav  {
-    padding-top:10px;
+    padding-top:10px; padding-bottom: 10px;
   }
   #main-menu .navbar .nav li  a {
     font-size:13px;
@@ -8068,7 +8068,7 @@ h2.portfolio-timeline-title {
   #main-menu .navbar .nav > li > a {
     font-weight: normal;
     margin: 0 !important;
-    padding: 16px 9px 16px 17px !important;
+    padding: 8px 9px 8px 17px !important;
     text-decoration: none;
     width:100%;
     text-align: left;
@@ -8152,7 +8152,7 @@ h2.portfolio-timeline-title {
     line-height: 22px;
   }
   #main-menu .sub a {
-    padding: 15px 9px 15px 27px !important;
+    padding: 8px 9px 8px 27px !important;
   }
   #main-menu .sub .sub a {
     padding: 15px 9px 15px 37px !important;
