@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock '3.4.1'
+#lock '3.4.1'
 
 set :application, 'esalc'
 set :repo_url, 'https://github.com/colmexdev/esalc.git'
