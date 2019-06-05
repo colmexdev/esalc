@@ -1,5 +1,5 @@
 $.ajax({
-	url: 'https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamérica, <%= @tema + @url %>',
+	url: 'https://coed.colmex.mx/catalogo_videos.json?tags=Latinoamerica, <%= @tema + @url %>',
 	success: function(result){
 		var limit = 10;
 		var pubs = <%= raw @pubs.to_json %>;
