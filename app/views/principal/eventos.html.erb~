@@ -148,6 +148,7 @@ function clean(){
 
                           <select onchange="filter(['tipo','centros','fecha']);" name="fecha" id="fecha" class="select-md input-border w-100">
                             <option value>Año</option>
+                            <option value="2019">2018</option>
                             <option value="2018">2018</option>
                             <option value="2017">2017</option>
                             <option value="2016">2016</option>
@@ -213,8 +214,8 @@ $(document).ready(function(){
 			var ev_html = '<div id="carr-evs" class="owl-1-pag-auto owl-carousel owl-dark-bg owl-pag-2">';
 			for(var i = 0; i < result["videos"].length; i++){
 				ev_html = ev_html + '<div class="item m-0">' +
-                    '<div>' +
-                      '<a href="' + result["videos"][i]["liga"] + '" target="_blank"><img alt="Slide 1" src="' + result["videos"][i]["ligaImagen"].replace("http://","https://") + '"></a>' +
+                    '<div style="text-align:center;">' +
+                      '<a href="' + result["videos"][i]["liga"] + '" target="_blank"><img alt="Slide 1" src="' + result["videos"][i]["ligaImagen"].replace("http://","https://") + '" style="max-height:390px;width:auto;"></a>' +
                     '</div>' +
                   '</div>';
 			}
