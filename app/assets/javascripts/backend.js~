@@ -80,11 +80,15 @@ function readURL(input,display,file) {
     var reader = new FileReader();
     
     reader.onload = function (e) {
-				if(file != null ){
-        	$(display).attr('src', e.target.result);
-				}
-				else{
-					$(display).attr('src', e.target.result);
+				try{
+					if(e.target.result.includes("data:application/pdf"))
+						document.querySelector(display).innerHTML = (multi ? document.querySelector(display).innerHTML : "") + "<object type=\"application/pdf\" data =\"" + e.target.result + "\"><embed src=\"" + e.target.result + "\" type=\"application/pdf\"></object>" + (multi ? "<br><br>" : "");
+					else if(e.target.result.includes("data:image/"))
+						document.querySelector(display).innerHTML = (multi ? document.querySelector(display).innerHTML : "") + "<img src=\"" + e.target.result + "\">" + (multi ? "<br><br>" : "");
+					else
+						document.querySelector(display).innerHTML = (multi ? document.querySelector(display).innerHTML : "") + "Vista previa no disponible" + (multi ? "<br><br>" : "");
+				} catch(err){
+						document.querySelector(display).innerHTML = (multi ? document.querySelector(display).innerHTML : "") + "Vista previa no disponible" + (multi ? "<br><br>" : "");
 				}
     }
     
