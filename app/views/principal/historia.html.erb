@@ -22,7 +22,7 @@ function filter(f_ids){
 		where = where + (val != "" ? "&conds["+f_ids[i]+"]="+ val : "");
 	}
 	$.ajax({
-		url: "/historia.js?offset=0&conds[tema]=Historia" + where,
+		url: "/historia.js?offset=0&conds[tema]=<%= @tema %>" + where,
 		success: function(){}
 	});
 }
@@ -31,7 +31,7 @@ function clean(){
 	$("#sect").value(null);
 	$("#key").value("");
 	$.ajax({
-		url: "/historia.js?offset=0&conds[tema]=Historia",
+		url: "/historia.js?offset=0&conds[tema]=<%= @tema %>",
 		success: function(result){}
 	});
 }
