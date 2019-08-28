@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :fecha, "Fecha de lanzamiento" %><br>
-    <%= f.text_field :fecha, {"data-uk-datepicker" => "{format: 'YYYY-MM-DD'}"} %>
+    <%= f.text_field :fecha, class: "fechas" %>
   </div>
   <div class="field" style="height:250px;">
 		<div class="photo-upload">
@@ -35,4 +35,10 @@
   <div class="actions">
     <%= f.submit "Guardar boletín" %>
   </div>
+
+<script>
+	$(".fechas").datepicker({
+		format: "yyyy-mm-dd", language: "es-MX", autoclose: true, todayBtn: "linked", todayHighlight: true, clearBtn: true
+	});
+</script>
 <% end %>

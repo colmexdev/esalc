@@ -24,9 +24,9 @@
     <%= f.label :documento, raw('<span class="glyphicon glyphicon-upload glyph-padding"></span>Añadir boletín') %><br>
     <%= f.file_field :documento, :onchange => "readURL(this,'#foto-portada')" %><br>
 		</div>
-		<div class="img-display">
+		<div class="img-display" id="foto-portada">
 			<% if !@obj.documento.url.nil? %>
-				<img id="foto-portada" src="<%= @obj.documento.url %>">
+				<img src="<%= @obj.documento.url %>">
 			<% else %>
 				<span>No hay boletín para mostrar.</span>
 			<% end %>

@@ -80,7 +80,7 @@ function readURL(input,display,file) {
     var reader = new FileReader();
     
     reader.onload = function (e) {
-			multi = false;
+			var multi = false;
 				try{
 					if(e.target.result.includes("data:application/pdf"))
 						document.querySelector(display).innerHTML = (multi ? document.querySelector(display).innerHTML : "") + "<object type=\"application/pdf\" data =\"" + e.target.result + "\"><embed src=\"" + e.target.result + "\" type=\"application/pdf\"></object>" + (multi ? "<br><br>" : "");
