@@ -2,7 +2,7 @@ class Boletin < ActiveRecord::Base
 
   validates_presence_of :titulo
   validates_presence_of :fecha
-  has_attached_file :documento, :styles => {:pdf_thumbnail => ["", :jpg]},
+  has_attached_file :documento, :style => {:pdf_thumbnail => ["", :jpg]},
                     :url => "/assets/boletines/:style/:id_:basename.:extension",
                     :path => ":rails_root/public/assets/boletines/:style/:id_:basename.:extension",
                     :default_url => "/vacio.png" 
